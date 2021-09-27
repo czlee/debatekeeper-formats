@@ -28,14 +28,16 @@ for child in args.formats_dir.iterdir():
 
     formats.append({
         "filename": child.name,
-        "location": f"https://formats.debatekeeper.czlee.nz/formats/{child.name}",
         "name": child_root.find("name").text,
-        "region": info.find("region").text,
-        "level": info.find("level").text,
-        "used-at": [e.text for e in info.findall("level")],
+        "url": f"https://formats.debatekeeper.czlee.nz/formats/{child.name}",
+        "region": [e.text for e in info.findall("region")],
+        "level": [e.text for e in info.findall("level")],
+        "used-at": [e.text for e in info.findall("used-at")],
         "description": info.find("description").text,
     })
 
+
+formats.sort(key=lambda f: f['name'])
 
 with open(args.output_file, "w") as fp:
     json.dump(formats, fp, indent=2)
