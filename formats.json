@@ -3,6 +3,7 @@
     "filename": "aueasters.xml",
     "name": "Australian Easters",
     "url": "https://formats.debatekeeper.czlee.nz/formats/aueasters.xml",
+    "version": 1,
     "region": [
       "Australia"
     ],
@@ -18,6 +19,7 @@
     "filename": "bp5.xml",
     "name": "British Parliamentary (5 minutes)",
     "url": "https://formats.debatekeeper.czlee.nz/formats/bp5.xml",
+    "version": 1,
     "region": [
       "UK"
     ],
@@ -34,6 +36,7 @@
     "filename": "canadian.xml",
     "name": "Canadian Parliamentary",
     "url": "https://formats.debatekeeper.czlee.nz/formats/canadian.xml",
+    "version": 1,
     "region": [
       "Canada"
     ],
@@ -49,6 +52,7 @@
     "filename": "canadian-pmre-splitopp.xml",
     "name": "Canadian Parliamentary (PMRE split opp)",
     "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-pmre-splitopp.xml",
+    "version": 1,
     "region": [
       "Canada"
     ],
@@ -64,6 +68,7 @@
     "filename": "canadian-pmre.xml",
     "name": "Canadian Parliamentary (PMRE)",
     "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-pmre.xml",
+    "version": 1,
     "region": [
       "Canada"
     ],
@@ -79,6 +84,7 @@
     "filename": "canadian-splitopp.xml",
     "name": "Canadian Parliamentary (split opp)",
     "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-splitopp.xml",
+    "version": 1,
     "region": [
       "Canada"
     ],
@@ -94,6 +100,7 @@
     "filename": "joyntscroll.xml",
     "name": "Joynt Scroll",
     "url": "https://formats.debatekeeper.czlee.nz/formats/joyntscroll.xml",
+    "version": 1,
     "region": [
       "New Zealand"
     ],
@@ -109,6 +116,7 @@
     "filename": "mspdp.xml",
     "name": "Middle School Public Debate Program",
     "url": "https://formats.debatekeeper.czlee.nz/formats/mspdp.xml",
+    "version": 1,
     "region": [
       "United States"
     ],
@@ -124,6 +132,7 @@
     "filename": "nzeasters.xml",
     "name": "New Zealand Easters",
     "url": "https://formats.debatekeeper.czlee.nz/formats/nzeasters.xml",
+    "version": 1,
     "region": [
       "New Zealand"
     ],
@@ -139,6 +148,7 @@
     "filename": "opd.xml",
     "name": "Open Parliamentary",
     "url": "https://formats.debatekeeper.czlee.nz/formats/opd.xml",
+    "version": 1,
     "region": [
       "Germany"
     ],
@@ -154,6 +164,7 @@
     "filename": "parisv.xml",
     "name": "Paris V",
     "url": "https://formats.debatekeeper.czlee.nz/formats/parisv.xml",
+    "version": 1,
     "region": [
       "France"
     ],
@@ -170,6 +181,7 @@
     "filename": "test1.xml",
     "name": "Test format 1",
     "url": "https://formats.debatekeeper.czlee.nz/formats/test1.xml",
+    "version": 1,
     "region": [
       "None"
     ],
@@ -185,6 +197,7 @@
     "filename": "test2.xml",
     "name": "Test format 2",
     "url": "https://formats.debatekeeper.czlee.nz/formats/test2.xml",
+    "version": 1,
     "region": [
       "None"
     ],
@@ -200,6 +213,7 @@
     "filename": "thropy.xml",
     "name": "Thropy",
     "url": "https://formats.debatekeeper.czlee.nz/formats/thropy.xml",
+    "version": 1,
     "region": [
       "New Zealand"
     ],
@@ -215,6 +229,7 @@
     "filename": "thropybreak.xml",
     "name": "Thropy break rounds",
     "url": "https://formats.debatekeeper.czlee.nz/formats/thropybreak.xml",
+    "version": 1,
     "region": [
       "New Zealand"
     ],

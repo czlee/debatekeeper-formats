@@ -2,6 +2,7 @@
 <debate-format schema-version="2.1">
   <name>British Parliamentary (5 minutes)</name>
   <short-name>BP (5 minutes)</short-name>
+  <version>1</version>
   <info>
     <region>UK</region>
     <level>University</level>

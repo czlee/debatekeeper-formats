@@ -2,6 +2,7 @@
 <debate-format schema-version="2.1">
   <name>New Zealand Easters</name>
   <short-name>NZ Easters</short-name>
+  <version>1</version>
   <info>
     <region>New Zealand</region>
     <level>University</level>

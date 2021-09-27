@@ -2,6 +2,7 @@
 <debate-format schema-version="2.1">
   <name>Canadian Parliamentary (PMRE)</name>
   <short-name>CP (PMRE)</short-name>
+  <version>1</version>
   <info>
     <region>Canada</region>
     <level>University</level>

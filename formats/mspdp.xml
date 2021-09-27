@@ -2,6 +2,7 @@
 <debate-format schema-version="2.1">
   <name>Middle School Public Debate Program</name>
   <short-name>MSPDP</short-name>
+  <version>1</version>
   <info>
     <region>United States</region>
     <level>Middle School</level>

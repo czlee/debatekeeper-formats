@@ -2,6 +2,7 @@
 <debate-format schema-version="2.1">
   <name>Canadian Parliamentary (split opp)</name>
   <short-name>CP (split opp)</short-name>
+  <version>1</version>
   <info>
     <region>Canada</region>
     <level>University</level>
