@@ -37,9 +37,9 @@ for child in args.formats_dir.iterdir():
         "name": child_root.find("name").text,
         "url": f"https://formats.debatekeeper.czlee.nz/formats/{child.name}",
         "version": int(child_root.find("version").text),
-        "region": [e.text for e in info.findall("region")],
-        "level": [e.text for e in info.findall("level")],
-        "used-at": [e.text for e in info.findall("used-at")],
+        "regions": [e.text for e in info.findall("region")],
+        "levels": [e.text for e in info.findall("level")],
+        "used-ats": [e.text for e in info.findall("used-at")],
         "description": info.find("description").text,
     })
 

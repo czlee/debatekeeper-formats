@@ -4,13 +4,13 @@
     "name": "Australian Easters",
     "url": "https://formats.debatekeeper.czlee.nz/formats/aueasters.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "Australia"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "Australian Intervarsity Debating Championships (Easters)"
     ],
     "description": "3 vs 3, 8-minute speeches, no replies, no POIs"
@@ -20,13 +20,13 @@
     "name": "British Parliamentary (5 minutes)",
     "url": "https://formats.debatekeeper.czlee.nz/formats/bp5.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "UK"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "Various UK IVs/Opens",
       "Welsh Novices"
     ],
@@ -37,13 +37,13 @@
     "name": "Canadian Parliamentary",
     "url": "https://formats.debatekeeper.czlee.nz/formats/canadian.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "Canada"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "Canadian National Debating Championship"
     ],
     "description": "2 vs 2, POIs allowed, PM, MO, MC 7 minutes, LO 10 minutes, PM 3 minutes"
@@ -53,13 +53,13 @@
     "name": "Canadian Parliamentary (PMRE split opp)",
     "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-pmre-splitopp.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "Canada"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "Canadian National Debating Championship"
     ],
     "description": "Prime Minister's Rebuttal Extension and split opposition rebuttal.  2 vs 2, POIs allowed, PM 6 minutes, LO, MC, MO 7 minutes, LO 3 minutes, PM 4 minutes"
@@ -69,13 +69,13 @@
     "name": "Canadian Parliamentary (PMRE)",
     "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-pmre.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "Canada"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "Canadian National Debating Championship"
     ],
     "description": "Prime Minister's Rebuttal Extension.  2 vs 2, POIs allowed, PM 6 minutes, MO, MC 7 minutes, LO 10 minutes, PM 4 minutes"
@@ -85,13 +85,13 @@
     "name": "Canadian Parliamentary (split opp)",
     "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-splitopp.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "Canada"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "Canadian National Debating Championship"
     ],
     "description": "Split opposition rebuttal. 2 vs 2, POIs allowed, 7-minute constructives, 3-minute rebuttals"
@@ -101,13 +101,13 @@
     "name": "Joynt Scroll",
     "url": "https://formats.debatekeeper.czlee.nz/formats/joyntscroll.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "New Zealand"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "New Zealand Universities Prepared Debating Championships"
     ],
     "description": "3 vs 3, 10-minute speeches, 5-minute replies, POIs allowed"
@@ -117,13 +117,13 @@
     "name": "Middle School Public Debate Program",
     "url": "https://formats.debatekeeper.czlee.nz/formats/mspdp.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "United States"
     ],
-    "level": [
+    "levels": [
       "Middle School"
     ],
-    "used-at": [
+    "used-ats": [
       "Middle School Public Debate Program"
     ],
     "description": "3 vs 3, 5-minute constructives (by 1st and 2nd), 4-minute rebuttals (by 3rd), POIs allowed"
@@ -133,13 +133,13 @@
     "name": "New Zealand Easters",
     "url": "https://formats.debatekeeper.czlee.nz/formats/nzeasters.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "New Zealand"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "New Zealand Impromptu Debating Championships (Officers' Cup)"
     ],
     "description": "2 vs 2, 7 minutes prep, 6-minute substantive speeches, 3-minute replies"
@@ -149,13 +149,13 @@
     "name": "Open Parliamentary",
     "url": "https://formats.debatekeeper.czlee.nz/formats/opd.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "Germany"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "German-Language Championship"
     ],
     "description": "Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed"
@@ -165,14 +165,14 @@
     "name": "Paris V",
     "url": "https://formats.debatekeeper.czlee.nz/formats/parisv.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "France"
     ],
-    "level": [
+    "levels": [
       "University",
       "High School"
     ],
-    "used-at": [
+    "used-ats": [
       "French Debating Association"
     ],
     "description": "Two teams of five, 6-minute speeches, POIs allowed"
@@ -182,13 +182,13 @@
     "name": "Test format 1",
     "url": "https://formats.debatekeeper.czlee.nz/formats/test1.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "None"
     ],
-    "level": [
+    "levels": [
       "None"
     ],
-    "used-at": [
+    "used-ats": [
       "Nowhere"
     ],
     "description": "Use this format to try out this app without waiting ages for bells"
@@ -198,13 +198,13 @@
     "name": "Test format 2",
     "url": "https://formats.debatekeeper.czlee.nz/formats/test2.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "None"
     ],
-    "level": [
+    "levels": [
       "None"
     ],
-    "used-at": [
+    "used-ats": [
       "Nowhere"
     ],
     "description": "Use this format to try out this app without waiting ages for bells"
@@ -214,13 +214,13 @@
     "name": "Thropy",
     "url": "https://formats.debatekeeper.czlee.nz/formats/thropy.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "New Zealand"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "New Zealand North Island Novice Debating Championships preliminary rounds"
     ],
     "description": "3 vs 3, 6-minute speeches, 3-minute replies, POIs allowed"
@@ -230,13 +230,13 @@
     "name": "Thropy break rounds",
     "url": "https://formats.debatekeeper.czlee.nz/formats/thropybreak.xml",
     "version": 1,
-    "region": [
+    "regions": [
       "New Zealand"
     ],
-    "level": [
+    "levels": [
       "University"
     ],
-    "used-at": [
+    "used-ats": [
       "New Zealand North Island Novice Debating Championships break rounds"
     ],
     "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
