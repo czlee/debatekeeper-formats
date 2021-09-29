@@ -240,5 +240,37 @@
       "New Zealand North Island Novice Debating Championships break rounds"
     ],
     "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
+  },
+  {
+    "filename": "nosuchfile.xml",
+    "name": "No such file",
+    "url": "https://formats.debatekeeper.czlee.nz/formats/nosuchfile.xml",
+    "version": 1,
+    "regions": [
+      "Nowhere"
+    ],
+    "levels": [
+      "None"
+    ],
+    "used-ats": [
+      "Nowhere"
+    ],
+    "description": "Test entry to check what it does when the file doesn't exist"
+  },
+  {
+    "filename": "wronghost.xml",
+    "name": "No such file",
+    "url": "https://czlee.github.io/debatekeeper-formats/formats/wronghost.xml",
+    "version": 1,
+    "regions": [
+      "Nowhere"
+    ],
+    "levels": [
+      "None"
+    ],
+    "used-ats": [
+      "Nowhere"
+    ],
+    "description": "Test entry to check what it does when the host is different to what's expected"
   }
 ]
