@@ -1,5 +1,37 @@
 [
   {
+    "filename": "apda.xml",
+    "name": "American Parliamentary",
+    "url": "https://formats.debatekeeper.czlee.nz/formats/apda.xml",
+    "version": 1,
+    "regions": [
+      "United States"
+    ],
+    "levels": [
+      "University"
+    ],
+    "used-ats": [
+      "American Parliamentary Debate Association"
+    ],
+    "description": "2 vs 2, POIs allowed, PM 7 minutes, LO, MG, MO 8 minutes, LO 4 minutes, PM 5 minutes"
+  },
+  {
+    "filename": "asian.xml",
+    "name": "Asian Parliamentary",
+    "url": "https://formats.debatekeeper.czlee.nz/formats/asian.xml",
+    "version": 1,
+    "regions": [
+      "Asia"
+    ],
+    "levels": [
+      "University"
+    ],
+    "used-ats": [
+      "United Asian Debating Championship"
+    ],
+    "description": "3 vs 3, 7-minute speeches, 4-minute replies, POIs allowed"
+  },
+  {
     "filename": "aueasters.xml",
     "name": "Australian Easters",
     "url": "https://formats.debatekeeper.czlee.nz/formats/aueasters.xml",
@@ -14,6 +46,40 @@
       "Australian Intervarsity Debating Championships (Easters)"
     ],
     "description": "3 vs 3, 8-minute speeches, no replies, no POIs"
+  },
+  {
+    "filename": "australs.xml",
+    "name": "Australs",
+    "url": "https://formats.debatekeeper.czlee.nz/formats/australs.xml",
+    "version": 1,
+    "regions": [
+      "Australasia"
+    ],
+    "levels": [
+      "University"
+    ],
+    "used-ats": [
+      "Australasian Intervarsity Debating Championships"
+    ],
+    "description": "3 vs 3, 8-minute speeches, 4-minute replies, no POIs"
+  },
+  {
+    "filename": "bp.xml",
+    "name": "British Parliamentary",
+    "url": "https://formats.debatekeeper.czlee.nz/formats/bp.xml",
+    "version": 1,
+    "regions": [
+      "World"
+    ],
+    "levels": [
+      "University"
+    ],
+    "used-ats": [
+      "World Universities Debating Championship",
+      "European Universities Debating Championship",
+      "Pan-African Universities Debating Championships"
+    ],
+    "description": "Four teams of two, 7-minute speeches, POIs allowed"
   },
   {
     "filename": "bp5.xml",
@@ -238,6 +304,22 @@
     ],
     "used-ats": [
       "New Zealand North Island Novice Debating Championships break rounds"
+    ],
+    "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
+  },
+  {
+    "filename": "worldschools.xml",
+    "name": "World Schools",
+    "url": "https://formats.debatekeeper.czlee.nz/formats/worldschools.xml",
+    "version": 1,
+    "regions": [
+      "World"
+    ],
+    "levels": [
+      "School"
+    ],
+    "used-ats": [
+      "World Schools Debating Championships"
     ],
     "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
   },
