@@ -1,4 +1,4 @@
 exclude:
   - update_list.py
   - README.md
-  - schema-2.1.rng
+  - schema-2.2.rng

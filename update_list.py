@@ -18,7 +18,7 @@ if not args.formats_dir.is_dir():
     print(f"{formats_dir} is not a directory")
     exit(1)
 
-validator = etree.RelaxNG(etree.parse("schema-2.1.rng"))
+validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
 
 formats = []
 
