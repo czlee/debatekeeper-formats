@@ -259,7 +259,7 @@
   },
   {
     "filename": "wronghost.xml",
-    "name": "No such file",
+    "name": "Wrong host",
     "url": "https://czlee.github.io/debatekeeper-formats/formats/wronghost.xml",
     "version": 1,
     "regions": [

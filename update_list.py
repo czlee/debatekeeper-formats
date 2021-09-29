@@ -10,6 +10,8 @@ from pathlib import Path
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("formats_dir", nargs="?", default=Path("formats"), type=Path)
 parser.add_argument("-O", "--output-file", default="formats.json")
+parser.add_argument("--add-errors", action="store_true",
+    help="Adds some erroneous entries to test error conditions in the app")
 args = parser.parse_args()
 
 if not args.formats_dir.is_dir():
@@ -43,8 +45,29 @@ for child in args.formats_dir.iterdir():
         "description": info.find("description").text,
     })
 
-
 formats.sort(key=lambda f: f['name'])
+
+if args.add_errors:
+    formats.extend([{
+        "filename": "nosuchfile.xml",
+        "name": "No such file",
+        "url": "https://formats.debatekeeper.czlee.nz/formats/nosuchfile.xml",
+        "version": 1,
+        "regions": ["Nowhere"],
+        "levels": ["None"],
+        "used-ats": ["Nowhere"],
+        "description": "Test entry to check what it does when the file doesn't exist"
+      },
+      {
+        "filename": "wronghost.xml",
+        "name": "Wrong host",
+        "url": "https://czlee.github.io/debatekeeper-formats/formats/wronghost.xml",
+        "version": 1,
+        "regions": ["Nowhere"],
+        "levels": ["None"],
+        "used-ats": ["Nowhere"],
+        "description": "Test entry to check what it does when the host is different to what's expected"
+    }])
 
 with open(args.output_file, "w") as fp:
     json.dump(formats, fp, indent=2)
