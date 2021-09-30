@@ -14,7 +14,11 @@ Then, to submit your file for inclusion in this repository:
 2. **Add** your file to the "formats" directory.
 3. Submit a **pull request** from your fork to this repository.
 
-If you can run the `update_list.py` script, that's great, but don't worry about it—I can do it easily.
+### Note on formats.json
+The `update_list.py` script updates the formats.json file. At some point, it should be run, and the result committed to the repository to update the list that Debatekeeper first downloads. If you can run this script as part of your PR, that's great, but don't worry about it—I can do it easily after merging your PR. Currently, until the new Debatekeeper release finishes beta testing, formats.json includes a couple of "bad" entries to allow testing of error conditions in the app, so to include those:
+```
+python update_list.py --add-errors
+```
 
 How this is hosted
 ------------------
