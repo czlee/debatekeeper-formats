@@ -18,6 +18,7 @@ if not args.formats_dir.is_dir():
 validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
 
 failures = []
+successes = []
 
 for child in args.formats_dir.iterdir():
     if child.suffix != ".xml":
@@ -35,12 +36,16 @@ for child in args.formats_dir.iterdir():
         for error in validator.error_log:
             print(f"Validation error in {child.name}, line {error.line}, column {error.column}: {error.message}")
         failures.append(child)
+        continue
+
+    successes.append(child)
 
 if failures:
+    print(f"\n{len(successes)} files passed validation.")
     print("\nValidation failures in the following files:")
     for failure in failures:
         print(f" - {failure}")
     exit(1)
 
 else:
-    print("All files validated.")
+    print(f"All {len(successes)} files passed validation.")
