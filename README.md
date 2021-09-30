@@ -14,7 +14,7 @@ Then, to submit your file for inclusion in this repository:
 2. **Add** your file to the "formats" directory.
 3. Submit a **pull request** from your fork to this repository.
 
-If you can run the `update_list.py` script, that's great, but don't worry about it---I can do it easily.
+If you can run the `update_list.py` script, that's great, but don't worry about it—I can do it easily.
 
 How this is hosted
 ------------------
