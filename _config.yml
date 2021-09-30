@@ -1,4 +1,6 @@
 exclude:
   - update_list.py
+  - validate_all.py
+  - CNAME
   - README.md
   - schema-2.2.rng
