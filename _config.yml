@@ -4,3 +4,4 @@ exclude:
   - CNAME
   - README.md
   - schema-2.2.rng
+show_dir_listing: true
