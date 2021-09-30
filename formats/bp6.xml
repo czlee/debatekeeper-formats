@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debate-format schema-version="2.2">
-  <name>British Parliamentary (5 minutes)</name>
-  <short-name>BP (5 minutes)</short-name>
+  <name>British Parliamentary (6 minutes)</name>
+  <short-name>BP (6 minutes)</short-name>
   <version>1</version>
   <info>
     <region>Greece</region>
