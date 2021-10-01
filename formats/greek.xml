@@ -16,7 +16,7 @@
       <bell time="5:00" number="1" next-period="warning" />
       <bell time="finish" number="2" next-period="overtime" />
     </speech-type>
-    <speech-type ref="reply" length="4:00" first-period="normal">
+    <speech-type ref="summary" length="4:00" first-period="normal">
       <bell time="3:00" number="1" next-period="warning" />
       <bell time="finish" number="2" next-period="overtime" />
     </speech-type>
