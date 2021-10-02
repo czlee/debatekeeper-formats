@@ -7,6 +7,8 @@ import json
 from lxml import etree
 from pathlib import Path
 
+from validate import validate_file
+
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("formats_dir", nargs="?", default=Path("formats"), type=Path)
 parser.add_argument("-O", "--output-file", default="formats.json")
@@ -18,8 +20,6 @@ if not args.formats_dir.is_dir():
     print(f"{formats_dir} is not a directory")
     exit(1)
 
-validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
-
 formats = []
 
 for child in args.formats_dir.iterdir():
@@ -27,11 +27,11 @@ for child in args.formats_dir.iterdir():
         print(f"skipping {child}")
         continue
 
-    child_root = etree.parse(open(child))
+    errors = validate_file(child)
+    if errors:
+        print("\n".join(errors))
 
-    if not validator.validate(child_root):
-        err = validator.error_log.last_error
-        print(f"Validation error in {child.name}, line {err.line}: {err.message}")
+    child_root = etree.parse(open(child))
 
     info = child_root.find("info")
     formats.append({

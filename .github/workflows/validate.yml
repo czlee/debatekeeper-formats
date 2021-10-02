@@ -26,4 +26,4 @@ jobs:
         pip install lxml
     - name: Validate files against schema
       run: |
-        python validate_all.py
+        python validate.py
