@@ -5,6 +5,8 @@ This repository contains the format files that will be available for download wi
 
 My motivation for moving this repository online is to make it much faster to make new formats available. Formats used to be shipped with the app, so new formats needed to wait for an app update. As I write this in 2021, there hasn't a Debatekeeper update since 2016, and there are 6 pending pull requests with new formats. One would be forgiven for thinking they'll never happen! I don't envisage updating Debatekeeper any more often in the future, so hopefully this online repository will make it simpler to make new and updated format files available.
 
+The repository for the Debatekeeper app itself is at https://github.com/czlee/debatekeeper.
+
 Submitting a new format file
 ----------------------------
 First, write your XML file [according to these specifications](https://github.com/czlee/debatekeeper/wiki/Writing-your-own-custom-debate-format-file), and test it by importing it into your phone and running it through a few debates.
