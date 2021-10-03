@@ -34,16 +34,22 @@
   <prep-time length="15:00"/>
   <speech-types>
     <speech-type ref="team" length="7:00" first-period="normal">
+      <name xml:lang="en">team</name>
+      <name xml:lang="de">Team</name>
       <bell time="1:00" number="1" next-period="pois-allowed"/>
       <bell time="6:00" number="1" next-period="warning"/>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
     <speech-type ref="nonaligned" length="3:30" first-period="normal">
+      <name xml:lang="en">nonaligned</name>
+      <name xml:lang="de">Fraktionsfrei</name>
       <bell time="1:00" number="1" next-period="pois-allowed"/>
       <bell time="3:00" number="1" next-period="warning"/>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
     <speech-type ref="reply" length="1:00" first-period="opd.nonaligned-reply">
+      <name xml:lang="en">reply</name>
+      <name xml:lang="de">Antwort</name>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
   </speech-types>

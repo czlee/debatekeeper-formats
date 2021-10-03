@@ -124,6 +124,9 @@
             </attribute>
         </optional>
         <zeroOrMore>
+            <ref name="element-name"/>
+        </zeroOrMore>
+        <zeroOrMore>
             <element name="bell">
                 <attribute name="time">
                     <choice>
