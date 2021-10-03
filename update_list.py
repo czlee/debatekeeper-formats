@@ -10,8 +10,8 @@ from pathlib import Path
 from validate import validate_file
 
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("formats_dir", nargs="?", default=Path("formats"), type=Path)
-parser.add_argument("-O", "--output-file", default="formats.json")
+parser.add_argument("formats_dir", nargs="?", default=Path("v1/formats"), type=Path)
+parser.add_argument("-O", "--output-file", default="v1/formats.json")
 parser.add_argument("--add-errors", action="store_true",
     help="Adds some erroneous entries to test error conditions in the app")
 args = parser.parse_args()
@@ -37,7 +37,7 @@ for child in args.formats_dir.iterdir():
     formats.append({
         "filename": child.name,
         "name": child_root.find("name").text,
-        "url": f"https://formats.debatekeeper.czlee.nz/formats/{child.name}",
+        "url": f"https://formats.debatekeeper.czlee.nz/v1/formats/{child.name}",
         "version": int(child_root.find("version").text),
         "regions": [e.text for e in info.findall("region")],
         "levels": [e.text for e in info.findall("level")],

@@ -67,7 +67,7 @@ def validate_cross_references(path, root):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("formats_dir", nargs="?", default=Path("formats"), type=Path)
+    parser.add_argument("formats_dir", nargs="?", default=Path("v1/formats"), type=Path)
     args = parser.parse_args()
 
     if not args.formats_dir.is_dir():
