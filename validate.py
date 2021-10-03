@@ -3,6 +3,7 @@
 
 import argparse
 import json
+from collections import Counter
 from lxml import etree
 from pathlib import Path
 
@@ -25,11 +26,12 @@ def validate_file(path):
                   f"{err.message}" for err in validator.error_log]
         return errors
 
-    errors = validate_cross_references(path, root)
+    errors = validate_cross_references(path.name, root)
+    errors += validate_multilingual_elements(path.name, root)
     return errors
 
 
-def validate_cross_references(path, root):
+def validate_cross_references(filename: str, root: etree.ElementTree):
     """Checks the cross-references for period types and speech types, given the root of a debate
     format XML tree, and returns a list of errors. (If validation is successful, the list will be
     empty.)"""
@@ -37,31 +39,84 @@ def validate_cross_references(path, root):
     errors = []
 
     period_types = ["normal", "pois-allowed", "warning", "overtime", None]
-
-    custom_period_types = root.find("period-types")
-    if custom_period_types is not None:
-        period_types.extend([pt.get("ref") for pt in custom_period_types.findall("period-type")])
+    period_types.extend([pt.get("ref") for pt in get_period_type_elements(root)])
 
     for speech_type in root.find("speech-types").findall("speech-type"):
-
-        if speech_type.get("first-period") not in period_types:
-            errors.append(f"Cross-ref error in {path.name}: speech type '{speech_type.get('ref')}' "
-                          f"has unknown first-period '{speech_type.get('first-period')}'")
-
+        errors += validate_attribute_xref(filename, speech_type, "first-period", period_types)
         for bell in speech_type.findall("bell"):
-            if bell.get("next-period") not in period_types:
-                errors.append(f"Cross-ref error in {path.name}: bell at '{bell.get('time')}' in "
-                              f"speech type '{speech_type.get('ref')}' has unknown next-period "
-                              f"'{bell.get('next-period')}'")
+            errors += validate_attribute_xref(filename, bell, "next-period", period_types)
 
     speech_types = [st.get("ref") for st in root.find("speech-types").findall("speech-type")]
 
     for speech in root.find("speeches").findall("speech"):
-        if speech.get("type") not in speech_types:
-            errors.append(f"Cross-ref error in {path.name}: speech '{speech.find('name').text}' "
-                          f"has unknown speech type '{speech.get('type')}'")
+        errors += validate_attribute_xref(filename, speech, "type", speech_types)
 
     return errors
+
+
+def validate_attribute_xref(filename: str, element: etree.Element, attribute: str, allowed_values: list):
+    value = element.get(attribute)
+    if value not in allowed_values:
+        return [f"Cross-ref error in {filename}, line {element.sourceline}: unknown {attribute} {value!r}"]
+    return []
+
+
+def validate_multilingual_elements(filename, root):
+
+    languages_element = root.find("languages")
+    languages = [l.text for l in languages_element.findall("language")] if languages_element is not None else None
+
+    errors = []
+    errors += validate_multilingual_element(filename, languages, root, "name")
+    errors += validate_multilingual_element(filename, languages, root, "info")
+    for period_type in get_period_type_elements(root):
+        errors += validate_multilingual_element(filename, languages, period_type, "name")
+        errors += validate_multilingual_element(filename, languages, period_type, "display")
+    for speech in root.find("speeches").findall("speech"):
+        errors += validate_multilingual_element(filename, languages, speech, "name")
+    return errors
+
+
+def validate_multilingual_element(filename: str, languages: list, element: etree.Element, subelement: str):
+    """Checks that the element given either has exactly one of the subelement, or every subelement
+    has a unique language specifier."""
+    errors = []
+    children = element.findall(subelement)
+
+    def add_error(el, message):
+        errors.append(f"Multilingual error in {filename}, line {el.sourceline}: {message}")
+
+    if languages is None:
+        if len(children) > 1:
+            add_error(children[1], f"Multiple {subelement} elements found, but no languages declared in file")
+        for child in children:
+            if child.get("lang"):
+                add_error(child, f"Attribute 'lang' found in {subelement}, but no languages declared in file")
+
+    else:
+        found = dict.fromkeys(languages, False)
+        for child in children:
+            language = child.get("lang")
+            if language is None:
+                add_error(child, f"Language not specified with multiple {subelement} elements")
+            elif language not in languages:
+                add_error(child, f"Language {language!r} not declared in <languages>")
+            elif found[language]:
+                add_error(child, f"Language {language!r} found multiple times in {subelement} elements")
+            found[language] = True
+
+        for language in languages:
+            if not found[language]:
+                add_error(element.getroot(), f"No translation for {subelement} found for language {language!r}")
+    return errors
+
+
+def get_period_type_elements(root):
+    """Returns an iterable over custom period types, or an empty iterable if there aren't any."""
+    period_types = root.find("period-types")
+    if period_types is None:
+        return []
+    return period_types.findall("period-type")
 
 
 if __name__ == "__main__":

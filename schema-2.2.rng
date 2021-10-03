@@ -26,24 +26,19 @@
             <optional>
                 <element name="languages">
                     <oneOrMore>
-                        <element name="lang">
+                        <element name="language">
                             <ref name="value-language"/>
                         </element>
                     </oneOrMore>
                 </element>
             </optional>
 
-            <choice>
-                <oneOrMore>
-                    <element name="info">
-                        <ref name="attribute-language"/>
-                        <ref name="subelements-info"/>
-                    </element>
-                </oneOrMore>
+            <oneOrMore>
                 <element name="info">
+                    <ref name="attribute-language"/>
                     <ref name="subelements-info"/>
                 </element>
-            </choice>
+            </oneOrMore>
 
             <optional>
                 <element name="period-types">
@@ -59,19 +54,12 @@
                             </optional>
                             <interleave>
                                 <ref name="element-name"/>
-                                <optional>
-                                    <choice>
-                                        <oneOrMore>
-                                            <element name="display">
-                                                <ref name="attribute-language"/>
-                                                <text/>
-                                            </element>
-                                        </oneOrMore>
-                                        <element name="display">
-                                            <text/>
-                                        </element>
-                                    </choice>
-                                </optional>
+                                <zeroOrMore>
+                                    <element name="display">
+                                        <ref name="attribute-language"/>
+                                        <text/>
+                                    </element>
+                                </zeroOrMore>
                                 <optional>
                                     <element name="default-bgcolor">
                                         <data type="string">
@@ -163,17 +151,12 @@
     </define>
 
     <define name="element-name">
-        <choice>
-            <oneOrMore>
-                <element name="name">
-                    <ref name="attribute-language"/>
-                    <ref name="value-string"/>
-                </element>
-            </oneOrMore>
+        <oneOrMore>
             <element name="name">
+                <ref name="attribute-language"/>
                 <ref name="value-string"/>
             </element>
-        </choice>
+        </oneOrMore>
     </define>
 
     <define name="subelements-info">
@@ -212,9 +195,11 @@
     </define>
 
     <define name="attribute-language">
-        <attribute name="lang">
-            <ref name="value-language"/>
-        </attribute>
+        <optional>
+            <attribute name="lang">
+                <ref name="value-language"/>
+            </attribute>
+        </optional>
     </define>
 
     <define name="value-language">

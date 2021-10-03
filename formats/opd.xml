@@ -2,7 +2,14 @@
 <debate-format schema-version="2.2">
   <name lang="en">Open Parliamentary</name>
   <name lang="de">Offene Parlamentarische Debatte</name>
+
   <version>1</version>
+
+  <languages>
+    <language>en</language>
+    <language>de</language>
+  </languages>
+
   <info lang="en">
     <region>Germany</region>
     <level>University</level>
@@ -15,6 +22,7 @@
     <used-at>Deutschsprachige Meisterschaften</used-at>
     <description>Zwei Dreierteams (7 Minuten Reden) plus drei Fraktionsfreie Redner (3:30 Reden, 1 Minute Antwort), POIs erlaubt</description>
   </info>
+
   <period-types>
     <period-type ref="opd.nonaligned-reply">
       <name lang="en">OPD: Nonaligned reply</name>
