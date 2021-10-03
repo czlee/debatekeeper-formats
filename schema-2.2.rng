@@ -196,7 +196,7 @@
 
     <define name="attribute-language">
         <optional>
-            <attribute name="lang">
+            <attribute name="xml:lang">
                 <ref name="value-language"/>
             </attribute>
         </optional>
