@@ -6,29 +6,29 @@
   <version>1</version>
 
   <languages>
-    <language>en</language>
     <language>de</language>
+    <language>en</language>
   </languages>
 
-  <info xml:lang="en">
-    <region>Germany</region>
-    <level>University</level>
-    <used-at>German-Language Championship</used-at>
-    <description>Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed</description>
-  </info>
   <info xml:lang="de">
     <region>Deutschland</region>
     <level>Universität</level>
     <used-at>Deutschsprachige Meisterschaften</used-at>
     <description>Zwei Dreierteams (7 Minuten Reden) plus drei Fraktionsfreie Redner (3:30 Reden, 1 Minute Antwort), POIs erlaubt</description>
   </info>
+  <info xml:lang="en">
+    <region>Germany</region>
+    <level>University</level>
+    <used-at>German-Language Championship</used-at>
+    <description>Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed</description>
+  </info>
 
   <period-types>
     <period-type ref="opd.nonaligned-reply">
-      <name xml:lang="en">OPD: Nonaligned reply</name>
       <name xml:lang="de">OPD: Antwort auf fraktionsfreien Redner</name>
-      <display xml:lang="en">by side opposed by previous nonaligned speaker</display>
+      <name xml:lang="en">OPD: Nonaligned reply</name>
       <display xml:lang="de">bei der zum vorherigen fraktionsfreien Redner gegnerischen Seite</display>
+      <display xml:lang="en">by side opposed by previous nonaligned speaker</display>
     </period-type>
   </period-types>
   <prep-time length="15:00"/>
@@ -49,52 +49,52 @@
   </speech-types>
   <speeches>
     <speech type="team">
-      <name xml:lang="en">Opening Speaker for the Government</name>
       <name xml:lang="de">Eröffnende Regierung</name>
+      <name xml:lang="en">Opening Speaker for the Government</name>
     </speech>
     <speech type="team">
-      <name xml:lang="en">Opening Speaker for the Opposition</name>
       <name xml:lang="de">Eröffnende Opposition</name>
+      <name xml:lang="en">Opening Speaker for the Opposition</name>
     </speech>
     <speech type="team">
-      <name xml:lang="en">Extension Speaker for the Government</name>
       <name xml:lang="de">Ergänzende Regierung</name>
+      <name xml:lang="en">Extension Speaker for the Government</name>
     </speech>
     <speech type="team">
-      <name xml:lang="en">Extension Speaker for the Opposition</name>
       <name xml:lang="de">Ergänzende Opposition</name>
+      <name xml:lang="en">Extension Speaker for the Opposition</name>
     </speech>
     <speech type="nonaligned">
-      <name xml:lang="en">1st Nonaligned Speaker</name>
       <name xml:lang="de">1. Fraktionsfreier Redner</name>
+      <name xml:lang="en">1st Nonaligned Speaker</name>
     </speech>
     <speech type="reply">
-      <name xml:lang="en">1st Reply Speech</name>
       <name xml:lang="de">1. Zwischenrede der gegnerischen Seite</name>
+      <name xml:lang="en">1st Reply Speech</name>
     </speech>
     <speech type="nonaligned">
-      <name xml:lang="en">2nd Nonaligned Speaker</name>
       <name xml:lang="de">2. Fraktionsfreier Redner</name>
+      <name xml:lang="en">2nd Nonaligned Speaker</name>
     </speech>
     <speech type="reply">
-      <name xml:lang="en">2nd Reply Speech</name>
       <name xml:lang="de">2. Zwischenrede der gegnerischen Seite</name>
+      <name xml:lang="en">2nd Reply Speech</name>
     </speech>
     <speech type="nonaligned">
-      <name xml:lang="en">3rd Nonaligned Speaker</name>
       <name xml:lang="de">3. Fraktionsfreier Redner</name>
+      <name xml:lang="en">3rd Nonaligned Speaker</name>
     </speech>
     <speech type="reply">
-      <name xml:lang="en">3rd Reply Speech</name>
       <name xml:lang="de">3. Zwischenrede der gegnerischen Seite</name>
+      <name xml:lang="en">3rd Reply Speech</name>
     </speech>
     <speech type="team">
-      <name xml:lang="en">Closing Speaker for the Opposition</name>
       <name xml:lang="de">Schließende Opposition</name>
+      <name xml:lang="en">Closing Speaker for the Opposition</name>
     </speech>
     <speech type="team">
-      <name xml:lang="en">Closing Speaker for the Government</name>
       <name xml:lang="de">Schließende Regierung</name>
+      <name xml:lang="en">Closing Speaker for the Government</name>
     </speech>
   </speeches>
 </debate-format>
