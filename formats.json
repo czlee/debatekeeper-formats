@@ -76,8 +76,7 @@
     ],
     "used-ats": [
       "World Universities Debating Championship",
-      "European Universities Debating Championship",
-      "Pan-African Universities Debating Championships"
+      "Campeonato Mundial Universitario de Debate en Espa\u00f1ol"
     ],
     "description": "Four teams of two, 7-minute speeches, POIs allowed"
   },
@@ -250,15 +249,15 @@
     "url": "https://formats.debatekeeper.czlee.nz/formats/opd.xml",
     "version": 1,
     "regions": [
-      "Germany"
+      "Deutschland"
     ],
     "levels": [
-      "University"
+      "Universit\u00e4t"
     ],
     "used-ats": [
-      "German-Language Championship"
+      "Deutschsprachige Meisterschaften"
     ],
-    "description": "Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed"
+    "description": "Zwei Dreierteams (7 Minuten Reden) plus drei Fraktionsfreie Redner (3:30 Reden, 1 Minute Antwort), POIs erlaubt"
   },
   {
     "filename": "parisv.xml",
