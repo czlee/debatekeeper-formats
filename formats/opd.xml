@@ -1,17 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
-  <name>Open Parliamentary</name>
+  <name lang="en">Open Parliamentary</name>
+  <name lang="de">Offene Parlamentarische Debatte</name>
   <version>1</version>
-  <info>
+  <info lang="en">
     <region>Germany</region>
     <level>University</level>
     <used-at>German-Language Championship</used-at>
     <description>Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed</description>
   </info>
+  <info lang="de">
+    <region>Deutschland</region>
+    <level>Universität</level>
+    <used-at>Deutschsprachige Meisterschaften</used-at>
+    <description>Zwei Dreierteams (7 Minuten Reden) plus drei Fraktionsfreie Redner (3:30 Reden, 1 Minute Antwort), POIs erlaubt</description>
+  </info>
   <period-types>
     <period-type ref="opd.nonaligned-reply">
-      <name>OPD: Nonaligned reply</name>
-      <display>by side opposed by previous nonaligned speaker</display>
+      <name lang="en">OPD: Nonaligned reply</name>
+      <name lang="de">OPD: Antwort auf fraktionsfreien Redner</name>
+      <display lang="en">by side opposed by previous nonaligned speaker</display>
+      <display lang="de">bei der zum vorherigen fraktionsfreien Redner gegnerischen Seite</display>
     </period-type>
   </period-types>
   <prep-time length="15:00"/>
@@ -32,40 +41,52 @@
   </speech-types>
   <speeches>
     <speech type="team">
-      <name>Opening Speaker for the Government</name>
+      <name lang="en">Opening Speaker for the Government</name>
+      <name lang="de">Eröffnende Regierung</name>
     </speech>
     <speech type="team">
-      <name>Opening Speaker for the Opposition</name>
+      <name lang="en">Opening Speaker for the Opposition</name>
+      <name lang="de">Eröffnende Opposition</name>
     </speech>
     <speech type="team">
-      <name>Extension Speaker for the Government</name>
+      <name lang="en">Extension Speaker for the Government</name>
+      <name lang="de">Ergänzende Regierung</name>
     </speech>
     <speech type="team">
-      <name>Extension Speaker for the Opposition</name>
+      <name lang="en">Extension Speaker for the Opposition</name>
+      <name lang="de">Ergänzende Opposition</name>
     </speech>
     <speech type="nonaligned">
-      <name>1st Nonaligned Speaker</name>
+      <name lang="en">1st Nonaligned Speaker</name>
+      <name lang="de">1. Fraktionsfreier Redner</name>
     </speech>
     <speech type="reply">
-      <name>1st Reply Speech</name>
+      <name lang="en">1st Reply Speech</name>
+      <name lang="de">1. Zwischenrede der gegnerischen Seite</name>
     </speech>
     <speech type="nonaligned">
-      <name>2nd Nonaligned Speaker</name>
+      <name lang="en">2nd Nonaligned Speaker</name>
+      <name lang="de">2. Fraktionsfreier Redner</name>
     </speech>
     <speech type="reply">
-      <name>2nd Reply Speech</name>
+      <name lang="en">2nd Reply Speech</name>
+      <name lang="de">2. Zwischenrede der gegnerischen Seite</name>
     </speech>
     <speech type="nonaligned">
-      <name>3rd Nonaligned Speaker</name>
+      <name lang="en">3rd Nonaligned Speaker</name>
+      <name lang="de">3. Fraktionsfreier Redner</name>
     </speech>
     <speech type="reply">
-      <name>3rd Reply Speech</name>
+      <name lang="en">3rd Reply Speech</name>
+      <name lang="de">3. Zwischenrede der gegnerischen Seite</name>
     </speech>
     <speech type="team">
-      <name>Closing Speaker for the Opposition</name>
+      <name lang="en">Closing Speaker for the Opposition</name>
+      <name lang="de">Schließende Opposition</name>
     </speech>
     <speech type="team">
-      <name>Closing Speaker for the Government</name>
+      <name lang="en">Closing Speaker for the Government</name>
+      <name lang="de">Schließende Regierung</name>
     </speech>
   </speeches>
 </debate-format>
