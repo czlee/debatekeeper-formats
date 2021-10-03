@@ -67,8 +67,8 @@ def validate_multilingual_elements(filename, root):
     languages = [l.text for l in languages_element.findall("language")] if languages_element is not None else None
 
     errors = []
-    errors += validate_multilingual_element(filename, languages, root, "name")
-    errors += validate_multilingual_element(filename, languages, root, "info")
+    errors += validate_multilingual_element(filename, languages, root.getroot(), "name")
+    errors += validate_multilingual_element(filename, languages, root.getroot(), "info")
     for period_type in get_period_type_elements(root):
         errors += validate_multilingual_element(filename, languages, period_type, "name")
         errors += validate_multilingual_element(filename, languages, period_type, "display")
@@ -107,7 +107,7 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
 
         for language in languages:
             if not found[language]:
-                add_error(element.getroot(), f"No translation for {subelement} found for language {language!r}")
+                add_error(element, f"No translation for {subelement} found for language {language!r}")
     return errors
 
 
