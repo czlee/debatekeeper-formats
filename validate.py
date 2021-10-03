@@ -127,7 +127,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if not args.formats_dir.is_dir():
-        print(f"{formats_dir} is not a directory")
+        print(f"{args.formats_dir} is not a directory")
         exit(1)
 
     failures = []
