@@ -2,7 +2,7 @@
   {
     "filename": "apda.xml",
     "name": "American Parliamentary",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/apda.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/apda.xml",
     "version": 1,
     "regions": [
       "United States"
@@ -18,7 +18,7 @@
   {
     "filename": "asian.xml",
     "name": "Asian Parliamentary",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/asian.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asian.xml",
     "version": 1,
     "regions": [
       "Asia"
@@ -34,7 +34,7 @@
   {
     "filename": "aueasters.xml",
     "name": "Australian Easters",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/aueasters.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/aueasters.xml",
     "version": 1,
     "regions": [
       "Australia"
@@ -50,7 +50,7 @@
   {
     "filename": "australs.xml",
     "name": "Australs",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/australs.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/australs.xml",
     "version": 1,
     "regions": [
       "Australasia"
@@ -66,7 +66,7 @@
   {
     "filename": "bp.xml",
     "name": "British Parliamentary",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/bp.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/bp.xml",
     "version": 1,
     "regions": [
       "World"
@@ -83,7 +83,7 @@
   {
     "filename": "bp5.xml",
     "name": "British Parliamentary (5 minutes)",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/bp5.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/bp5.xml",
     "version": 1,
     "regions": [
       "UK"
@@ -100,7 +100,7 @@
   {
     "filename": "bp6.xml",
     "name": "British Parliamentary (6 minutes)",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/bp6.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/bp6.xml",
     "version": 1,
     "regions": [
       "Greece"
@@ -117,7 +117,7 @@
   {
     "filename": "canadian.xml",
     "name": "Canadian Parliamentary",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/canadian.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/canadian.xml",
     "version": 1,
     "regions": [
       "Canada"
@@ -133,7 +133,7 @@
   {
     "filename": "canadian-pmre-splitopp.xml",
     "name": "Canadian Parliamentary (PMRE split opp)",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-pmre-splitopp.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/canadian-pmre-splitopp.xml",
     "version": 1,
     "regions": [
       "Canada"
@@ -149,7 +149,7 @@
   {
     "filename": "canadian-pmre.xml",
     "name": "Canadian Parliamentary (PMRE)",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-pmre.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/canadian-pmre.xml",
     "version": 1,
     "regions": [
       "Canada"
@@ -165,7 +165,7 @@
   {
     "filename": "canadian-splitopp.xml",
     "name": "Canadian Parliamentary (split opp)",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/canadian-splitopp.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/canadian-splitopp.xml",
     "version": 1,
     "regions": [
       "Canada"
@@ -181,7 +181,7 @@
   {
     "filename": "greek.xml",
     "name": "Greek",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/greek.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/greek.xml",
     "version": 1,
     "regions": [
       "Greece"
@@ -198,7 +198,7 @@
   {
     "filename": "joyntscroll.xml",
     "name": "Joynt Scroll",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/joyntscroll.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/joyntscroll.xml",
     "version": 1,
     "regions": [
       "New Zealand"
@@ -214,7 +214,7 @@
   {
     "filename": "mspdp.xml",
     "name": "Middle School Public Debate Program",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/mspdp.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/mspdp.xml",
     "version": 1,
     "regions": [
       "United States"
@@ -230,7 +230,7 @@
   {
     "filename": "nzeasters.xml",
     "name": "New Zealand Easters",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/nzeasters.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nzeasters.xml",
     "version": 1,
     "regions": [
       "New Zealand"
@@ -246,7 +246,7 @@
   {
     "filename": "opd.xml",
     "name": "Open Parliamentary",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/opd.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/opd.xml",
     "version": 1,
     "regions": [
       "Deutschland"
@@ -262,7 +262,7 @@
   {
     "filename": "parisv.xml",
     "name": "Paris V",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/parisv.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/parisv.xml",
     "version": 1,
     "regions": [
       "France"
@@ -279,7 +279,7 @@
   {
     "filename": "test1.xml",
     "name": "Test format 1",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/test1.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/test1.xml",
     "version": 1,
     "regions": [
       "None"
@@ -295,7 +295,7 @@
   {
     "filename": "test2.xml",
     "name": "Test format 2",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/test2.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/test2.xml",
     "version": 1,
     "regions": [
       "None"
@@ -311,7 +311,7 @@
   {
     "filename": "thropy.xml",
     "name": "Thropy",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/thropy.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/thropy.xml",
     "version": 1,
     "regions": [
       "New Zealand"
@@ -327,7 +327,7 @@
   {
     "filename": "thropybreak.xml",
     "name": "Thropy break rounds",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/thropybreak.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/thropybreak.xml",
     "version": 1,
     "regions": [
       "New Zealand"
@@ -343,7 +343,7 @@
   {
     "filename": "worldschools.xml",
     "name": "World Schools",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/worldschools.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/worldschools.xml",
     "version": 1,
     "regions": [
       "World"

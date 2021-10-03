@@ -27,9 +27,9 @@ python update_list.py --add-errors
 How this is hosted
 ------------------
 
-It's just a GitHub Pages site that hosts the files in this repository directly, hosted at the domain name formats.debatekeeper.czlee.nz. Don't go there—there's nothing there for humans to see! Okay, if you really want: https://formats.debatekeeper.czlee.nz/formats.json. But it's literally just [the formats.json in this repository](https://github.com/czlee/debatekeeper-formats/blob/main/formats.json).
+It's just a GitHub Pages site that hosts the files in this repository directly, hosted at the domain name formats.debatekeeper.czlee.nz. Don't go there—there's nothing there for humans to see! Okay, if you really want: https://formats.debatekeeper.czlee.nz/v1/formats.json. But it's literally just [the formats.json in this repository](https://github.com/czlee/debatekeeper-formats/blob/main/v1/formats.json).
 
 Repository format
 -----------------
 
-If you'd like to start a new repository (_e.g._, because I've stopped updating this one), you just need to provide a JSON file of the same format as [formats.json](https://github.com/czlee/debatekeeper-formats/blob/main/formats.json). The JSON should provide URLs to the format files available for download. Note, however, that your format files must be hosted at the same domain name as the formats file—that is, you can't link to files on other sites. (Debatekeeper checks this, and refuses to request files that aren't on the same host as the JSON file listing the available formats. There's no requirement for it to be in a "formats" directory, though.)
+If you'd like to start a new repository (_e.g._, because I've stopped updating this one), you just need to provide a JSON file of the same format as [formats.json](https://github.com/czlee/debatekeeper-formats/blob/main/v1/formats.json). The JSON should provide URLs to the format files available for download. Note, however, that your format files must be hosted at the same domain name as the formats file—that is, you can't link to files on other sites. (Debatekeeper checks this, and refuses to request files that aren't on the same host as the JSON file listing the available formats. There's no requirement for it to be in a "formats" directory, though.)
