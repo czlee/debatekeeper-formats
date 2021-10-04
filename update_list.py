@@ -4,8 +4,9 @@ committed to the repository."""
 
 import argparse
 import json
-from lxml import etree
 from pathlib import Path
+
+from lxml import etree
 
 from validate import validate_file
 
@@ -17,7 +18,7 @@ parser.add_argument("--add-errors", action="store_true",
 args = parser.parse_args()
 
 if not args.formats_dir.is_dir():
-    print(f"{formats_dir} is not a directory")
+    print(f"{args.formats_dir} is not a directory")
     exit(1)
 
 formats = []
@@ -60,30 +61,33 @@ for path in args.formats_dir.iterdir():
 formats.sort(key=lambda f: next(iter(f['info'].values()))['name'])
 
 if args.add_errors:
-    formats.extend([{
-        "filename": "nosuchfile.xml",
-        "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nosuchfile.xml",
-        "version": 1,
-        "info": {"en": {
-            "name": "No such file",
-            "regions": ["Nowhere"],
-            "levels": ["None"],
-            "used-ats": ["Nowhere"],
-            "description": "Test entry to check what it does when the file doesn't exist"
-        }},
-      },
-      {
-        "filename": "wronghost.xml",
-        "url": "https://czlee.github.io/debatekeeper-formats/v1/formats/wronghost.xml",
-        "version": 1,
-        "info": {"en": {
-            "name": "Wrong host",
-            "regions": ["Nowhere"],
-            "levels": ["None"],
-            "used-ats": ["Nowhere"],
-            "description": "Test entry to check what it does when the host is different to what's expected"
-        }},
-    }])
+    formats.extend([
+        {
+            "filename": "nosuchfile.xml",
+            "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nosuchfile.xml",
+            "version": 1,
+            "info": {"en": {
+                "name": "No such file",
+                "regions": ["Nowhere"],
+                "levels": ["None"],
+                "used-ats": ["Nowhere"],
+                "description": "Test entry to check what it does when the file doesn't exist",
+            }},
+        },
+        {
+            "filename": "wronghost.xml",
+            "url": "https://czlee.github.io/debatekeeper-formats/v1/formats/wronghost.xml",
+            "version": 1,
+            "info": {"en": {
+                "name": "Wrong host",
+                "regions": ["Nowhere"],
+                "levels": ["None"],
+                "used-ats": ["Nowhere"],
+                "description": "Test entry to check what it does when the host is "
+                               "different to what's expected",
+            }},
+        },
+    ])
 
 top = {"formats": formats}
 

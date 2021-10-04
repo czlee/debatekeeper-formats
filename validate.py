@@ -2,10 +2,9 @@
 """Validates debate format XML files against the schema."""
 
 import argparse
-import json
-from collections import Counter
-from lxml import etree
 from pathlib import Path
+
+from lxml import etree
 
 
 validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
@@ -59,14 +58,19 @@ def validate_cross_references(filename: str, root: etree.ElementTree):
 def validate_attribute_xref(filename: str, element: etree.Element, attribute: str, allowed_values: list):
     value = element.get(attribute)
     if value not in allowed_values:
-        return [f"Cross-ref error in {filename}, line {element.sourceline}: unknown {attribute} {value!r}"]
+        return [f"Cross-ref error in {filename}, line {element.sourceline}: "
+                f"unknown {attribute} {value!r}"]
     return []
 
 
 def validate_multilingual_elements(filename, root):
 
     languages_element = root.find("languages")
-    languages = [l.text for l in languages_element.findall("language")] if languages_element is not None else None
+
+    if languages_element is not None:
+        languages = [e.text for e in languages_element.findall("language")]
+    else:
+        languages = None
 
     errors = []
     errors += validate_multilingual_element(filename, languages, root.getroot(), "name")
@@ -79,7 +83,8 @@ def validate_multilingual_elements(filename, root):
     return errors
 
 
-def validate_multilingual_element(filename: str, languages: list, element: etree.Element, subelement: str):
+def validate_multilingual_element(filename: str, languages: list,
+                                  element: etree.Element, subelement: str):
     """Checks that the element given either has exactly one of the subelement, or every subelement
     has a unique language specifier."""
     errors = []
@@ -90,10 +95,12 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
 
     if languages is None:
         if len(children) > 1:
-            add_error(children[1], f"Multiple {subelement} elements found, but no languages declared in file")
+            add_error(children[1],
+                f"Multiple {subelement} elements found, but no languages declared in file")
         for child in children:
             if child.get(LANG_ATTR):
-                add_error(child, f"Attribute 'lang' found in {subelement}, but no languages declared in file")
+                add_error(child,
+                    f"Attribute 'lang' found in {subelement}, but no languages declared in file")
 
     else:
         found = dict.fromkeys(languages, False)
