@@ -22,29 +22,36 @@ if not args.formats_dir.is_dir():
 
 formats = []
 
-for child in args.formats_dir.iterdir():
-    if child.suffix != ".xml":
-        print(f"skipping {child}")
+LANG_ATTR = "{http://www.w3.org/XML/1998/namespace}lang"
+
+for path in args.formats_dir.iterdir():
+    if path.suffix != ".xml":
+        print(f"skipping {path}")
         continue
 
-    errors = validate_file(child)
+    errors = validate_file(path)
     if errors:
         print("\n".join(errors))
 
-    child_root = etree.parse(open(child))
+    root = etree.parse(open(path))
 
-    infos = child_root.findall("info")
-    formats.append({
-        "filename": child.name,
-        "url": f"https://formats.debatekeeper.czlee.nz/v1/formats/{child.name}",
-        "version": int(child_root.find("version").text),
-        "info": {info.get("{http://www.w3.org/XML/1998/namespace}lang", ""): {
-            "name": child_root.find("name").text,
+    infos = {}
+    for e in root.findall("name"):
+        infos[e.get(LANG_ATTR, "")] = {"name": e.text}
+
+    for info in root.findall("info"):
+        infos[info.get(LANG_ATTR, "")].update({
             "regions": [e.text for e in info.findall("region")],
             "levels": [e.text for e in info.findall("level")],
             "used-ats": [e.text for e in info.findall("used-at")],
-            "description": info.find("description").text,
-        } for info in infos}
+            "description": info.findtext("description"),
+        })
+
+    formats.append({
+        "filename": path.name,
+        "url": f"https://formats.debatekeeper.czlee.nz/v1/formats/{path.name}",
+        "version": int(root.findtext("version")),
+        "info": infos,
     })
 
 formats.sort(key=lambda f: next(iter(f['info'].values()))['name'])
@@ -52,7 +59,7 @@ formats.sort(key=lambda f: next(iter(f['info'].values()))['name'])
 if args.add_errors:
     formats.extend([{
         "filename": "nosuchfile.xml",
-        "url": "https://formats.debatekeeper.czlee.nz/formats/nosuchfile.xml",
+        "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nosuchfile.xml",
         "version": 1,
         "info": {"en": {
             "name": "No such file",
@@ -64,7 +71,7 @@ if args.add_errors:
       },
       {
         "filename": "wronghost.xml",
-        "url": "https://czlee.github.io/debatekeeper-formats/formats/wronghost.xml",
+        "url": "https://czlee.github.io/debatekeeper-formats/v1/formats/wronghost.xml",
         "version": 1,
         "info": {"en": {
             "name": "Wrong host",

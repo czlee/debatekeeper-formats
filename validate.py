@@ -10,6 +10,8 @@ from pathlib import Path
 
 validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
 
+LANG_ATTR = "{http://www.w3.org/XML/1998/namespace}lang"
+
 
 def validate_file(path):
     """Validates the file given by the path `path`, and returns a list of syntax, validation or
@@ -82,7 +84,6 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
     has a unique language specifier."""
     errors = []
     children = element.findall(subelement)
-    LANGUAGE_ATTRIBUTE = "{http://www.w3.org/XML/1998/namespace}lang"
 
     def add_error(el, message):
         errors.append(f"Multilingual error in {filename}, line {el.sourceline}: {message}")
@@ -91,13 +92,13 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
         if len(children) > 1:
             add_error(children[1], f"Multiple {subelement} elements found, but no languages declared in file")
         for child in children:
-            if child.get(LANGUAGE_ATTRIBUTE):
+            if child.get(LANG_ATTR):
                 add_error(child, f"Attribute 'lang' found in {subelement}, but no languages declared in file")
 
     else:
         found = dict.fromkeys(languages, False)
         for child in children:
-            language = child.get(LANGUAGE_ATTRIBUTE)
+            language = child.get(LANG_ATTR)
             if language is None:
                 add_error(child, f"Language not specified with multiple {subelement} elements")
             elif language not in languages:

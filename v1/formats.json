@@ -99,7 +99,7 @@
         "description": "Four teams of two, 7-minute speeches, POIs allowed"
       },
       "es": {
-        "name": "British Parliamentary",
+        "name": "Parlamentario Brit\u00e1nico",
         "regions": [
           "Mundo"
         ],
@@ -322,19 +322,6 @@
     "url": "https://formats.debatekeeper.czlee.nz/v1/formats/opd.xml",
     "version": 1,
     "info": {
-      "de": {
-        "name": "Open Parliamentary",
-        "regions": [
-          "Deutschland"
-        ],
-        "levels": [
-          "Universit\u00e4t"
-        ],
-        "used-ats": [
-          "Deutschsprachige Meisterschaften"
-        ],
-        "description": "Zwei Dreierteams (7 Minuten Reden) plus drei Fraktionsfreie Redner (3:30 Reden, 1 Minute Antwort), POIs erlaubt"
-      },
       "en": {
         "name": "Open Parliamentary",
         "regions": [
@@ -347,6 +334,19 @@
           "German-Language Championship"
         ],
         "description": "Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed"
+      },
+      "de": {
+        "name": "Offene Parlamentarische Debatte",
+        "regions": [
+          "Deutschland"
+        ],
+        "levels": [
+          "Universit\u00e4t"
+        ],
+        "used-ats": [
+          "Deutschsprachige Meisterschaften"
+        ],
+        "description": "Zwei Dreierteams (7 Minuten Reden) plus drei Fraktionsfreie Redner (3:30 Reden, 1 Minute Antwort), POIs erlaubt"
       }
     }
   },
@@ -468,46 +468,6 @@
           "World Schools Debating Championships"
         ],
         "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
-      }
-    }
-  },
-  {
-    "filename": "nosuchfile.xml",
-    "url": "https://formats.debatekeeper.czlee.nz/formats/nosuchfile.xml",
-    "version": 1,
-    "info": {
-      "en": {
-        "name": "No such file",
-        "regions": [
-          "Nowhere"
-        ],
-        "levels": [
-          "None"
-        ],
-        "used-ats": [
-          "Nowhere"
-        ],
-        "description": "Test entry to check what it does when the file doesn't exist"
-      }
-    }
-  },
-  {
-    "filename": "wronghost.xml",
-    "url": "https://czlee.github.io/debatekeeper-formats/formats/wronghost.xml",
-    "version": 1,
-    "info": {
-      "en": {
-        "name": "Wrong host",
-        "regions": [
-          "Nowhere"
-        ],
-        "levels": [
-          "None"
-        ],
-        "used-ats": [
-          "Nowhere"
-        ],
-        "description": "Test entry to check what it does when the host is different to what's expected"
       }
     }
   }
