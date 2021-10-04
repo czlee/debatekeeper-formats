@@ -38,7 +38,7 @@ for child in args.formats_dir.iterdir():
         "filename": child.name,
         "url": f"https://formats.debatekeeper.czlee.nz/v1/formats/{child.name}",
         "version": int(child_root.find("version").text),
-        "info": {info.get("xml:lang", ""): {
+        "info": {info.get("{http://www.w3.org/XML/1998/namespace}lang", ""): {
             "name": child_root.find("name").text,
             "regions": [e.text for e in info.findall("region")],
             "levels": [e.text for e in info.findall("level")],
