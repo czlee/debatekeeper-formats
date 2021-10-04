@@ -33,40 +33,46 @@ for child in args.formats_dir.iterdir():
 
     child_root = etree.parse(open(child))
 
-    info = child_root.find("info")
+    infos = child_root.findall("info")
     formats.append({
         "filename": child.name,
-        "name": child_root.find("name").text,
         "url": f"https://formats.debatekeeper.czlee.nz/v1/formats/{child.name}",
         "version": int(child_root.find("version").text),
-        "regions": [e.text for e in info.findall("region")],
-        "levels": [e.text for e in info.findall("level")],
-        "used-ats": [e.text for e in info.findall("used-at")],
-        "description": info.find("description").text,
+        "info": {info.get("{http://www.w3.org/XML/1998/namespace}lang", ""): {
+            "name": child_root.find("name").text,
+            "regions": [e.text for e in info.findall("region")],
+            "levels": [e.text for e in info.findall("level")],
+            "used-ats": [e.text for e in info.findall("used-at")],
+            "description": info.find("description").text,
+        } for info in infos}
     })
 
-formats.sort(key=lambda f: f['name'])
+formats.sort(key=lambda f: next(iter(f['info'].values()))['name'])
 
 if args.add_errors:
     formats.extend([{
         "filename": "nosuchfile.xml",
-        "name": "No such file",
         "url": "https://formats.debatekeeper.czlee.nz/formats/nosuchfile.xml",
         "version": 1,
-        "regions": ["Nowhere"],
-        "levels": ["None"],
-        "used-ats": ["Nowhere"],
-        "description": "Test entry to check what it does when the file doesn't exist"
+        "info": {"en": {
+            "name": "No such file",
+            "regions": ["Nowhere"],
+            "levels": ["None"],
+            "used-ats": ["Nowhere"],
+            "description": "Test entry to check what it does when the file doesn't exist"
+        }},
       },
       {
         "filename": "wronghost.xml",
-        "name": "Wrong host",
         "url": "https://czlee.github.io/debatekeeper-formats/formats/wronghost.xml",
         "version": 1,
-        "regions": ["Nowhere"],
-        "levels": ["None"],
-        "used-ats": ["Nowhere"],
-        "description": "Test entry to check what it does when the host is different to what's expected"
+        "info": {"en": {
+            "name": "Wrong host",
+            "regions": ["Nowhere"],
+            "levels": ["None"],
+            "used-ats": ["Nowhere"],
+            "description": "Test entry to check what it does when the host is different to what's expected"
+        }},
     }])
 
 with open(args.output_file, "w") as fp:

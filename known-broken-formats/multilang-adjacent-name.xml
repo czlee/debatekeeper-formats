@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
   <name xml:lang="en">British Parliamentary</name>
-  <name xml:lang="es">Parlamentario Británico</name>
   <version>1</version>
   <languages>
     <language>en</language>
     <language>es</language>
   </languages>
+  <!-- Problem: we have multiple <name> elements, but they're not adjacent -->
+  <name xml:lang="es">Parlamentario Británico</name>
   <info xml:lang="en">
     <region>World</region>
     <level>University</level>

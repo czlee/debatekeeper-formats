@@ -5,7 +5,7 @@
   <version>1</version>
   <languages>
     <language>en</language>
-    <language>es</language>
+    <!-- Problem: xml:lang='es' is used below, but missing here -->
   </languages>
   <info xml:lang="en">
     <region>World</region>

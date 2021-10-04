@@ -3,10 +3,7 @@
   <name xml:lang="en">British Parliamentary</name>
   <name xml:lang="es">Parlamentario Británico</name>
   <version>1</version>
-  <languages>
-    <language>en</language>
-    <language>es</language>
-  </languages>
+  <!-- Problem: <languages> missing -->
   <info xml:lang="en">
     <region>World</region>
     <level>University</level>
