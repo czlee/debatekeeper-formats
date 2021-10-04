@@ -85,5 +85,7 @@ if args.add_errors:
         }},
     }])
 
+top = {"formats": formats}
+
 with open(args.output_file, "w") as fp:
-    json.dump(formats, fp, indent=2)
+    json.dump(top, fp, indent=2)
