@@ -84,7 +84,21 @@
     "url": "https://formats.debatekeeper.czlee.nz/v1/formats/bp.xml",
     "version": 1,
     "info": {
-      "": {
+      "en": {
+        "name": "British Parliamentary",
+        "regions": [
+          "World"
+        ],
+        "levels": [
+          "University"
+        ],
+        "used-ats": [
+          "World Universities Debating Championship",
+          "Campeonato Mundial Universitario de Debate en Espa\u00f1ol"
+        ],
+        "description": "Four teams of two, 7-minute speeches, POIs allowed"
+      },
+      "es": {
         "name": "British Parliamentary",
         "regions": [
           "Mundo"
@@ -308,7 +322,20 @@
     "url": "https://formats.debatekeeper.czlee.nz/v1/formats/opd.xml",
     "version": 1,
     "info": {
-      "": {
+      "de": {
+        "name": "Open Parliamentary",
+        "regions": [
+          "Deutschland"
+        ],
+        "levels": [
+          "Universit\u00e4t"
+        ],
+        "used-ats": [
+          "Deutschsprachige Meisterschaften"
+        ],
+        "description": "Zwei Dreierteams (7 Minuten Reden) plus drei Fraktionsfreie Redner (3:30 Reden, 1 Minute Antwort), POIs erlaubt"
+      },
+      "en": {
         "name": "Open Parliamentary",
         "regions": [
           "Germany"
