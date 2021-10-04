@@ -322,19 +322,6 @@
     "url": "https://formats.debatekeeper.czlee.nz/v1/formats/opd.xml",
     "version": 1,
     "info": {
-      "en": {
-        "name": "Open Parliamentary",
-        "regions": [
-          "Germany"
-        ],
-        "levels": [
-          "University"
-        ],
-        "used-ats": [
-          "German-Language Championship"
-        ],
-        "description": "Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed"
-      },
       "de": {
         "name": "Offene Parlamentarische Debatte",
         "regions": [
@@ -347,6 +334,19 @@
           "Deutschsprachige Meisterschaften"
         ],
         "description": "Zwei Dreierteams (7 Minuten Reden) plus drei Fraktionsfreie Redner (3:30 Reden, 1 Minute Antwort), POIs erlaubt"
+      },
+      "en": {
+        "name": "Open Parliamentary",
+        "regions": [
+          "Germany"
+        ],
+        "levels": [
+          "University"
+        ],
+        "used-ats": [
+          "German-Language Championship"
+        ],
+        "description": "Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed"
       }
     }
   },

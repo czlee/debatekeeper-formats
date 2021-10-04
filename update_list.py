@@ -35,9 +35,12 @@ for path in args.formats_dir.iterdir():
 
     root = etree.parse(open(path))
 
-    infos = {}
+    # respect order of declared languages if there are any...
+    infos = {e.text: {} for e in root.findall("./languages/language")}
+
     for e in root.findall("name"):
-        infos[e.get(LANG_ATTR, "")] = {"name": e.text}
+        # ...but declared languages aren't always mandatory, so fall back to name order
+        infos.setdefault(e.get(LANG_ATTR, ""), {}).update({"name": e.text})
 
     for info in root.findall("info"):
         infos[info.get(LANG_ATTR, "")].update({
