@@ -470,5 +470,45 @@
         "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
       }
     }
+  },
+  {
+    "filename": "nosuchfile.xml",
+    "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nosuchfile.xml",
+    "version": 1,
+    "info": {
+      "en": {
+        "name": "No such file",
+        "regions": [
+          "Nowhere"
+        ],
+        "levels": [
+          "None"
+        ],
+        "used-ats": [
+          "Nowhere"
+        ],
+        "description": "Test entry to check what it does when the file doesn't exist"
+      }
+    }
+  },
+  {
+    "filename": "wronghost.xml",
+    "url": "https://czlee.github.io/debatekeeper-formats/v1/formats/wronghost.xml",
+    "version": 1,
+    "info": {
+      "en": {
+        "name": "Wrong host",
+        "regions": [
+          "Nowhere"
+        ],
+        "levels": [
+          "None"
+        ],
+        "used-ats": [
+          "Nowhere"
+        ],
+        "description": "Test entry to check what it does when the host is different to what's expected"
+      }
+    }
   }
 ]
