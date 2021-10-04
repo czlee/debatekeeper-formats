@@ -13,7 +13,7 @@ First, write your XML file [according to these specifications](https://github.co
 
 Then, to submit your file for inclusion in this repository:
 1. **Fork** this repository (click the button in the top-right of this page).
-2. **Add** your file to the "formats" directory.
+2. **Add** your file to the "[v1/formats](https://github.com/czlee/debatekeeper-formats/tree/main/v1/formats)" directory.
 3. Submit a **pull request** from your fork to this repository.
 
 ### Note on formats.json
