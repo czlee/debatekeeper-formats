@@ -74,6 +74,8 @@ def validate_multilingual_elements(filename, root):
 
     errors = []
     errors += validate_multilingual_element(filename, languages, root.getroot(), "name")
+    errors += validate_multilingual_element(filename, languages, root.getroot(), "short-name",
+                                            optional=True)
     errors += validate_multilingual_element(filename, languages, root.getroot(), "info")
     for period_type in get_period_type_elements(root):
         errors += validate_multilingual_element(filename, languages, period_type, "name")
@@ -83,12 +85,15 @@ def validate_multilingual_elements(filename, root):
     return errors
 
 
-def validate_multilingual_element(filename: str, languages: list,
-                                  element: etree.Element, subelement: str):
+def validate_multilingual_element(filename: str, languages: list, element: etree.Element,
+                                  subelement: str, optional=False):
     """Checks that the element given either has exactly one of the subelement, or every subelement
     has a unique language specifier."""
     errors = []
     children = element.findall(subelement)
+
+    if len(children) == 0 and optional:
+        return errors
 
     def add_error(el, message):
         errors.append(f"Multilingual error in {filename}, line {el.sourceline}: {message}")

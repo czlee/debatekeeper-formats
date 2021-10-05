@@ -2,6 +2,8 @@
 <debate-format schema-version="2.2">
   <name xml:lang="en">Open Parliamentary</name>
   <name xml:lang="de">Offene Parlamentarische Debatte</name>
+  <short-name xml:lang="en">Open Parliamentary</short-name>
+  <short-name xml:lang="de">OPD</short-name>
 
   <version>1</version>
 

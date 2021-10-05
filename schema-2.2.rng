@@ -13,11 +13,12 @@
 
             <ref name="element-name"/>
 
-            <optional>
+            <zeroOrMore>
                 <element name="short-name">
+                    <ref name="attribute-language"/>
                     <data type="string"/>
                 </element>
-            </optional>
+            </zeroOrMore>
 
             <element name="version">
                 <data type="integer"/>
