@@ -473,12 +473,32 @@
       }
     },
     {
+      "filename": "test-version-update.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/test-version-update.xml",
+      "version": 2,
+      "info": {
+        "": {
+          "name": "ZZ Test - Version update",
+          "regions": [
+            "Nowhere"
+          ],
+          "levels": [
+            "None"
+          ],
+          "used-ats": [
+            "Nowhere"
+          ],
+          "description": "Test entry to check that the \"update available\" mechanism works. Before downloading this file, please import a \"version 1\" of this file."
+        }
+      }
+    },
+    {
       "filename": "nosuchfile.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nosuchfile.xml",
       "version": 1,
       "info": {
         "en": {
-          "name": "No such file",
+          "name": "ZZ Test - No such file",
           "regions": [
             "Nowhere"
           ],
@@ -498,7 +518,7 @@
       "version": 1,
       "info": {
         "en": {
-          "name": "Wrong host",
+          "name": "ZZ Test - Wrong host",
           "regions": [
             "Nowhere"
           ],

@@ -67,7 +67,7 @@ if args.add_errors:
             "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nosuchfile.xml",
             "version": 1,
             "info": {"en": {
-                "name": "No such file",
+                "name": "ZZ Test - No such file",
                 "regions": ["Nowhere"],
                 "levels": ["None"],
                 "used-ats": ["Nowhere"],
@@ -79,7 +79,7 @@ if args.add_errors:
             "url": "https://czlee.github.io/debatekeeper-formats/v1/formats/wronghost.xml",
             "version": 1,
             "info": {"en": {
-                "name": "Wrong host",
+                "name": "ZZ Test - Wrong host",
                 "regions": ["Nowhere"],
                 "levels": ["None"],
                 "used-ats": ["Nowhere"],
