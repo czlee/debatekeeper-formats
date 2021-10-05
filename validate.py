@@ -80,6 +80,8 @@ def validate_multilingual_elements(filename, root):
     for period_type in get_period_type_elements(root):
         errors += validate_multilingual_element(filename, languages, period_type, "name")
         errors += validate_multilingual_element(filename, languages, period_type, "display")
+    for speech_type in root.find("speech-types").findall("speech-type"):
+        errors += validate_multilingual_element(filename, languages, speech_type, "name", optional=True)
     for speech in root.find("speeches").findall("speech"):
         errors += validate_multilingual_element(filename, languages, speech, "name")
     return errors
