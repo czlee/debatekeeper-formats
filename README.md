@@ -16,6 +16,9 @@ Then, to submit your file for inclusion in this repository:
 2. **Add** your file to the "[v1/formats](https://github.com/czlee/debatekeeper-formats/tree/main/v1/formats)" directory.
 3. Submit a **pull request** from your fork to this repository.
 
+### ⚠️ Note on licensing
+I'm planning to apply the [MIT License](https://choosealicense.com/licenses/mit/) to this repository, but it doesn't apply yet. I'm currently reaching out to all existing contributors to check if they're happy to relicense their contributions under the MIT License. **Submitters of new pull requests should assume that the MIT License will apply.**
+
 ### Note on formats.json
 A GitHub Action automatically runs after every commit to update the formats.json file (thanks to [Frank Richter](https://github.com/res2k) in [#3](https://github.com/czlee/debatekeeper-formats/pull/3)!), so you shouldn't need to do this. However, you can run the `update_list.py` script locally to see what it'll do if you like.
 
