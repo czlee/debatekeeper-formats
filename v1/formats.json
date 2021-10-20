@@ -83,7 +83,7 @@
     {
       "filename": "bp.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/bp.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "en": {
           "name": "British Parliamentary",
@@ -111,19 +111,19 @@
             "World Universities Debating Championship",
             "Campeonato Mundial Universitario de Debate en Espa\u00f1ol"
           ],
-          "description": "Cuatro equipos de dos oradores, discursos de 7 minutos, POIs permitidos"
+          "description": "Cuatro equipos de dos oradores, discursos de 7 minutos, los PdI permitidos"
         }
       }
     },
     {
       "filename": "bp5.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/bp5.xml",
-      "version": 1,
+      "version": 2,
       "info": {
-        "": {
+        "en": {
           "name": "British Parliamentary (5 minutes)",
           "regions": [
-            "UK"
+            "United Kingdom"
           ],
           "levels": [
             "University"
@@ -133,15 +133,29 @@
             "Welsh Novices"
           ],
           "description": "Four teams of two, 5-minute speeches, POIs allowed"
+        },
+        "es": {
+          "name": "Parlamentario Brit\u00e1nico (5 minutos)",
+          "regions": [
+            "Reino Unido"
+          ],
+          "levels": [
+            "Universidad"
+          ],
+          "used-ats": [
+            "Varios torneos en el Reino Unido",
+            "Welsh Novices"
+          ],
+          "description": "Cuatro equipos de dos oradores, discursos de 5 minutos, los PdI permitidos"
         }
       }
     },
     {
       "filename": "bp6.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/bp6.xml",
-      "version": 1,
+      "version": 2,
       "info": {
-        "": {
+        "en": {
           "name": "British Parliamentary (6 minutes)",
           "regions": [
             "Greece"
@@ -154,6 +168,20 @@
             "Deree Invitational Tournament"
           ],
           "description": "Four teams of two, 6 minute speeches, POIs allowed"
+        },
+        "es": {
+          "name": "Parlamentario Brit\u00e1nico (6 minutos)",
+          "regions": [
+            "Grecia"
+          ],
+          "levels": [
+            "Universidad"
+          ],
+          "used-ats": [
+            "Panhellenic Debating Championship",
+            "Deree Invitational Tournament"
+          ],
+          "description": "Cuatro equipos de dos oradores, discursos de 6 minutos, los PdI permitidos"
         }
       }
     },

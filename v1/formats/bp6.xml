@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debate-format schema-version="2.2">
-  <name>British Parliamentary (6 minutes)</name>
-  <short-name>BP (6 minutes)</short-name>
-  <version>1</version>
-  <info>
+  <name xml:lang="en">British Parliamentary (6 minutes)</name>
+  <name xml:lang="es">Parlamentario Británico (6 minutos)</name>
+  <short-name xml:lang="en">BP (6 minutes)</short-name>
+  <short-name xml:lang="es">BP (6 minutos)</short-name>
+  <version>2</version>
+  <languages>
+    <language>en</language>
+    <language>es</language>
+  </languages>
+  <info xml:lang="en">
     <region>Greece</region>
     <level>University</level>
     <used-at>Panhellenic Debating Championship</used-at>
     <used-at>Deree Invitational Tournament</used-at>
     <description>Four teams of two, 6 minute speeches, POIs allowed</description>
   </info>
+  <info xml:lang="es">
+    <region>Grecia</region>
+    <level>Universidad</level>
+    <used-at>Panhellenic Debating Championship</used-at>
+    <used-at>Deree Invitational Tournament</used-at>
+    <description>Cuatro equipos de dos oradores, discursos de 6 minutos, los PdI permitidos</description>
+  </info>
   <prep-time length="15:00" />
   <speech-types>
     <speech-type ref="all" length="6:00" first-period="normal">
+      <name xml:lang="en">all</name>
+      <name xml:lang="es">todos</name>
       <bell time="1:00" number="1" next-period="pois-allowed" />
       <bell time="5:00" number="1" next-period="warning" />
       <bell time="finish" number="2" next-period="overtime" />
@@ -20,28 +35,36 @@
   </speech-types>
   <speeches>
     <speech type="all">
-      <name>Prime Minister</name>
+      <name xml:lang="en">Prime Minister</name>
+      <name xml:lang="es">Primer ministro</name>
     </speech>
     <speech type="all">
-      <name>Leader of the Opposition</name>
+      <name xml:lang="en">Leader of the Opposition</name>
+      <name xml:lang="es">Líder de la oposoción</name>
     </speech>
     <speech type="all">
-      <name>Deputy Prime Minister</name>
+      <name xml:lang="en">Deputy Prime Minister</name>
+      <name xml:lang="es">Viceprimer ministro</name>
     </speech>
     <speech type="all">
-      <name>Deputy Leader of the Opposition</name>
+      <name xml:lang="en">Deputy Leader of the Opposition</name>
+      <name xml:lang="es">Vicelíder de la oposoción</name>
     </speech>
     <speech type="all">
-      <name>Member for the Government</name>
+      <name xml:lang="en">Member for the Government</name>
+      <name xml:lang="es">Miembro del gobierno</name>
     </speech>
     <speech type="all">
-      <name>Member for the Opposition</name>
+      <name xml:lang="en">Member for the Opposition</name>
+      <name xml:lang="es">Miembro de la oposoción</name>
     </speech>
     <speech type="all">
-      <name>Government Whip</name>
+      <name xml:lang="en">Government Whip</name>
+      <name xml:lang="es">Látigo del gobierno</name>
     </speech>
     <speech type="all">
-      <name>Opposition Whip</name>
+      <name xml:lang="en">Opposition Whip</name>
+      <name xml:lang="es">Látigo de la oposoción</name>
     </speech>
   </speeches>
 </debate-format>
