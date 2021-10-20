@@ -1,38 +1,52 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+# Workflow to check files for syntax and regenerate formats.json
+
+# Based on the Python workflow template:
+# https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
 name: Validate XML and update list
 
 on:
   push:
-    branches: [ '**' ]
+    branches:
+      # just run on push to main, to avoid duplicate runs from PRs
+      - main
   pull_request:
-    branches: [ '**' ]
+    branches:
+      - '**'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+      # Need to specify head_ref explicitly for pull requests, see
+      # https://github.com/stefanzweifel/git-auto-commit-action#checkout-the-correct-branch
+      with:
+        ref: ${{ github.head_ref }}
+
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
+
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install lxml pre-commit
+
     - name: Run lint checks
       run: |
         pre-commit run --all-files
+
     - name: Validate XML files against schema
       run: |
         python validate.py
+
     - name: Update formats.json
       run: |
         python update_list.py --add-errors
+
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Regenerated formats.json
