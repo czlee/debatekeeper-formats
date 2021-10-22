@@ -401,46 +401,6 @@
       }
     },
     {
-      "filename": "test1.xml",
-      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/test1.xml",
-      "version": 1,
-      "info": {
-        "": {
-          "name": "Test format 1",
-          "regions": [
-            "None"
-          ],
-          "levels": [
-            "None"
-          ],
-          "used-ats": [
-            "Nowhere"
-          ],
-          "description": "Use this format to try out this app without waiting ages for bells"
-        }
-      }
-    },
-    {
-      "filename": "test2.xml",
-      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/test2.xml",
-      "version": 1,
-      "info": {
-        "": {
-          "name": "Test format 2",
-          "regions": [
-            "None"
-          ],
-          "levels": [
-            "None"
-          ],
-          "used-ats": [
-            "Nowhere"
-          ],
-          "description": "Use this format to try out this app without waiting ages for bells"
-        }
-      }
-    },
-    {
       "filename": "thropy.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/thropy.xml",
       "version": 1,
@@ -497,66 +457,6 @@
             "World Schools Debating Championships"
           ],
           "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
-        }
-      }
-    },
-    {
-      "filename": "test-version-update.xml",
-      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/test-version-update.xml",
-      "version": 2,
-      "info": {
-        "": {
-          "name": "ZZ Test - Version update",
-          "regions": [
-            "Nowhere"
-          ],
-          "levels": [
-            "None"
-          ],
-          "used-ats": [
-            "Nowhere"
-          ],
-          "description": "Test entry to check that the \"update available\" mechanism works. Before downloading this file, please import a \"version 1\" of this file."
-        }
-      }
-    },
-    {
-      "filename": "nosuchfile.xml",
-      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nosuchfile.xml",
-      "version": 1,
-      "info": {
-        "en": {
-          "name": "ZZ Test - No such file",
-          "regions": [
-            "Nowhere"
-          ],
-          "levels": [
-            "None"
-          ],
-          "used-ats": [
-            "Nowhere"
-          ],
-          "description": "Test entry to check what it does when the file doesn't exist"
-        }
-      }
-    },
-    {
-      "filename": "wronghost.xml",
-      "url": "https://czlee.github.io/debatekeeper-formats/v1/formats/wronghost.xml",
-      "version": 1,
-      "info": {
-        "en": {
-          "name": "ZZ Test - Wrong host",
-          "regions": [
-            "Nowhere"
-          ],
-          "levels": [
-            "None"
-          ],
-          "used-ats": [
-            "Nowhere"
-          ],
-          "description": "Test entry to check what it does when the host is different to what's expected"
         }
       }
     }
