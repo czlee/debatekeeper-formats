@@ -1,7 +1,7 @@
 Official Debatekeeper debate formats repository
 ===============================================
 
-This repository contains the format files that will be available for download within Debatekeeper starting in version 1.3 (yet to be released).
+This repository contains the format files that will be available for download within Debatekeeper starting in version 1.3.
 
 My motivation for moving this repository online is to make it much faster to make new formats available. Formats used to be shipped with the app, so new formats needed to wait for an app update. As I write this in 2021, there hasn't a Debatekeeper update since 2016, and there are 6 pending pull requests with new formats. One would be forgiven for thinking they'll never happen! I don't envisage updating Debatekeeper any more often in the future, so hopefully this online repository will make it simpler to make new and updated format files available.
 
@@ -23,11 +23,6 @@ Then, to submit your file for inclusion in this repository:
 
 ### Note on formats.json
 A GitHub Action is configured to automatically update the formats.json file ([thanks to Frank Richter](https://github.com/czlee/debatekeeper-formats/pull/3)!), so you shouldn't need to. However, you can run the `update_list.py` script locally if you like.
-
-Currently, until the Debatekeeper version 1.3 finishes beta testing, formats.json includes a couple of "bad" entries to allow testing of error conditions in the app, so to include those:
-```
-python update_list.py --add-errors
-```
 
 How this is hosted
 ------------------
