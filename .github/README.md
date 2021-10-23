@@ -1,7 +1,13 @@
+<div align="center">
+
+<img width="120" src="https://raw.githubusercontent.com/czlee/debatekeeper/master/misc/icon/overall.svg" />
+
 Official Debatekeeper debate formats repository
 ===============================================
 
-This repository contains the format files that will be available for download within Debatekeeper starting in version 1.3.
+</div>
+
+This repository contains the format files that are available for download within Debatekeeper (starting in version 1.3).
 
 My motivation for moving this repository online is to make it much faster to make new formats available. Formats used to be shipped with the app, so new formats needed to wait for an app update. As I write this in 2021, there hasn't a Debatekeeper update since 2016, and there are 6 pending pull requests with new formats. One would be forgiven for thinking they'll never happen! I don't envisage updating Debatekeeper any more often in the future, so hopefully this online repository will make it simpler to make new and updated format files available.
 
