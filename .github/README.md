@@ -7,9 +7,9 @@ Official Debatekeeper debate formats repository
 
 </div>
 
-This repository contains the format files that are available for download within Debatekeeper (starting in version 1.3).
+This repository contains the format files that are available for download within Debatekeeper, starting in version 1.3 (October 2021).
 
-My motivation for moving this repository online is to make it much faster to make new formats available. Formats used to be shipped with the app, so new formats needed to wait for an app update. As I write this in 2021, there hasn't a Debatekeeper update since 2016, and there are 6 pending pull requests with new formats. One would be forgiven for thinking they'll never happen! I don't envisage updating Debatekeeper any more often in the future, so hopefully this online repository will make it simpler to make new and updated format files available.
+My motivation for moving this repository online is to make it much faster to make new formats available. Formats used to be shipped with the app, so new formats needed to wait for an app update. As I write this in 2021, there hasn't a Debatekeeper update since 2016, and there are 6 pending pull requests with new formats. One would be forgiven for thinking they'll never happen! I don't envisage doing any further updates to the Debatekeeper app in the future, so hopefully this online repository will make it simpler to make new and updated format files available.
 
 The repository for the Debatekeeper app itself is at https://github.com/czlee/debatekeeper.
 
@@ -29,6 +29,9 @@ Then, to submit your file for inclusion in this repository:
 
 ### Note on formats.json
 A GitHub Action is configured to automatically update the formats.json file ([thanks to Frank Richter](https://github.com/czlee/debatekeeper-formats/pull/3)!), so you shouldn't need to. However, you can run the `update_list.py` script locally if you like.
+
+### Note on some American styles
+Debatekeeper can't properly support the public forum, Lincoln-Douglas or policy debate styles. This is because the app doesn't support preparation time between speeches distributed at teams' election. A discussion of this is in [issue #6 in the Debatekeeper app repository](https://github.com/czlee/debatekeeper/issues/6).
 
 How this is hosted
 ------------------
