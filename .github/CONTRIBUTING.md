@@ -25,13 +25,13 @@ If you'd like to discuss any of this, please feel free to send me an email (prob
 
 First, write your XML file [according to these specifications](https://github.com/czlee/debatekeeper/wiki/Writing-your-own-custom-debate-format-file), and test it by importing it into your phone and running it through a few debates.
 
-1. **Fork** this repository (click the button in the top-right of this page).
-2. In your fork, **add** your file to the "[v1/formats](https://github.com/czlee/debatekeeper-formats/tree/main/v1/formats)" directory.
-3. Submit a **pull request** from your fork to this repository.
+1. **Go to** the "[v1/formats](https://github.com/czlee/debatekeeper-formats/tree/main/v1/formats)" directory.
+2. Click the **Add file** button in the top right of that page (not this one). Either upload your file, or create one then copy-paste your file's contents. Please double-check that you're in the **v1/formats** directory.
+3. Propose the file, and then submit your **pull request**.
 
-> A "fork" is a copy of a repository that you manage. A "pull request" is a proposed change.
+> This will automatically create a "fork", a copy of this repository under your control. A "pull request" is a proposed change.
 
-It's helpful if you can provide a bit of information about where the league, circuit or tournaments where your format is used.
+It's helpful if you can provide a bit of information about where the league, circuit or tournaments where your format is used. The pull request template will ask you to add this information, and will remind you that you're agreeing to license your contribution under the MIT License.
 
 ### What happens when you submit
 
@@ -55,3 +55,5 @@ Contributions of other code
 ---------------------------
 
 Nothing of unusual significance here. All of the above also applies to new code—it's also licensed under the MIT License, and should be submitted in a pull request as usual. The main purpose of this page was to provide a guide for people who don't have an extensive coding background. 🙂
+
+You can delete all the text in the pull request template if you're submitting other code. The pre-filled text in pull requests is mainly to help people who are submitting a new debate format (and so that they can't miss the part about the MIT License).

@@ -19,9 +19,11 @@ Submitting a new format file
 First, write your XML file [according to these specifications](https://github.com/czlee/debatekeeper/wiki/Writing-your-own-custom-debate-format-file), and test it by importing it into your phone and running it through a few debates.
 
 Then, to submit your file for inclusion in this repository:
-1. **Fork** this repository (click the button in the top-right of this page).
-2. **Add** your file to the "[v1/formats](https://github.com/czlee/debatekeeper-formats/tree/main/v1/formats)" directory.
-3. Submit a **pull request** from your fork to this repository.
+1. **Go to** the "[v1/formats](https://github.com/czlee/debatekeeper-formats/tree/main/v1/formats)" directory.
+2. Click the **Add file** button in the top right of that page (not this one). Either upload your file, or create one then copy-paste your file's contents. Please double-check that you're in the **v1/formats** directory.
+3. Propose the file, and then submit your **pull request**.
+
+(If you're familiar with GitHub forks, you can also fork and add as usual. Just be sure it's in the v1/formats directory.)
 
 ⚠️ **Note on licensing:** Code in this repository is [licensed](https://github.com/czlee/debatekeeper-formats/tree/main/LICENCE.md) under the [MIT License](https://choosealicense.com/licenses/mit/). Submitters of new contributions are taken to agree that their code may be licensed under the MIT License. [Learn more in our information for contributors](https://github.com/czlee/debatekeeper-formats/tree/main/.github/CONTRIBUTING.md).
 
