@@ -10,6 +10,17 @@ repos:
   - id: check-xml
   - id: check-yaml
   - id: check-added-large-files
+
+- repo: https://github.com/czlee/pre-commit-hooks
+  rev: v0.0.1
+  hooks:
+  - id: check-file-name-pattern
+    files: v1/formats/.+
+    exclude: v1/formats.json
+    args:
+    - --pattern
+    - "[a-z0-9\\-]+.xml"
+
 - repo: https://gitlab.com/pycqa/flake8
   rev: 3.9.2
   hooks:
