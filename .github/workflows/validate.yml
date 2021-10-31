@@ -1,15 +1,16 @@
-# Workflow to check files for syntax and regenerate formats.json
+# Workflow to check files for XML syntax and other lint checks
+#
+# This also does a dry run of updating formats.json, printing the diff but not committing changes.
 
 # Based on the Python workflow template:
 # https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Validate XML and update list
+name: Validate XML files
 
 on:
   push:
     branches:
-      # just run on push to main, to avoid duplicate runs from PRs
-      - main
+      - '**'
   pull_request:
     branches:
       - '**'
@@ -20,10 +21,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      # Need to specify head_ref explicitly for pull requests, see
-      # https://github.com/stefanzweifel/git-auto-commit-action#checkout-the-correct-branch
-      with:
-        ref: ${{ github.head_ref }}
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
@@ -43,11 +40,8 @@ jobs:
       run: |
         python validate.py
 
-    - name: Update formats.json
+    # diff exits with 1 if differences, 2 if trouble; "|| [ $? -eq 1 ]" gets it to treat 1 as success
+    - name: Dry run of updating formats.json
       run: |
-        python update_list.py
-
-    - uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Regenerated formats.json
-        file_pattern: v1/formats.json
+        python update_list.py -O v1/formats-updated.json
+        diff -s v1/formats.json v1/formats-updated.json || [ $? -eq 1 ]
