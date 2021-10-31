@@ -1,0 +1,36 @@
+# Workflow to regenerate formats.json
+#
+# This is run only on push to main.
+
+name: Update formats.json
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install lxml pre-commit
+
+    - name: Update formats.json
+      run: |
+        python update_list.py
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Regenerated formats.json
+        file_pattern: v1/formats.json
