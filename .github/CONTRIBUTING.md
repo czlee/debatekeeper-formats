@@ -66,6 +66,8 @@ There are some scripts that run automatically on all submissions to check for co
 
 This repository has some scripts that run automatically on all pull requests. These scripts check that the debate style format files are well-formed and follow the [conventions above](#conventions-in-this-repository). The pull request will show whether the checks succeeded.
 
+If you're new to GitHub, it might want me to "approve" the workflow before it runs.
+
 _Note:_ Because this is the official repository, the scripts are stricter than the app. So the file might work on your device, but still fail the checks in this repository. If this happens, check the errors and see if you can fix them in your fork. If the errors are confusing to you (some of them are admittedly obscure), please don't hesitate to ask by commenting on your pull request.
 
 ### When will my format become available on Debatekeeper?
