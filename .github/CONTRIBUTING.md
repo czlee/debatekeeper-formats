@@ -33,10 +33,25 @@ First, write your XML file [according to these specifications](https://github.co
 
 It's helpful if you can provide a bit of information about where the league, circuit or tournaments where your format is used. The pull request template will ask you to add this information, and will remind you that you're agreeing to license your contribution under the MIT License.
 
+### Conventions in this repository
+
+Some conventions in this repository are stricter than in the app.
+
+- File names should be lower case, and use hyphens rather than underscores, _e.g._ "bp.xml" not "BP.xml", "asd-juniors.xml" not "ASD_Juniors.xml"
+- It's preferable (but not essential) to keep file names reasonably short. Abbreviations in file names (like "apda") are fine.
+- Speech type references (the `ref` attribute) should be lower case. (Names should be in any linguistically appropriate case.)
+- XML should be neatly indented.
+- There should not be any trailing whitespace.
+- In multilingual files:
+  - All languages must be declared in the `<languages>` element, and every human-readable string must have a translation in all declared languages.
+  - It's preferable for languages always to appear in the same order.
+
+There are some scripts that run automatically on all submissions to check for conformity with some of these conventions.
+
 ### What happens when you submit
 
 This repository has some scripts that run automatically on all pull requests. These scripts
-- check that the debate style format files are well-formed, and
+- check that the debate style format files are well-formed and follow the [conventions above](#conventions-in-this-repository), and
 - regenerate the list of formats that Debatekeeper first checks when a user opens the Downloads page in the app.
 
 The pull request will show whether the checks succeeded.
