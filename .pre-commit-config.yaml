@@ -19,7 +19,7 @@ repos:
     exclude: v1/formats.json
     args:
     - --pattern
-    - "[a-z0-9\\-]+.xml"
+    - "[a-z0-9-]+.xml"
 
 - repo: https://gitlab.com/pycqa/flake8
   rev: 3.9.2

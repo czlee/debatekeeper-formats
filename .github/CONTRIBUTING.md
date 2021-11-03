@@ -47,14 +47,22 @@ It's helpful if you can provide a bit of information about where the league, cir
 
 Some conventions in this repository are stricter than in the app.
 
-- File names should be in lower case, _e.g._ "bp.xml" not "~~BP.xml~~"
-- File names should use hyphens rather than underscores, _e.g._ "asd-juniors.xml" not "~~ASD_Juniors.xml~~"
-- It's preferable (but not essential) to keep file names reasonably short. Abbreviations in file names (like "apda") are fine.
-- XML should be neatly indented, preferably using a tab width of 2.
-- Any trailing whitespace at the end of lines should be removed.
-- Speech type references (the `ref` attribute) should be lower case.
-- Human-readable names should be in the grammatically appropriate case for that language.
-- In [multilingual files](https://github.com/czlee/debatekeeper/wiki/Writing-your-own-custom-debate-format-file#multilingual-formats):
+- **File names**:
+  - should be in lower case, _e.g._ "bp.xml" not "~~BP.xml~~"
+  - should use hyphens rather than underscores, _e.g._ "asd-juniors.xml" not "~~ASD_Juniors.xml~~"
+  - It's preferable (but not essential) to keep file names reasonably short.
+  - Abbreviations in file names (like "apda") are fine.
+- **XML formatting**:
+  - XML should be neatly indented, preferably using a tab width of 2.
+  - Any trailing whitespace at the end of lines should be removed.
+- **Cross-references**, _i.e._ the `ref` attribute of speech types and period types:
+  - should be in lower case, and
+  - can have hyphens, dots and numbers, but no other symbols or whitespace.
+  - If you have a good reason to break this rule, I'll consider—feel free to explain in your pull request.
+- **Human-readable names**, _e.g._ the style name and speech names:
+  - should be in the grammatically appropriate case for that language
+  - should prefer the technically "correct" name to the common colloquial name (if they differ)
+- **In [multilingual files](https://github.com/czlee/debatekeeper/wiki/Writing-your-own-custom-debate-format-file#multilingual-formats)**:
   - All languages must be declared in the `<languages>` element.
   - Every human-readable string must have a translation in all declared languages.
   - It's preferable for languages always to appear in the same order.

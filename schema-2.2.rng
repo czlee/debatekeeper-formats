@@ -46,7 +46,7 @@
                     <oneOrMore>
                         <element name="period-type">
                             <attribute name="ref">
-                                <ref name="value-string"/>
+                                <ref name="value-xref"/>
                             </attribute>
                             <optional>
                                 <attribute name="pois-allowed">
@@ -93,7 +93,7 @@
                 <oneOrMore>
                     <element name="speech-type">
                         <attribute name="ref">
-                            <ref name="value-string"/>
+                            <ref name="value-xref"/>
                         </attribute>
                         <ref name="common.controlled-time"/>
                     </element>
@@ -104,7 +104,7 @@
                 <oneOrMore>
                     <element name="speech">
                         <attribute name="type">
-                            <ref name="value-string"/>
+                            <ref name="value-xref"/>
                         </attribute>
                         <ref name="element-name"/>
                     </element>
@@ -121,7 +121,7 @@
         </attribute>
         <optional>
             <attribute name="first-period">
-                <ref name="value-string"/>
+                <ref name="value-xref"/>
             </attribute>
         </optional>
         <zeroOrMore>
@@ -142,7 +142,7 @@
                 </optional>
                 <optional>
                     <attribute name="next-period">
-                        <ref name="value-string"/>
+                        <ref name="value-xref"/>
                     </attribute>
                 </optional>
                 <optional>
@@ -195,6 +195,14 @@
     <define name="value-string">
         <data type="string">
             <param name="minLength">2</param>
+        </data>
+    </define>
+
+    <define name="value-xref">
+        <!-- The app will actually permit any string, but we enforce stricter conventions in the
+             official repository. -->
+        <data type="string">
+            <param name="pattern">[a-z0-9\.\-]+</param>
         </data>
     </define>
 
