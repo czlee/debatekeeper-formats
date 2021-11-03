@@ -27,7 +27,7 @@ Then, to submit your file for inclusion in this repository:
 
 ⚠️ **Note on licensing:** Code in this repository is [licensed](https://github.com/czlee/debatekeeper-formats/tree/main/LICENCE.md) under the [MIT License](https://choosealicense.com/licenses/mit/). Submitters of new contributions are taken to agree that their code may be licensed under the MIT License. [Learn more in our information for contributors](https://github.com/czlee/debatekeeper-formats/tree/main/.github/CONTRIBUTING.md).
 
-➡️ _More detailed information, as well as guidance on conventions, is [available on this page](https://github.com/czlee/debatekeeper-formats/tree/main/.github/CONTRIBUTING.md)._
+ℹ️ _The official repository enforces some conventions that are stricter than the app. [Learn more in our information for contributors](https://github.com/czlee/debatekeeper-formats/tree/main/.github/CONTRIBUTING.md)._
 
 ### Note on formats.json
 A GitHub Action is configured to automatically update the formats.json file ([thanks to Frank Richter](https://github.com/czlee/debatekeeper-formats/pull/3)!), so you shouldn't need to. However, you can run the `update_list.py` script locally if you like.
