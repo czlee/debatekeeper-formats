@@ -8,6 +8,8 @@ repos:
   - id: end-of-file-fixer
     exclude: (CNAME|formats.json)
   - id: check-xml
+    types: [file]
+    files: \.(xml|rng)$
   - id: check-yaml
   - id: check-added-large-files
 
@@ -19,7 +21,7 @@ repos:
     exclude: v1/formats.json
     args:
     - --pattern
-    - "[a-z0-9\\-]+.xml"
+    - "[a-z0-9-]+.xml"
 
 - repo: https://gitlab.com/pycqa/flake8
   rev: 3.9.2

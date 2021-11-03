@@ -7,6 +7,16 @@ This page has some information about what you agree to by submitting your debate
 
 > This page is primarily written for an audience not already familiar with open-source licences. If you're familiar with open source conventions, there's probably nothing new to you on this page.
 
+Contents
+--------
+
+* [Contributions of debate style format files](#contributions-of-debate-style-format-files)
+   * [Licence information](#licence-information)
+   * [How to submit a new format](#how-to-submit-a-new-format)
+   * [Conventions in this repository](#conventions-in-this-repository)
+   * [What happens when you submit](#what-happens-when-you-submit)
+   * [When will my format become available on Debatekeeper?](#when-will-my-format-become-available-on-debatekeeper)
+* [Contributions of other code](#contributions-of-other-code)
 
 Contributions of debate style format files
 ------------------------------------------
@@ -33,15 +43,40 @@ First, write your XML file [according to these specifications](https://github.co
 
 It's helpful if you can provide a bit of information about where the league, circuit or tournaments where your format is used. The pull request template will ask you to add this information, and will remind you that you're agreeing to license your contribution under the MIT License.
 
+### Conventions in this repository
+
+Some conventions in this repository are stricter than in the app.
+
+- **File names**:
+  - should be in lower case, _e.g._ "bp.xml" not "~~BP.xml~~"
+  - should use hyphens rather than underscores, _e.g._ "asd-juniors.xml" not "~~ASD_Juniors.xml~~"
+  - It's preferable (but not essential) to keep file names reasonably short.
+  - Abbreviations in file names (like "apda") are fine.
+- **XML formatting**:
+  - XML should be neatly indented, preferably using a tab width of 2.
+  - Any trailing whitespace at the end of lines should be removed.
+- **Cross-references**, _i.e._ the `ref` attribute of speech types and period types:
+  - should be in lower case, and
+  - can have hyphens, dots and numbers, but no other symbols or whitespace.
+  - If you have a good reason to break this rule, I'll consider—feel free to explain in your pull request.
+- **Human-readable names**, _e.g._ the style name and speech names:
+  - should be in the grammatically appropriate case for that language
+  - should prefer the technically "correct" name to the common colloquial name (if they differ)
+- **In [multilingual files](https://github.com/czlee/debatekeeper/wiki/Writing-your-own-custom-debate-format-file#multilingual-formats)**:
+  - All languages must be declared in the `<languages>` element.
+  - Every human-readable string must have a translation in all declared languages.
+  - It's preferable for languages always to appear in the same order.
+  - (While it's common for formats include English translations, it's not a requirement.)
+
+There are some scripts that run automatically on all submissions to check for conformity with some of these conventions.
+
 ### What happens when you submit
 
-This repository has some scripts that run automatically on all pull requests. These scripts
-- check that the debate style format files are well-formed, and
-- regenerate the list of formats that Debatekeeper first checks when a user opens the Downloads page in the app.
+This repository has some scripts that run automatically on all pull requests. These scripts check that the debate style format files are well-formed and follow the [conventions above](#conventions-in-this-repository). The pull request will show whether the checks succeeded.
 
-The pull request will show whether the checks succeeded.
+If you're new to GitHub, it might want me to "approve" the workflow before it runs.
 
-_Note:_ Because this is the official repository, the scripts are stricter than the app. So the file might work on your device, but still fail the checks in this repository. If this happens, check the errors and see if you can fix them in your fork. If the errors are confusing to you, don't hesitate to ask by commenting on your pull request.
+_Note:_ Because this is the official repository, the scripts are stricter than the app. So the file might work on your device, but still fail the checks in this repository. If this happens, check the errors and see if you can fix them in your fork. If the errors are confusing to you (some of them are admittedly obscure), please don't hesitate to ask by commenting on your pull request.
 
 ### When will my format become available on Debatekeeper?
 
@@ -49,7 +84,7 @@ After I merge your pull request, your format will become available via Debatekee
 
 Users do _not_ need to update the app before they can access the new file.
 
-Depending on how busy I am with life, it might take a while for me to attend to your pull request. I apologise in advance. Before this repository was introduced in 2021, some contributions sat around for years; I'm hoping this new system will reduce to that a few days. Indeed, the purpose of the above scripts (and this online repository) is to make this a one-click process for me so that I can do it quickly.
+Depending on how busy I am with life, it might take a while for me to attend to your pull request. I apologise in advance. Before this repository was introduced in 2021, some contributions sat around for years; I'm hoping this new system will reduce to that a few days. Indeed, the purpose of the above automatic scripts (and this online repository) is to make this a one-click process for me so that I can do it quickly.
 
 Contributions of other code
 ---------------------------
