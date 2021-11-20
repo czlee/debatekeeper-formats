@@ -1,6 +1,76 @@
 {
   "formats": [
     {
+      "filename": "spanish.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/spanish.xml",
+      "version": 1,
+      "info": {
+        "es": {
+          "name": "Acad\u00e9mico espa\u00f1ol",
+          "regions": [
+            "Espa\u00f1a",
+            "Latinoam\u00e9rica"
+          ],
+          "levels": [
+            "Universidad"
+          ],
+          "used-ats": [
+            "Asociaciones de debate"
+          ],
+          "description": "Dos equipos de cuatro, se permiten preguntas durante las refutaciones, introducci\u00f3n: 4 min, refutaciones: 5 min (\u00d72), conclusi\u00f3n: 3 min"
+        },
+        "en": {
+          "name": "Spanish Academic",
+          "regions": [
+            "Spain",
+            "Latin America"
+          ],
+          "levels": [
+            "University"
+          ],
+          "used-ats": [
+            "Spanish Debate Associations"
+          ],
+          "description": "Two teams of four, POIs allowed, introduction: 4 min, refutations: 5 min (\u00d72), conclusion: 3 min"
+        }
+      }
+    },
+    {
+      "filename": "spanish-highschool.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/spanish-highschool.xml",
+      "version": 1,
+      "info": {
+        "es": {
+          "name": "Acad\u00e9mico espa\u00f1ol para institutos",
+          "regions": [
+            "Espa\u00f1a",
+            "Latinoam\u00e9rica"
+          ],
+          "levels": [
+            "Universidad"
+          ],
+          "used-ats": [
+            "Asociaciones de debate en institutos"
+          ],
+          "description": "Dos equipos de cuatro, se permiten preguntas durante las refutaciones, introducci\u00f3n: 3 min, refutaciones: 4 min (\u00d72), conclusi\u00f3n: 3 min"
+        },
+        "en": {
+          "name": "Spanish High School Academic",
+          "regions": [
+            "Spain",
+            "Latin America"
+          ],
+          "levels": [
+            "University"
+          ],
+          "used-ats": [
+            "Spanish Debate Associations in High Schools"
+          ],
+          "description": "Two teams of four, POIs allowed, introduction: 3 min, refutations: 4 min (\u00d72), conclusion: 3 min"
+        }
+      }
+    },
+    {
       "filename": "apda.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/apda.xml",
       "version": 1,
