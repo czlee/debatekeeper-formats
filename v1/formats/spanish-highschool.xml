@@ -1,37 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
-  <name xml:lang="en">Spanish Academic</name>
-  <name xml:lang="es">Académico español</name>
-  <version>2</version>
+  <name xml:lang="en">Spanish High School Academic</name>
+  <name xml:lang="es">Académico español para institutos</name>
+  <version>1</version>
   <languages>
-    <language>en</language>
     <language>es</language>
+    <language>en</language>
   </languages>
-  <info xml: lang="en">
-    <region>Spain and Latin America</region>
+  <info xml:lang="en">
+    <region>Spain</region>
+    <region>Latin America</region>
     <level>University</level>
-    <used-at>Spanish Debate Associations</used-at>
-    <description>Two teams of four, POIs allowed, Introductory: 4 min, 1st Refutation: 5 min, 2nd Refutation: 5 min, Conclusion: 3 min</description>
+    <used-at>Spanish Debate Associations in High Schools</used-at>
+    <description>Two teams of four, POIs allowed, introduction: 3 min, refutations: 4 min (×2), conclusion: 3 min</description>
   </info>
-    <info xml: lang="es">
-    <region>España y Latinoamérica</region>
+    <info xml:lang="es">
+    <region>España</region>
+    <region>Latinoamérica</region>
     <level>Universidad</level>
-    <used-at>Asociaciones de debate</used-at>
-    <description>Dos equipos de cuatro, se permiten preguntas durante las refutaciones, Introducción: 4 min, 1ª Refutación: 5 min, 2ª Refutación: 5 min, Conclusión: 3 min</description>
+    <used-at>Asociaciones de debate en institutos</used-at>
+    <description>Dos equipos de cuatro, se permiten preguntas durante las refutaciones, introducción: 3 min, refutaciones: 4 min (×2), conclusión: 3 min</description>
   </info>
   <speech-types>
-    <speech-type ref="introductory" length="4:00" first-period="normal">
-      <name xml:lang="en">Introductory</name>
+    <speech-type ref="introduction" length="3:00" first-period="normal">
+      <name xml:lang="en">Introduction</name>
       <name xml:lang="es">Introducción</name>
       <bell time="1:00" number="1" next-period="pois-allowed"/>
-      <bell time="3:00" number="1" next-period="warning"/>
+      <bell time="2:00" number="1" next-period="warning"/>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
-    <speech-type ref="refutation" length="5:00" first-period="normal">
+    <speech-type ref="refutation" length="4:00" first-period="normal">
       <name xml:lang="en">Refutation</name>
       <name xml:lang="es">Refutación</name>
       <bell time="1:00" number="1" next-period="pois-allowed"/>
-      <bell time="4:00" number="1" next-period="warning"/>
+      <bell time="3:00" number="1" next-period="warning"/>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
     <speech-type ref="conclusion" length="3:00" first-period="normal">
@@ -42,26 +44,27 @@
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
   </speech-types>
-  <speeches>
-    <speech type="introductory">
-      <name xml:lang="en">In favour - Introductory</name>
+
+ <speeches>
+    <speech type="introduction">
+      <name xml:lang="en">In favour - Introduction</name>
       <name xml:lang="es">A favor - Introducción</name>
     </speech>
-    <speech type="introductory">
-      <name xml:lang="en">Against - Introductory</name>
+    <speech type="introduction">
+      <name xml:lang="en">Against - Introduction</name>
       <name xml:lang="es">En contra - Introducción</name>
     </speech>
     <speech type="refutation">
       <name xml:lang="en">In favour - First refutation</name>
-      <name xml:lang="es">A favor - Primera refutación</name>    
+      <name xml:lang="es">A favor - Primera refutación</name>
     </speech>
     <speech type="refutation">
       <name xml:lang="en">Against - First refutation</name>
-      <name xml:lang="es">En contra - Primera refutación</name>    
+      <name xml:lang="es">En contra - Primera refutación</name>
     </speech>
     <speech type="refutation">
       <name xml:lang="en">In favour - Second refutation</name>
-      <name xml:lang="es">A favor - Segunda refutación</name>  
+      <name xml:lang="es">A favor - Segunda refutación</name>
     </speech>
     <speech type="refutation">
       <name xml:lang="en">Against - Second refutation</name>
