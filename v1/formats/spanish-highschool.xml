@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<debate-format schema-version="2.2">
+  <name xml:lang="en">Spanish High School Academic</name>
+  <name xml:lang="es">Académico español para institutos</name>
+  <version>1</version>
+  <languages>
+    <language>es</language>
+    <language>en</language>
+  </languages>
+  <info xml:lang="en">
+    <region>Spain</region>
+    <region>Latin America</region>
+    <level>University</level>
+    <used-at>Spanish Debate Associations in High Schools</used-at>
+    <description>Two teams of four, POIs allowed, introduction: 3 min, refutations: 4 min (×2), conclusion: 3 min</description>
+  </info>
+    <info xml:lang="es">
+    <region>España</region>
+    <region>Latinoamérica</region>
+    <level>Universidad</level>
+    <used-at>Asociaciones de debate en institutos</used-at>
+    <description>Dos equipos de cuatro, se permiten preguntas durante las refutaciones, introducción: 3 min, refutaciones: 4 min (×2), conclusión: 3 min</description>
+  </info>
+  <speech-types>
+    <speech-type ref="introduction" length="3:00" first-period="normal">
+      <name xml:lang="en">Introduction</name>
+      <name xml:lang="es">Introducción</name>
+      <bell time="1:00" number="1" next-period="pois-allowed"/>
+      <bell time="2:00" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+    <speech-type ref="refutation" length="4:00" first-period="normal">
+      <name xml:lang="en">Refutation</name>
+      <name xml:lang="es">Refutación</name>
+      <bell time="1:00" number="1" next-period="pois-allowed"/>
+      <bell time="3:00" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+    <speech-type ref="conclusion" length="3:00" first-period="normal">
+      <name xml:lang="en">Conclusion</name>
+      <name xml:lang="es">Conclusión</name>
+      <bell time="1:00" number="1" next-period="pois-allowed"/>
+      <bell time="2:00" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+  </speech-types>
+
+ <speeches>
+    <speech type="introduction">
+      <name xml:lang="en">In favour - Introduction</name>
+      <name xml:lang="es">A favor - Introducción</name>
+    </speech>
+    <speech type="introduction">
+      <name xml:lang="en">Against - Introduction</name>
+      <name xml:lang="es">En contra - Introducción</name>
+    </speech>
+    <speech type="refutation">
+      <name xml:lang="en">In favour - First refutation</name>
+      <name xml:lang="es">A favor - Primera refutación</name>
+    </speech>
+    <speech type="refutation">
+      <name xml:lang="en">Against - First refutation</name>
+      <name xml:lang="es">En contra - Primera refutación</name>
+    </speech>
+    <speech type="refutation">
+      <name xml:lang="en">In favour - Second refutation</name>
+      <name xml:lang="es">A favor - Segunda refutación</name>
+    </speech>
+    <speech type="refutation">
+      <name xml:lang="en">Against - Second refutation</name>
+      <name xml:lang="es">En contra - Segunda refutación</name>
+    </speech>
+    <speech type="conclusion">
+      <name xml:lang="en">Against - Conclusion</name>
+      <name xml:lang="es">En contra - Conclusión</name>
+    </speech>
+    <speech type="conclusion">
+      <name xml:lang="en">In favour - Conclusion</name>
+      <name xml:lang="es">A favor - Conclusión</name>
+    </speech>
+  </speeches>
+</debate-format>
