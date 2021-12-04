@@ -5,7 +5,7 @@ Thank you for considering submitting a contribution to the official Debatekeeper
 
 This page has some information about what you agree to by submitting your debate format, and what you can expect to happen after your contribution is accepted ("merged").
 
-> This page is primarily written for an audience not already familiar with open-source licences. If you're familiar with open source conventions, there's probably nothing new to you on this page.
+> This page is primarily written for an audience not already familiar with open-source licences. If you're familiar with open source conventions, most of this will be familiar to you, though please consider checking the [Conventions in this repository](#conventions-in-this-repository) section.
 
 Contents
 --------
