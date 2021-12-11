@@ -3,7 +3,7 @@
     {
       "filename": "spanish.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/spanish.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "es": {
           "name": "Acad\u00e9mico espa\u00f1ol",
@@ -38,7 +38,7 @@
     {
       "filename": "spanish-highschool.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/spanish-highschool.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "es": {
           "name": "Acad\u00e9mico espa\u00f1ol para institutos",
