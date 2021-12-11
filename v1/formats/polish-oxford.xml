@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<debate-format schema-version="2.2">
+  <name>Polish Oxford Debate</name>
+  <version>1</version>
+  <info>
+    <region>Poland</region>
+    <level>High school</level>
+    <used-at>Polish Debate Associations</used-at>
+    <description>4 vs 4, 5-minute speeches, POIs allowed</description>
+  </info>
+  <prep-time length="15:00"/>
+  <speech-types>
+    <speech-type ref="regular" length="5:00" first-period="normal">
+      <bell time="1:00" number="1" next-period="pois-allowed"/>
+      <bell time="5:00" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+  </speech-types>
+  <speeches>
+    <speech type="regular">
+      <name>1st Proposition</name>
+    </speech>
+    <speech type="regular">
+      <name>1st Opposition</name>
+    </speech>
+    <speech type="regular">
+      <name>2nd Proposition</name>
+    </speech>
+    <speech type="regular">
+      <name>2nd Opposition</name>
+    </speech>
+    <speech type="regular">
+      <name>3rd Proposition</name>
+    </speech>
+    <speech type="regular">
+      <name>3rd Opposition</name>
+    </speech>
+    <speech type="regular">
+      <name>4th Proposition</name>
+    </speech>
+    <speech type="regular">
+      <name>4th Opposition</name>
+    </speech>
+  </speeches>
+</debate-format>
