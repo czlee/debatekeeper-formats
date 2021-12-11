@@ -471,6 +471,26 @@
       }
     },
     {
+      "filename": "polish-oxford.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/polish-oxford.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Polish Oxford Debate",
+          "regions": [
+            "Poland"
+          ],
+          "levels": [
+            "High school"
+          ],
+          "used-ats": [
+            "Polish Debate Associations"
+          ],
+          "description": "4 vs 4, 5-minute speeches, POIs allowed"
+        }
+      }
+    },
+    {
       "filename": "thropy.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/thropy.xml",
       "version": 1,
