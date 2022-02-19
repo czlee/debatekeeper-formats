@@ -2,6 +2,7 @@
 """Validates debate format XML files against the schema."""
 
 import argparse
+import re
 from pathlib import Path
 
 from lxml import etree
@@ -127,28 +128,16 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
     return errors
 
 
-def get_period_type_elements(root):
-    """Returns an iterable over custom period types, or an empty iterable if there aren't any."""
-    period_types = root.find("period-types")
-    if period_types is None:
-        return []
-    return period_types.findall("period-type")
-
-
-if __name__ == "__main__":
-
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("formats_dir", nargs="?", default=Path("v1/formats"), type=Path)
-    args = parser.parse_args()
-
-    if not args.formats_dir.is_dir():
-        print(f"{args.formats_dir} is not a directory")
-        exit(1)
+def validate_all_files(formats_dir):
+    """Validates all files in the directory `formats_dir`."""
+    if not formats_dir.is_dir():
+        print(f"{formats_dir} is not a directory")
+        return 1
 
     failures = []
     successes = []
 
-    for child in args.formats_dir.iterdir():
+    for child in formats_dir.iterdir():
         if child.suffix != ".xml":
             print(f"skipping {child}")
             continue
@@ -165,7 +154,53 @@ if __name__ == "__main__":
         print(f"\nValidation failures in the following {len(failures)} files:")
         for failure in failures:
             print(f" - {failure}")
-        exit(1)
+        return 1
 
     else:
         print(f"All {len(successes)} files passed validation.")
+        return 0
+
+
+def check_for_wrongly_located_files(wrong_dirs, correct_dir):
+    """Checks that no file in any directory in the list `wrong_dirs` looks like a debate format file."""
+
+    pattern = re.compile(r"<\s*debate\-?format")
+    wrong_files = []
+
+    for wrong_dir in wrong_dirs:
+        if wrong_dir.is_dir():
+            for child in wrong_dir.iterdir():
+                if child.is_file():
+                    with open(child) as f:
+                        if pattern.search(f.read(500)):
+                            wrong_files.append(child)
+
+    if wrong_files:
+        print("Looks like the following files might be debate formats:")
+        for filename in wrong_files:
+            print(f" - {filename}")
+        print(f"Did you mean to add them to the {correct_dir} directory instead?\n")
+        return 1
+
+    else:
+        return 0
+
+
+def get_period_type_elements(root):
+    """Returns an iterable over custom period types, or an empty iterable if there aren't any."""
+    period_types = root.find("period-types")
+    if period_types is None:
+        return []
+    return period_types.findall("period-type")
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("formats_dir", nargs="?", default=Path("v1/formats"), type=Path)
+    parser.add_argument("--wrong-dirs", nargs="?", default=[Path("."), Path("v1")], type=Path)
+    args = parser.parse_args()
+
+    return_code = check_for_wrongly_located_files(args.wrong_dirs, args.formats_dir)
+    return_code += validate_all_files(args.formats_dir)
+    exit(return_code)
