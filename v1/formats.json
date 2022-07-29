@@ -111,6 +111,26 @@
       }
     },
     {
+      "filename": "asd-juniors.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-juniors.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Auckland Schools Junior Championships",
+          "regions": [
+            "Auckland"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Auckland Schools Debating Junior Championships"
+          ],
+          "description": "3 vs 3, 5-minute speeches, 2.5-minute replies, no POIs"
+        }
+      }
+    },
+    {
       "filename": "aueasters.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/aueasters.xml",
       "version": 1,
