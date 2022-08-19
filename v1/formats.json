@@ -111,6 +111,26 @@
       }
     },
     {
+      "filename": "asd-impromptu.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-impromptu.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Auckland Schools Impromptu",
+          "regions": [
+            "New Zealand"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Auckland Schools Debating Impromptu Cup"
+          ],
+          "description": "2 vs 2, 7 minutes prep, 5-minute substantive speeches, 2\u00bd-minute replies"
+        }
+      }
+    },
+    {
       "filename": "asd-juniors.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-juniors.xml",
       "version": 1,
