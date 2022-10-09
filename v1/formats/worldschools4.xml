@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<debate-format schema-version="2.2">
+  <name>World Schools (4 minutes)</name>
+  <version>1</version>
+  <info>
+    <region>World</region>
+    <level>School</level>
+    <used-at>Various Regional Competitions</used-at>
+    <description>3 vs 3, 4-minute speeches, 2-minute replies, POIs allowed</description>
+  </info>
+  <prep-time length="15:00"/>
+  <speech-types>
+    <speech-type ref="substantive" length="4:00" first-period="normal">
+      <bell time="1:00" number="1" next-period="pois-allowed"/>
+      <bell time="3:00" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+    <speech-type ref="reply" length="2:00" first-period="normal">
+      <bell time="1:00" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+  </speech-types>
+  <speeches>
+    <speech type="substantive">
+      <name>1st Affirmative</name>
+    </speech>
+    <speech type="substantive">
+      <name>1st Negative</name>
+    </speech>
+    <speech type="substantive">
+      <name>2nd Affirmative</name>
+    </speech>
+    <speech type="substantive">
+      <name>2nd Negative</name>
+    </speech>
+    <speech type="substantive">
+      <name>3rd Affirmative</name>
+    </speech>
+    <speech type="substantive">
+      <name>3rd Negative</name>
+    </speech>
+    <speech type="reply">
+      <name>Negative Reply</name>
+    </speech>
+    <speech type="reply">
+      <name>Affirmative Reply</name>
+    </speech>
+  </speeches>
+</debate-format>
