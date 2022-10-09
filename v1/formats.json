@@ -589,6 +589,26 @@
           "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
         }
       }
+    },
+    {
+      "filename": "worldschools4.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/worldschools4.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "World Schools (4 minutes)",
+          "regions": [
+            "World"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Various Regional Competitions"
+          ],
+          "description": "3 vs 3, 4-minute speeches, 2-minute replies, POIs allowed"
+        }
+      }
     }
   ]
 }
