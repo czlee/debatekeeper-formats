@@ -40,10 +40,10 @@
       <name>3rd Negative</name>
     </speech>
     <speech type="reply">
-      <name>Negative Leader's Reply</name>
+      <name>Negative Reply</name>
     </speech>
     <speech type="reply">
-      <name>Affirmative Leader's Reply</name>
+      <name>Affirmative Reply</name>
     </speech>
   </speeches>
 </debate-format>
