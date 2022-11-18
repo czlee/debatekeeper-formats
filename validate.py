@@ -39,6 +39,9 @@ def validate_file(path):
 
 
 def validate_version_number_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> list[str]:
+    """Checks if the version number in the file path has changed by comparing it to the version number in
+    formats_list_path. Only checks if the version number in the xml document is less than or equal to the number
+    in the json document, so already presumes that the file has been changed."""
     filename = path.name
     root = etree.parse(open(path))
 
@@ -59,6 +62,7 @@ def validate_version_number_has_changed(path: Path, formats_list_path: Path = Pa
 
 
 def file_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> bool:
+    """Detects whether the file path has been modified."""
     filename = path.name
     new_version = open(path).read()
 
