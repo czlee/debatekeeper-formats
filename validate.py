@@ -13,7 +13,7 @@ validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
 LANG_ATTR = "{http://www.w3.org/XML/1998/namespace}lang"
 
 
-def validate_file(path):
+def validate_file(path: Path) -> list[str]:
     """Validates the file given by the path `path`, and returns a list of syntax, validation or
     cross-reference errors. (If validation is successful, the list will be empty.)"""
 
@@ -33,7 +33,7 @@ def validate_file(path):
     return errors
 
 
-def validate_cross_references(filename: str, root: etree.ElementTree):
+def validate_cross_references(filename: str, root: etree.ElementTree) -> list[str]:
     """Checks the cross-references for period types and speech types, given the root of a debate
     format XML tree, and returns a list of errors. (If validation is successful, the list will be
     empty.)"""
@@ -56,7 +56,7 @@ def validate_cross_references(filename: str, root: etree.ElementTree):
     return errors
 
 
-def validate_attribute_xref(filename: str, element: etree.Element, attribute: str, allowed_values: list):
+def validate_attribute_xref(filename: str, element: etree.Element, attribute: str, allowed_values: list) -> list[str]:
     value = element.get(attribute)
     if value not in allowed_values:
         return [f"Cross-ref error in {filename}, line {element.sourceline}: "
@@ -64,7 +64,7 @@ def validate_attribute_xref(filename: str, element: etree.Element, attribute: st
     return []
 
 
-def validate_multilingual_elements(filename, root):
+def validate_multilingual_elements(filename: str, root: etree.ElementTree) -> list[str]:
 
     languages_element = root.find("languages")
 
@@ -89,7 +89,7 @@ def validate_multilingual_elements(filename, root):
 
 
 def validate_multilingual_element(filename: str, languages: list, element: etree.Element,
-                                  subelement: str, optional=False):
+                                  subelement: str, optional=False) -> list[str]:
     """Checks that the element given either has exactly one of the subelement, or every subelement
     has a unique language specifier."""
     errors = []
@@ -128,7 +128,7 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
     return errors
 
 
-def validate_all_files(formats_dir):
+def validate_all_files(formats_dir: Path) -> int:
     """Validates all files in the directory `formats_dir`."""
     if not formats_dir.is_dir():
         print(f"{formats_dir} is not a directory")
@@ -161,7 +161,7 @@ def validate_all_files(formats_dir):
         return 0
 
 
-def check_for_wrongly_located_files(wrong_dirs, correct_dir):
+def check_for_wrongly_located_files(wrong_dirs: list[Path], correct_dir: Path) -> int:
     """Checks that no file in any directory in the list `wrong_dirs` looks like a debate format file."""
 
     pattern = re.compile(r"<\s*debate\-?format")
@@ -186,7 +186,7 @@ def check_for_wrongly_located_files(wrong_dirs, correct_dir):
         return 0
 
 
-def get_period_type_elements(root):
+def get_period_type_elements(root: etree.ElementTree) -> list[etree.ElementTree]:
     """Returns an iterable over custom period types, or an empty iterable if there aren't any."""
     period_types = root.find("period-types")
     if period_types is None:
