@@ -35,7 +35,7 @@ def validate_file(path):
     return errors
 
 
-def version_number_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> list[str]:
+def validate_version_number_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> list[str]:
     filename = path.name
     root = etree.parse(open(path))
 
@@ -69,7 +69,9 @@ def file_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json
         return True  # the fact it is not in formats.json yet means that it has been changed or is new
 
     # It feels somewhat hacky to get the old version this way but there doesn't seem to be an easy alternative
-    old_version = requests.get(old_url).text
+    response = requests.get(old_url)
+    response.encoding = "UTF-8"
+    old_version = response.text.replace("\r", "")
 
     return new_version != old_version
 
