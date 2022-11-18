@@ -32,6 +32,9 @@ def validate_file(path):
 
     errors = validate_cross_references(path.name, root)
     errors += validate_multilingual_elements(path.name, root)
+
+    if file_has_changed(path):
+        errors += validate_version_number_has_changed(path)
     return errors
 
 
@@ -49,7 +52,7 @@ def validate_version_number_has_changed(path: Path, formats_list_path: Path = Pa
             json_version_number = format["version"]
             break
 
-    if extracted_version_number == json_version_number:
+    if extracted_version_number <= json_version_number:
         return [f"Version number error in {filename}, version number has not changed."]
 
     return []
