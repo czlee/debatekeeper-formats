@@ -5,6 +5,7 @@ import argparse
 import re
 from pathlib import Path
 import json
+import requests
 
 from lxml import etree
 
@@ -52,6 +53,25 @@ def version_number_has_changed(path: Path, formats_list_path: Path = Path("v1/fo
         return [f"Version number error in {filename}, version number has not changed."]
 
     return []
+
+
+def file_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> bool:
+    filename = path.name
+    new_version = open(path).read()
+
+    formats = json.load(open(formats_list_path))["formats"]
+    # grab the format in formats.json that matches the current one
+    for format in formats:
+        if format["filename"] == filename:
+            old_url = format["url"]
+            break
+    else:
+        return True  # the fact it is not in formats.json yet means that it has been changed or is new
+
+    # It feels somewhat hacky to get the old version this way but there doesn't seem to be an easy alternative
+    old_version = requests.get(old_url).text
+
+    return new_version != old_version
 
 
 def validate_cross_references(filename: str, root: etree.ElementTree):
