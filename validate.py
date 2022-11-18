@@ -4,6 +4,7 @@
 import argparse
 import re
 from pathlib import Path
+import json
 
 from lxml import etree
 
@@ -31,6 +32,26 @@ def validate_file(path):
     errors = validate_cross_references(path.name, root)
     errors += validate_multilingual_elements(path.name, root)
     return errors
+
+
+def version_number_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> list[str]:
+    filename = path.name
+    root = etree.parse(open(path))
+
+    extracted_version_number = int(root.find("version").text)  # the version number that is specified in the format xml
+
+    formats = json.load(open(formats_list_path))["formats"]
+    json_version_number = 0  # ensures that it is always defined, initialized to 0 to ensure that a new file also passes
+    # grab the format in formats.json that matches the current one
+    for format in formats:
+        if format["filename"] == filename:
+            json_version_number = format["version"]
+            break
+
+    if extracted_version_number == json_version_number:
+        return [f"Version number error in {filename}, version number has not changed."]
+
+    return []
 
 
 def validate_cross_references(filename: str, root: etree.ElementTree):
