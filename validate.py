@@ -4,6 +4,8 @@
 import argparse
 import re
 from pathlib import Path
+import json
+import requests
 
 from lxml import etree
 
@@ -30,7 +32,55 @@ def validate_file(path: Path) -> list[str]:
 
     errors = validate_cross_references(path.name, root)
     errors += validate_multilingual_elements(path.name, root)
+
+    if file_has_changed(path):
+        errors += validate_version_number_has_changed(path)
     return errors
+
+
+def validate_version_number_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> list[str]:
+    """Checks if the version number in the file path has changed by comparing it to the version number in
+    formats_list_path. Only checks if the version number in the xml document is less than or equal to the number
+    in the json document, so already presumes that the file has been changed."""
+    filename = path.name
+    root = etree.parse(open(path))
+
+    extracted_version_number = int(root.find("version").text)  # the version number that is specified in the format xml
+
+    formats = json.load(open(formats_list_path))["formats"]
+    json_version_number = 0  # ensures that it is always defined, initialized to 0 to ensure that a new file also passes
+    # grab the format in formats.json that matches the current one
+    for format in formats:
+        if format["filename"] == filename:
+            json_version_number = format["version"]
+            break
+
+    if extracted_version_number <= json_version_number:
+        return [f"Version number error in {filename}, version number has not changed."]
+
+    return []
+
+
+def file_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> bool:
+    """Detects whether the file path has been modified."""
+    filename = path.name
+    new_version = open(path).read()
+
+    formats = json.load(open(formats_list_path))["formats"]
+    # grab the format in formats.json that matches the current one
+    for format in formats:
+        if format["filename"] == filename:
+            old_url = format["url"]
+            break
+    else:
+        return True  # the fact it is not in formats.json yet means that it has been changed or is new
+
+    # It feels somewhat hacky to get the old version this way but there doesn't seem to be an easy alternative
+    response = requests.get(old_url)
+    response.encoding = "UTF-8"
+    old_version = response.text.replace("\r", "")
+
+    return new_version != old_version
 
 
 def validate_cross_references(filename: str, root: etree.ElementTree) -> list[str]:
