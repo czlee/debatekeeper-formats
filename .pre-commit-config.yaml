@@ -23,7 +23,7 @@ repos:
     - --pattern
     - "[a-z0-9-]+.xml"
 
-- repo: https://gitlab.com/pycqa/flake8
+- repo: https://github.com/PyCQA/flake8
   rev: 3.9.2
   hooks:
   - id: flake8
