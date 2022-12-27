@@ -3,9 +3,8 @@
 
 import argparse
 import re
+import subprocess
 from pathlib import Path
-import json
-import requests
 
 from lxml import etree
 
@@ -15,7 +14,7 @@ validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
 LANG_ATTR = "{http://www.w3.org/XML/1998/namespace}lang"
 
 
-def validate_file(path: Path) -> list[str]:
+def validate_file(path: Path, git_base_ref: str = None) -> list[str]:
     """Validates the file given by the path `path`, and returns a list of syntax, validation or
     cross-reference errors. (If validation is successful, the list will be empty.)"""
 
@@ -32,55 +31,35 @@ def validate_file(path: Path) -> list[str]:
 
     errors = validate_cross_references(path.name, root)
     errors += validate_multilingual_elements(path.name, root)
-
-    if file_has_changed(path):
-        errors += validate_version_number_has_changed(path)
+    errors += validate_version_number(path, git_base_ref)
     return errors
 
 
-def validate_version_number_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> list[str]:
-    """Checks if the version number in the file path has changed by comparing it to the version number in
-    formats_list_path. Only checks if the version number in the xml document is less than or equal to the number
-    in the json document, so already presumes that the file has been changed."""
+def validate_version_number(path: Path, git_base_ref: str = None) -> list[str]:
+    """Validates that the version number in the file given by the path `path` has changed, by
+    comparing it to the version number in the same file of the commit given by `git_base_ref`. The
+    validation passes if no `git_base_ref` is given, or if the file has not changed."""
+    if not git_base_ref:
+        return []
+    if not subprocess.check_output(["git", "diff", "--name-only", git_base_ref, "--", path]).strip():
+        return []
+
     filename = path.name
-    root = etree.parse(open(path))
+    new_root = etree.parse(open(path))
+    new_version = int(new_root.find("version").text)
 
-    extracted_version_number = int(root.find("version").text)  # the version number that is specified in the format xml
+    try:
+        original_content = subprocess.check_output(["git", "show", f"{git_base_ref}:{path}"], stderr=subprocess.STDOUT)
+        original_root = etree.fromstring(original_content)
+        original_version = int(original_root.find("version").text)
+    except (subprocess.CalledProcessError, etree.XMLSyntaxError, ValueError) as e:
+        return [f"Error getting original version number for {filename}: {e}"]
 
-    formats = json.load(open(formats_list_path))["formats"]
-    json_version_number = 0  # ensures that it is always defined, initialized to 0 to ensure that a new file also passes
-    # grab the format in formats.json that matches the current one
-    for format in formats:
-        if format["filename"] == filename:
-            json_version_number = format["version"]
-            break
-
-    if extracted_version_number <= json_version_number:
-        return [f"Version number error in {filename}, version number has not changed."]
+    if new_version <= original_version:
+        return [f"Version number error in {filename}: file has changed so expected at least {original_version+1}, "
+                f"found '{new_version}'"]
 
     return []
-
-
-def file_has_changed(path: Path, formats_list_path: Path = Path("v1/formats.json")) -> bool:
-    """Detects whether the file path has been modified."""
-    filename = path.name
-    new_version = open(path).read()
-
-    formats = json.load(open(formats_list_path))["formats"]
-    # grab the format in formats.json that matches the current one
-    for format in formats:
-        if format["filename"] == filename:
-            old_url = format["url"]
-            break
-    else:
-        return True  # the fact it is not in formats.json yet means that it has been changed or is new
-
-    # It feels somewhat hacky to get the old version this way but there doesn't seem to be an easy alternative
-    response = requests.get(old_url)
-    response.encoding = "UTF-8"
-    old_version = response.text.replace("\r", "")
-
-    return new_version != old_version
 
 
 def validate_cross_references(filename: str, root: etree.ElementTree) -> list[str]:
@@ -178,7 +157,7 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
     return errors
 
 
-def validate_all_files(formats_dir: Path) -> int:
+def validate_all_files(formats_dir: Path, git_base_ref: str = None) -> int:
     """Validates all files in the directory `formats_dir`."""
     if not formats_dir.is_dir():
         print(f"{formats_dir} is not a directory")
@@ -192,7 +171,7 @@ def validate_all_files(formats_dir: Path) -> int:
             print(f"skipping {child}")
             continue
 
-        errors = validate_file(child)
+        errors = validate_file(child, git_base_ref=git_base_ref)
         if errors:
             print("\n".join(errors))
             failures.append(child)
@@ -249,8 +228,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("formats_dir", nargs="?", default=Path("v1/formats"), type=Path)
     parser.add_argument("--wrong-dirs", nargs="?", default=[Path("."), Path("v1")], type=Path)
+    parser.add_argument("--git-base-ref", default="origin/main")
     args = parser.parse_args()
 
     return_code = check_for_wrongly_located_files(args.wrong_dirs, args.formats_dir)
-    return_code += validate_all_files(args.formats_dir)
+    return_code += validate_all_files(args.formats_dir, args.git_base_ref)
     exit(return_code)
