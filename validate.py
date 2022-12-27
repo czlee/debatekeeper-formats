@@ -2,9 +2,10 @@
 """Validates debate format XML files against the schema."""
 
 import argparse
+import json
 import re
 from pathlib import Path
-import json
+
 import requests
 
 from lxml import etree
