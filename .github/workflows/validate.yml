@@ -20,7 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: ${{ github.event.pull_request.commits }}
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
@@ -38,7 +40,7 @@ jobs:
 
     - name: Validate XML files against schema
       run: |
-        python validate.py --git-base-ref=${{ github.base_ref }}
+        python validate.py --git-base-ref=${{ github.event.pull_request.base.sha }}
 
     # diff exits with 1 if differences, 2 if trouble; "|| [ $? -eq 1 ]" gets it to treat 1 as success
     - name: Dry run of updating formats.json
