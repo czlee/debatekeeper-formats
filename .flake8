@@ -6,4 +6,4 @@ ignore = E128,Q000
 
 max-line-length = 120
 import-order-style = edited
-application-import-names = validate
+application-import-names = validate_xml_schema,check_version_bump,check_wrongly_located_files

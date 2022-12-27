@@ -30,7 +30,7 @@ Then, to submit your file for inclusion in this repository:
 ℹ️ _The official repository enforces some conventions that are stricter than the app. [Learn more in our information for contributors](https://github.com/czlee/debatekeeper-formats/tree/main/.github/CONTRIBUTING.md)._
 
 ### Note on formats.json
-A GitHub Action is configured to automatically update the formats.json file ([thanks to Frank Richter](https://github.com/czlee/debatekeeper-formats/pull/3)!), so you shouldn't need to. However, you can run the `update_list.py` script locally if you like.
+A GitHub Action is configured to automatically update the formats.json file ([thanks to Frank Richter](https://github.com/czlee/debatekeeper-formats/pull/3)!), so you shouldn't need to. However, you can run the `scripts/update_list.py` script locally if you like.
 
 ### Note on some American styles
 Debatekeeper can't properly support the public forum, Lincoln-Douglas or policy debate styles. This is because the app doesn't support preparation time between speeches distributed at teams' election. A discussion of this is in [issue #6 in the Debatekeeper app repository](https://github.com/czlee/debatekeeper/issues/6).

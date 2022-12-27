@@ -2,10 +2,7 @@
 """Validates debate format XML files against the schema."""
 
 import argparse
-import re
-import subprocess
 from pathlib import Path
-from typing import Optional
 
 from lxml import etree
 
@@ -15,7 +12,7 @@ validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
 LANG_ATTR = "{http://www.w3.org/XML/1998/namespace}lang"
 
 
-def validate_file(path: Path, git_base_ref: Optional[str] = None) -> list[str]:
+def validate_xml_schema(path: Path) -> list[str]:
     """Validates the file given by the path `path`, and returns a list of syntax, validation or
     cross-reference errors. (If validation is successful, the list will be empty.)"""
 
@@ -32,35 +29,7 @@ def validate_file(path: Path, git_base_ref: Optional[str] = None) -> list[str]:
 
     errors = validate_cross_references(path.name, root)
     errors += validate_multilingual_elements(path.name, root)
-    errors += validate_version_number(path, git_base_ref)
     return errors
-
-
-def validate_version_number(path: Path, git_base_ref: Optional[str] = None) -> list[str]:
-    """Validates that the version number in the file given by the path `path` has changed, by
-    comparing it to the version number in the same file of the commit given by `git_base_ref`. The
-    validation passes if no `git_base_ref` is given, or if the file has not changed."""
-    if not git_base_ref:
-        return []
-    if not subprocess.check_output(["git", "diff", "--name-only", git_base_ref, "--", path]).strip():
-        return []
-
-    filename = path.name
-    new_root = etree.parse(open(path))
-    new_version = int(new_root.find("version").text)
-
-    try:
-        original_content = subprocess.check_output(["git", "show", f"{git_base_ref}:{path}"], stderr=subprocess.STDOUT)
-        original_root = etree.fromstring(original_content)
-        original_version = int(original_root.find("version").text)
-    except (subprocess.CalledProcessError, etree.XMLSyntaxError, ValueError) as e:
-        return [f"Error getting original version number for {filename}: {e}"]
-
-    if new_version <= original_version:
-        return [f"Version number error in {filename}: file has changed so expected at least {original_version+1}, "
-                f"found '{new_version}'"]
-
-    return []
 
 
 def validate_cross_references(filename: str, root: etree.ElementTree) -> list[str]:
@@ -158,7 +127,15 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
     return errors
 
 
-def validate_all_files(formats_dir: Path, git_base_ref: Optional[str] = None) -> int:
+def get_period_type_elements(root: etree.ElementTree) -> list[etree.ElementTree]:
+    """Returns an iterable over custom period types, or an empty iterable if there aren't any."""
+    period_types = root.find("period-types")
+    if period_types is None:
+        return []
+    return period_types.findall("period-type")
+
+
+def validate_xml_schema_for_all_files(formats_dir: Path) -> int:
     """Validates all files in the directory `formats_dir`."""
     if not formats_dir.is_dir():
         print(f"{formats_dir} is not a directory")
@@ -172,7 +149,7 @@ def validate_all_files(formats_dir: Path, git_base_ref: Optional[str] = None) ->
             print(f"skipping {child}")
             continue
 
-        errors = validate_file(child, git_base_ref=git_base_ref)
+        errors = validate_xml_schema(child)
         if errors:
             print("\n".join(errors))
             failures.append(child)
@@ -181,57 +158,21 @@ def validate_all_files(formats_dir: Path, git_base_ref: Optional[str] = None) ->
 
     if failures:
         print(f"\n{len(successes)} files passed validation.")
-        print(f"\nValidation failures in the following {len(failures)} files:")
+        print(f"\n❌ Validation failures in the following {len(failures)} files:")
         for failure in failures:
             print(f" - {failure}")
         return 1
 
     else:
-        print(f"All {len(successes)} files passed validation.")
+        print(f"✅ All {len(successes)} files passed validation.")
         return 0
-
-
-def check_for_wrongly_located_files(wrong_dirs: list[Path], correct_dir: Path) -> int:
-    """Checks that no file in any directory in the list `wrong_dirs` looks like a debate format file."""
-
-    pattern = re.compile(r"<\s*debate\-?format")
-    wrong_files = []
-
-    for wrong_dir in wrong_dirs:
-        if wrong_dir.is_dir():
-            for child in wrong_dir.iterdir():
-                if child.is_file():
-                    with open(child) as f:
-                        if pattern.search(f.read(500)):
-                            wrong_files.append(child)
-
-    if wrong_files:
-        print("Looks like the following files might be debate formats:")
-        for filename in wrong_files:
-            print(f" - {filename}")
-        print(f"Did you mean to add them to the {correct_dir} directory instead?\n")
-        return 1
-
-    else:
-        return 0
-
-
-def get_period_type_elements(root: etree.ElementTree) -> list[etree.ElementTree]:
-    """Returns an iterable over custom period types, or an empty iterable if there aren't any."""
-    period_types = root.find("period-types")
-    if period_types is None:
-        return []
-    return period_types.findall("period-type")
 
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("formats_dir", nargs="?", default=Path("v1/formats"), type=Path)
-    parser.add_argument("--wrong-dirs", nargs="?", default=[Path("."), Path("v1")], type=Path)
-    parser.add_argument("--git-base-ref", default="origin/main")
     args = parser.parse_args()
 
-    return_code = check_for_wrongly_located_files(args.wrong_dirs, args.formats_dir)
-    return_code += validate_all_files(args.formats_dir, args.git_base_ref)
+    return_code = validate_xml_schema_for_all_files(args.formats_dir)
     exit(return_code)

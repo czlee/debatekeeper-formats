@@ -8,7 +8,7 @@ from pathlib import Path
 
 from lxml import etree
 
-from validate import validate_file
+from validate_xml_schema import validate_xml_schema
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("formats_dir", nargs="?", default=Path("v1/formats"), type=Path)
@@ -30,7 +30,7 @@ for path in args.formats_dir.iterdir():
         print(f"skipping {path}")
         continue
 
-    errors = validate_file(path)
+    errors = validate_xml_schema(path)
     if errors:
         print("\n".join(errors))
 
