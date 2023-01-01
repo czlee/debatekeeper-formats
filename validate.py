@@ -5,6 +5,7 @@ import argparse
 import re
 import subprocess
 from pathlib import Path
+from typing import Optional
 
 from lxml import etree
 
@@ -14,7 +15,7 @@ validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
 LANG_ATTR = "{http://www.w3.org/XML/1998/namespace}lang"
 
 
-def validate_file(path: Path, git_base_ref: str = None) -> list[str]:
+def validate_file(path: Path, git_base_ref: Optional[str] = None) -> list[str]:
     """Validates the file given by the path `path`, and returns a list of syntax, validation or
     cross-reference errors. (If validation is successful, the list will be empty.)"""
 
@@ -35,7 +36,7 @@ def validate_file(path: Path, git_base_ref: str = None) -> list[str]:
     return errors
 
 
-def validate_version_number(path: Path, git_base_ref: str = None) -> list[str]:
+def validate_version_number(path: Path, git_base_ref: Optional[str] = None) -> list[str]:
     """Validates that the version number in the file given by the path `path` has changed, by
     comparing it to the version number in the same file of the commit given by `git_base_ref`. The
     validation passes if no `git_base_ref` is given, or if the file has not changed."""
@@ -157,7 +158,7 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
     return errors
 
 
-def validate_all_files(formats_dir: Path, git_base_ref: str = None) -> int:
+def validate_all_files(formats_dir: Path, git_base_ref: Optional[str] = None) -> int:
     """Validates all files in the directory `formats_dir`."""
     if not formats_dir.is_dir():
         print(f"{formats_dir} is not a directory")
