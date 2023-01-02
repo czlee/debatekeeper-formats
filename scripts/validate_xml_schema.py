@@ -2,7 +2,6 @@
 """Validates debate format XML files against the schema."""
 
 import argparse
-import re
 from pathlib import Path
 
 from lxml import etree
@@ -13,7 +12,7 @@ validator = etree.RelaxNG(etree.parse("schema-2.2.rng"))
 LANG_ATTR = "{http://www.w3.org/XML/1998/namespace}lang"
 
 
-def validate_file(path: Path) -> list[str]:
+def validate_xml_schema(path: Path) -> list[str]:
     """Validates the file given by the path `path`, and returns a list of syntax, validation or
     cross-reference errors. (If validation is successful, the list will be empty.)"""
 
@@ -128,7 +127,15 @@ def validate_multilingual_element(filename: str, languages: list, element: etree
     return errors
 
 
-def validate_all_files(formats_dir: Path) -> int:
+def get_period_type_elements(root: etree.ElementTree) -> list[etree.ElementTree]:
+    """Returns an iterable over custom period types, or an empty iterable if there aren't any."""
+    period_types = root.find("period-types")
+    if period_types is None:
+        return []
+    return period_types.findall("period-type")
+
+
+def validate_xml_schema_for_all_files(formats_dir: Path) -> int:
     """Validates all files in the directory `formats_dir`."""
     if not formats_dir.is_dir():
         print(f"{formats_dir} is not a directory")
@@ -142,7 +149,7 @@ def validate_all_files(formats_dir: Path) -> int:
             print(f"skipping {child}")
             continue
 
-        errors = validate_file(child)
+        errors = validate_xml_schema(child)
         if errors:
             print("\n".join(errors))
             failures.append(child)
@@ -151,56 +158,21 @@ def validate_all_files(formats_dir: Path) -> int:
 
     if failures:
         print(f"\n{len(successes)} files passed validation.")
-        print(f"\nValidation failures in the following {len(failures)} files:")
+        print(f"\n❌ Validation failures in the following {len(failures)} files:")
         for failure in failures:
             print(f" - {failure}")
         return 1
 
     else:
-        print(f"All {len(successes)} files passed validation.")
+        print(f"✅ All {len(successes)} files passed validation.")
         return 0
-
-
-def check_for_wrongly_located_files(wrong_dirs: list[Path], correct_dir: Path) -> int:
-    """Checks that no file in any directory in the list `wrong_dirs` looks like a debate format file."""
-
-    pattern = re.compile(r"<\s*debate\-?format")
-    wrong_files = []
-
-    for wrong_dir in wrong_dirs:
-        if wrong_dir.is_dir():
-            for child in wrong_dir.iterdir():
-                if child.is_file():
-                    with open(child) as f:
-                        if pattern.search(f.read(500)):
-                            wrong_files.append(child)
-
-    if wrong_files:
-        print("Looks like the following files might be debate formats:")
-        for filename in wrong_files:
-            print(f" - {filename}")
-        print(f"Did you mean to add them to the {correct_dir} directory instead?\n")
-        return 1
-
-    else:
-        return 0
-
-
-def get_period_type_elements(root: etree.ElementTree) -> list[etree.ElementTree]:
-    """Returns an iterable over custom period types, or an empty iterable if there aren't any."""
-    period_types = root.find("period-types")
-    if period_types is None:
-        return []
-    return period_types.findall("period-type")
 
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("formats_dir", nargs="?", default=Path("v1/formats"), type=Path)
-    parser.add_argument("--wrong-dirs", nargs="?", default=[Path("."), Path("v1")], type=Path)
     args = parser.parse_args()
 
-    return_code = check_for_wrongly_located_files(args.wrong_dirs, args.formats_dir)
-    return_code += validate_all_files(args.formats_dir)
+    return_code = validate_xml_schema_for_all_files(args.formats_dir)
     exit(return_code)

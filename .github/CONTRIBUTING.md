@@ -70,6 +70,8 @@ Some conventions in this repository are stricter than in the app.
 
 There are some scripts that run automatically on all submissions to check for conformity with some of these conventions.
 
+If you want to run the scripts locally to check your work before pushing, you can run `python scripts/validate_all.py` from the repository root directory.
+
 ### What happens when you submit
 
 This repository has some scripts that run automatically on all pull requests. These scripts check that the debate style format files are well-formed and follow the [conventions above](#conventions-in-this-repository). The pull request will show whether the checks succeeded.

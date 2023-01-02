@@ -28,7 +28,7 @@ jobs:
 
     - name: Update formats.json
       run: |
-        python update_list.py
+        python scripts/update_list.py
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:

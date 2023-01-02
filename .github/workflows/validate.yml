@@ -20,7 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: ${{ github.event.pull_request.commits || 0 }}
 
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
@@ -38,10 +40,24 @@ jobs:
 
     - name: Validate XML files against schema
       run: |
-        python validate.py
+        python scripts/validate_xml_schema.py
+
+    - name: Validate version numbers (pull request)
+      if: github.event_name == 'pull_request'
+      run: |
+        python scripts/check_version_bump.py --base-ref=${{ github.event.pull_request.base.sha }}
+
+    - name: Validate version numbers (push)
+      if: github.event_name == 'push' && !github.event.forced && github.event.before != '0000000000000000000000000000000000000000'
+      run: |
+        python scripts/check_version_bump.py --base-ref=${{ github.event.before }}
+
+    - name: Check for wrongly located files
+      run: |
+        python scripts/check_wrongly_located_files.py
 
     # diff exits with 1 if differences, 2 if trouble; "|| [ $? -eq 1 ]" gets it to treat 1 as success
     - name: Dry run of updating formats.json
       run: |
-        python update_list.py -O v1/formats-updated.json
+        python scripts/update_list.py -O v1/formats-updated.json
         diff -s v1/formats.json v1/formats-updated.json || [ $? -eq 1 ]
