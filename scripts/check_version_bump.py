@@ -41,6 +41,8 @@ def check_version_number_increment(path: Path, base_ref: str) -> list[str]:
     try:
         original_content = subprocess.check_output(["git", "show", f"{base_ref}:{path}"], stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
+        if e.returncode == 128:  # The file doesn't exist yet on the parent commit (i.e. the file is new in this PR)
+            return 0
         print(f"🛑 {filename} ERROR: Error getting original contents: {e}")
         return 1
 
