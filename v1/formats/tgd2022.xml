@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<debate-format schema-version="1.0">
+<debate-format schema-version="2.2">
   <name>The Great Debate 2022 - Vinschool</name>
   <version>1</version>
-  <info> Inspired by World Schools format but used for beginners
+  <info>
     <region>Vietnam</region>
     <level>School</level>
     <used-at>Vinschool Vietnam</used-at>
-    <description>3 vs 3, 6-minute speeches, 3-minute replies, POIs allowed</description>
+    <description>Inspired by World Schools format but used for beginners; 3 vs 3, 6-minute speeches, 3-minute replies, POIs allowed</description>
   </info>
   <prep-time length="30:00"/>
   <speech-types>
