@@ -18,7 +18,8 @@ def validate_version_numbers(formats_dir: Path, base_ref: str) -> int:
         print(f"{formats_dir} is not a directory")
         return 1
 
-    diff_output = subprocess.check_output(["git", "diff", "--name-only", base_ref, "--", formats_dir], text=True)
+    diff_command = ["git", "diff", "--name-only", "--diff-filter=M", base_ref, "--", formats_dir]
+    diff_output = subprocess.check_output(diff_command, text=True)
     changed_files = [Path(file) for file in diff_output.split()]
 
     if not changed_files:
