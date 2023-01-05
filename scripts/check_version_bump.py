@@ -18,18 +18,29 @@ def validate_version_numbers(formats_dir: Path, base_ref: str) -> int:
         print(f"{formats_dir} is not a directory")
         return 1
 
-    diff_command = ["git", "diff", "--name-only", "--diff-filter=M", base_ref, "--", formats_dir]
-    diff_output = subprocess.check_output(diff_command, text=True)
-    changed_files = [Path(file) for file in diff_output.split("\n") if file]
+    changed_files = get_diff_files("M", formats_dir, base_ref)
+    added_files = get_diff_files("A", formats_dir, base_ref)
 
-    if not changed_files:
+    if not changed_files and not added_files:
         print(f"🆗 No debate format files have changed since {base_ref}")
 
     nerrors = 0
     for path in changed_files:
         nerrors += check_version_number_increment(path, base_ref)
+    for path in added_files:
+        nerrors += check_version_number_is_one(path)
 
     return nerrors
+
+
+def get_diff_files(diff_filter: str, formats_dir: Path, base_ref: str):
+    command = [
+        "git", "diff", "--name-only", f"--diff-filter={diff_filter}",
+        base_ref, "--", formats_dir,
+    ]
+    output = subprocess.check_output(command, text=True)
+    files = [Path(file) for file in output.split("\n") if file]
+    return files
 
 
 def check_version_number_increment(path: Path, base_ref: str) -> int:
@@ -54,10 +65,22 @@ def check_version_number_increment(path: Path, base_ref: str) -> int:
 
     if new_version <= original_version:
         print(f"❌ {filename} ERROR: File has changed so expected at least {original_version+1}, found "
-              f"'{new_version}'")
+              f"{new_version}")
         return 1
     else:
         print(f"✅ {filename}: Version has changed from {original_version} to {new_version}")
+        return 0
+
+
+def check_version_number_is_one(path: Path) -> int:
+    content = open(path, 'rb').read()
+    version = extract_version_number(content)
+
+    if version != 1:
+        print(f"❌ {path.name} ERROR: New file version should be 1, found {version}")
+        return 1
+    else:
+        print(f"✅ {path.name}: Version of new file is 1")
         return 0
 
 
