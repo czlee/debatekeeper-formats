@@ -2,7 +2,7 @@
 <debate-format schema-version="2.2">
   <name>Auckland Schools Junior Championships</name>
   <short-name>ASD Juniors</short-name>
-  <version>1</version>
+  <version>2</version>
   <info>
     <region>Auckland</region>
     <level>School</level>
@@ -40,10 +40,10 @@
       <name>3rd Negative</name>
     </speech>
     <speech type="reply">
-      <name>Negative Leader's Reply</name>
+      <name>Negative Reply</name>
     </speech>
     <speech type="reply">
-      <name>Affirmative Leader's Reply</name>
+      <name>Affirmative Reply</name>
     </speech>
   </speeches>
 </debate-format>

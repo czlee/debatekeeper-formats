@@ -2,7 +2,7 @@
 <debate-format schema-version="2.2">
   <name>Auckland Schools Impromptu</name>
   <short-name>ASD Impromptu</short-name>
-  <version>1</version>
+  <version>2</version>
   <info>
     <region>New Zealand</region>
     <level>School</level>
@@ -52,10 +52,10 @@
       <name>2nd Negative</name>
     </speech>
     <speech type="reply">
-      <name>Negative Leader's Reply</name>
+      <name>Negative Reply</name>
     </speech>
     <speech type="reply">
-      <name>Affirmative Leader's Reply</name>
+      <name>Affirmative Reply</name>
     </speech>
   </speeches>
 </debate-format>
