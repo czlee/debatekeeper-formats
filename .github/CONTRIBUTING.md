@@ -62,6 +62,9 @@ Some conventions in this repository are stricter than in the app.
 - **Human-readable names**, _e.g._ the style name and speech names:
   - should be in the grammatically appropriate case for that language
   - should prefer the technically "correct" name to the common colloquial name (if they differ)
+- **Version numbers**:
+  - should be 1 if it's a new format
+  - should increase when a format is updated (increments preferred)
 - **In [multilingual files](https://github.com/czlee/debatekeeper/wiki/Writing-your-own-custom-debate-format-file#multilingual-formats)**:
   - All languages must be declared in the `<languages>` element.
   - Every human-readable string must have a translation in all declared languages.
