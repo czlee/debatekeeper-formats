@@ -18,8 +18,9 @@ def validate_version_numbers(formats_dir: Path, base_ref: str) -> int:
         print(f"{formats_dir} is not a directory")
         return 1
 
-    diff_output = subprocess.check_output(["git", "diff", "--name-only", base_ref, "--", formats_dir], text=True)
-    changed_files = [Path(file) for file in diff_output.split()]
+    diff_command = ["git", "diff", "--name-only", "--diff-filter=M", base_ref, "--", formats_dir]
+    diff_output = subprocess.check_output(diff_command, text=True)
+    changed_files = [Path(file) for file in diff_output.split("\n") if file]
 
     if not changed_files:
         print(f"🆗 No debate format files have changed since {base_ref}")
@@ -31,7 +32,7 @@ def validate_version_numbers(formats_dir: Path, base_ref: str) -> int:
     return nerrors
 
 
-def check_version_number_increment(path: Path, base_ref: str) -> list[str]:
+def check_version_number_increment(path: Path, base_ref: str) -> int:
     """Validates that the version number in the file given by the path `path` has changed, by
     comparing it to the version number in the same file of the commit given by `base_ref`. The
     validation passes if no `base_ref` is given, or if the file has not changed."""
@@ -60,7 +61,7 @@ def check_version_number_increment(path: Path, base_ref: str) -> list[str]:
         return 0
 
 
-def extract_version_number(contents: str):
+def extract_version_number(contents: str) -> int:
     try:
         root = etree.fromstring(contents)
     except etree.XMLSyntaxError as e:
