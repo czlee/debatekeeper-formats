@@ -113,7 +113,7 @@
     {
       "filename": "asd-impromptu.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-impromptu.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "Auckland Schools Impromptu",
@@ -133,7 +133,7 @@
     {
       "filename": "asd-juniors.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-juniors.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "Auckland Schools Junior Championships",
@@ -173,7 +173,7 @@
     {
       "filename": "australs.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/australs.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "Australs",
@@ -399,7 +399,7 @@
     {
       "filename": "joyntscroll.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/joyntscroll.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "Joynt Scroll",
@@ -439,7 +439,7 @@
     {
       "filename": "nzeasters.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nzeasters.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "New Zealand Easters",
@@ -533,7 +533,7 @@
     {
       "filename": "thropy.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/thropy.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "Thropy",
@@ -553,7 +553,7 @@
     {
       "filename": "thropybreak.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/thropybreak.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "Thropy break rounds",
