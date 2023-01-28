@@ -417,6 +417,39 @@
       }
     },
     {
+      "filename": "german-jugend-debattiert.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/german-jugend-debattiert.xml",
+      "version": 1,
+      "info": {
+        "de": {
+          "name": "Jugend Debattiert",
+          "regions": [
+            "Deutschland"
+          ],
+          "levels": [
+            "Weiterf\u00fchrende Schulen"
+          ],
+          "used-ats": [
+            "Jugend Debattiert Wettbewerb"
+          ],
+          "description": "Zwei Zweierteams, Er\u00f6ffnungsreden (jeweils 2 Minuten) + freie Aussprache (12 Minuten) + Schlussreden (jeweils 1 Minute)"
+        },
+        "en": {
+          "name": "German Jugend Debattiert",
+          "regions": [
+            "Germany"
+          ],
+          "levels": [
+            "Secondary schools"
+          ],
+          "used-ats": [
+            "Jugend Debattiert Competition"
+          ],
+          "description": "Two teams of two, opening speeches (2 minutes each) + free debate (12 minutes) + closing speeches (1 minute each)"
+        }
+      }
+    },
+    {
       "filename": "mspdp.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/mspdp.xml",
       "version": 1,
