@@ -564,6 +564,26 @@
       }
     },
     {
+      "filename": "tgd-vinschool.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/tgd-vinschool.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "The Great Debate \u2014 Vinschool",
+          "regions": [
+            "Vietnam"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Vinschool Vietnam"
+          ],
+          "description": "3 vs 3, 6-minute speeches, 3-minute replies, POIs allowed"
+        }
+      }
+    },
+    {
       "filename": "thropy.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/thropy.xml",
       "version": 2,
