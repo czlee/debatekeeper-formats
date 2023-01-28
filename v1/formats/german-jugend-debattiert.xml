@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<debate-format schema-version="2.2">
+    <name xml:lang="en">German Jugend Debattiert</name>
+    <name xml:lang="de">Jugend Debattiert</name>
+    <short-name xml:lang="en">Jugend Debattiert</short-name>
+    <short-name xml:lang="de">Jugend Debattiert</short-name>
+
+    <version>1</version>
+
+    <languages>
+        <language>de</language>
+        <language>en</language>
+    </languages>
+
+    <info xml:lang="de">
+        <region>Deutschland</region>
+        <level>Weiterführende Schulen</level>
+        <used-at>Jugend Debattiert Wettbewerb</used-at>
+        <description>Zwei Zweierteams, Eröffnungsreden (jeweils 2 Minuten) + freie Aussprache (12 Minuten) + Schlussreden (jeweils 1 Minute)</description>
+    </info>
+    <info xml:lang="en">
+        <region>Germany</region>
+        <level>Secondary schools</level>
+        <used-at>Jugend Debattiert Competition</used-at>
+        <description>Two teams of two, opening speeches (2 minutes each) + free debate (12 minutes) + closing speeches (1 minute each)</description>
+    </info>
+
+    <period-types>
+        <period-type ref="jd.opening-speech">
+            <name xml:lang="de">JD: Eröffnungsrede</name>
+            <name xml:lang="en">JD: Opening speech</name>
+            <display xml:lang="de">Eröffnungsrede</display>
+            <display xml:lang="en">Opening speech</display>
+        </period-type>
+        <period-type ref="jd.closing-speech">
+            <name xml:lang="de">JD: Schlussrede</name>
+            <name xml:lang="en">JD: Closing speech</name>
+            <display xml:lang="de">Schlussrede</display>
+            <display xml:lang="en">Closing speech</display>
+        </period-type>
+    </period-types>
+
+    <speech-types>
+        <speech-type ref="opening" length="2:00" first-period="jd.opening-speech">
+            <name xml:lang="en">Opening speech</name>
+            <name xml:lang="de">Eröffnungsrede</name>
+            <bell time="1:45" number="1" next-period="warning"/>
+            <bell time="finish" number="2" next-period="overtime"/>
+        </speech-type>
+        <speech-type ref="exchange" length="12:00" first-period="normal">
+            <name xml:lang="en">Free debate</name>
+            <name xml:lang="de">Freie Aussprache</name>
+            <bell time="11:45" number="1" next-period="warning"/>
+            <bell time="finish" number="2" next-period="overtime"/>
+        </speech-type>
+        <speech-type ref="closing" length="1:00" first-period="jd.closing-speech">
+            <name xml:lang="en">Closing speech</name>
+            <name xml:lang="de">Schlussrede</name>
+            <bell time="0:45" number="1" next-period="warning"/>
+            <bell time="finish" number="2" next-period="overtime"/>
+        </speech-type>
+    </speech-types>
+
+    <speeches>
+
+        <speech type="opening">
+            <name xml:lang="de">Pro 1</name>
+            <name xml:lang="en">Pro 1</name>
+        </speech>
+        <speech type="opening">
+            <name xml:lang="de">Kontra 1</name>
+            <name xml:lang="en">Contra 1</name>
+        </speech>
+        <speech type="opening">
+            <name xml:lang="de">Pro 2</name>
+            <name xml:lang="en">Pro 2</name>
+        </speech>
+        <speech type="opening">
+            <name xml:lang="de">Kontra 2</name>
+            <name xml:lang="en">Contra 2</name>
+        </speech>
+
+        <speech type="exchange">
+            <name xml:lang="de">Freie Aussprache</name>
+            <name xml:lang="en">Free debate</name>
+        </speech>
+
+        <speech type="closing">
+            <name xml:lang="de">Pro 1</name>
+            <name xml:lang="en">Pro 1</name>
+        </speech>
+        <speech type="closing">
+            <name xml:lang="de">Kontra 1</name>
+            <name xml:lang="en">Contra 1</name>
+        </speech>
+        <speech type="closing">
+            <name xml:lang="de">Pro 2</name>
+            <name xml:lang="en">Pro 2</name>
+        </speech>
+        <speech type="closing">
+            <name xml:lang="de">Kontra 2</name>
+            <name xml:lang="en">Contra 2</name>
+        </speech>
+    </speeches>
+
+</debate-format>
