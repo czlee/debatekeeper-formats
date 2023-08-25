@@ -399,7 +399,7 @@
     {
       "filename": "joyntscroll.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/joyntscroll.xml",
-      "version": 2,
+      "version": 3,
       "info": {
         "": {
           "name": "Joynt Scroll",
@@ -410,9 +410,9 @@
             "University"
           ],
           "used-ats": [
-            "New Zealand Universities Prepared Debating Championships"
+            "New Zealand Universities Limited Preparation Debating Championships"
           ],
-          "description": "3 vs 3, 10-minute speeches, 5-minute replies, POIs allowed"
+          "description": "3 vs 3, 8-minute speeches, 4-minute replies, no POIs"
         }
       }
     },
@@ -503,26 +503,6 @@
       }
     },
     {
-      "filename": "nzeasters.xml",
-      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nzeasters.xml",
-      "version": 2,
-      "info": {
-        "": {
-          "name": "New Zealand Easters",
-          "regions": [
-            "New Zealand"
-          ],
-          "levels": [
-            "University"
-          ],
-          "used-ats": [
-            "New Zealand Impromptu Debating Championships (Officers' Cup)"
-          ],
-          "description": "2 vs 2, 7 minutes prep, 6-minute substantive speeches, 3-minute replies"
-        }
-      }
-    },
-    {
       "filename": "opd.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/opd.xml",
       "version": 1,
@@ -552,6 +532,26 @@
             "German-Language Championship"
           ],
           "description": "Two teams of three (7-minute speeches) plus three nonaligned speakers (3:30 speeches, 1-minute reply by teams), POIs allowed"
+        }
+      }
+    },
+    {
+      "filename": "officerscup.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/officerscup.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Officers Cup",
+          "regions": [
+            "New Zealand"
+          ],
+          "levels": [
+            "University"
+          ],
+          "used-ats": [
+            "New Zealand Impromptu Debating Championships (Officers Cup)"
+          ],
+          "description": "2 vs 2, 7 minutes prep, 6-minute substantive speeches, 3-minute replies"
         }
       }
     },
