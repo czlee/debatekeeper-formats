@@ -1,31 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
-  <name>New Zealand Easters</name>
-  <short-name>NZ Easters</short-name>
-  <version>2</version>
+  <name>Officers Cup</name>
+  <short-name>Officers</short-name>
+  <version>1</version>
   <info>
     <region>New Zealand</region>
     <level>University</level>
-    <used-at>New Zealand Impromptu Debating Championships (Officers' Cup)</used-at>
+    <used-at>New Zealand Impromptu Debating Championships (Officers Cup)</used-at>
     <description>2 vs 2, 7 minutes prep, 6-minute substantive speeches, 3-minute replies</description>
   </info>
   <period-types>
-    <period-type ref="easters.moot">
-      <name>Easters: Choose moot</name>
+    <period-type ref="officers.moot">
+      <name>Officers: Choose moot</name>
       <display>Choose moot</display>
     </period-type>
-    <period-type ref="easters.side">
-      <name>Easters: Choose side</name>
+    <period-type ref="officers.side">
+      <name>Officers: Choose side</name>
       <display>Choose side</display>
     </period-type>
-    <period-type ref="easters.prep">
-      <name>Easters: Prepare debate</name>
+    <period-type ref="officers.prep">
+      <name>Officers: Prepare debate</name>
       <display></display>
     </period-type>
   </period-types>
-  <prep-time-controlled length="7:00" first-period="easters.moot">
-    <bell time="1:00" number="1" pause-on-bell="true" next-period="easters.side"/>
-    <bell time="2:00" number="1" pause-on-bell="true" next-period="easters.prep"/>
+  <prep-time-controlled length="7:00" first-period="officers.moot">
+    <bell time="1:00" number="1" pause-on-bell="true" next-period="officers.side"/>
+    <bell time="2:00" number="1" pause-on-bell="true" next-period="officers.prep"/>
     <bell time="finish" number="2" next-period="overtime"/>
   </prep-time-controlled>
   <speech-types>
