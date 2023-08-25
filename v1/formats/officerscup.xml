@@ -1,25 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
-  <name>Officers' Cup</name>
+  <name>Officers Cup</name>
   <short-name>Officers</short-name>
-  <version>2</version>
+  <version>1</version>
   <info>
     <region>New Zealand</region>
     <level>University</level>
-    <used-at>New Zealand Impromptu Debating Championships (Officers' Cup)</used-at>
+    <used-at>New Zealand Impromptu Debating Championships (Officers Cup)</used-at>
     <description>2 vs 2, 7 minutes prep, 6-minute substantive speeches, 3-minute replies</description>
   </info>
   <period-types>
     <period-type ref="officers.moot">
-      <name>Officers': Choose moot</name>
+      <name>Officers: Choose moot</name>
       <display>Choose moot</display>
     </period-type>
     <period-type ref="officers.side">
-      <name>Officer's: Choose side</name>
+      <name>Officers: Choose side</name>
       <display>Choose side</display>
     </period-type>
     <period-type ref="officers.prep">
-      <name>officers: Prepare debate</name>
+      <name>Officers: Prepare debate</name>
       <display></display>
     </period-type>
   </period-types>
