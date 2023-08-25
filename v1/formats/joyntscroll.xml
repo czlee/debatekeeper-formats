@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
   <name>Joynt Scroll</name>
-  <version>3</version>
+  <version>4</version>
   <info>
     <region>New Zealand</region>
     <level>University</level>
@@ -11,7 +11,7 @@
   <prep-time length="30:00"/>
   <speech-types>
     <speech-type ref="substantive" length="8:00" first-period="normal">
-      <bell time="7:00" number="1" next-period="warning"/>
+      <bell time="6:00" number="1" next-period="warning"/>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
     <speech-type ref="reply" length="4:00" first-period="normal">
