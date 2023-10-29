@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<debate-format schema-version="2.2">
+  <name>NSW Premier's Debating Challenge (9 and 10)</name>
+  <short-name>NSWPDC9and10</short-name>
+  <version>1</version>
+  <info>
+    <region>NSW, Australia</region>
+    <level>Primary School</level>
+    <used-at>NSW Premier's Debating Challenge (for Years 9 and 10)</used-at>
+    <description>3 speakers + 4th vs 3 speakers + 4th, 8 minute speeches</description>
+  </info>
+  <period-types>
+   <period-type ref="PDC.1bell">
+     <name>PDC 1 Bell</name>
+     <display>1 Bell</display>
+     <default-bgcolor>#CCAA00</default-bgcolor>
+   </period-type>
+   <period-type ref="PDC.2bell">
+     <name>PDC 2 Bells</name>
+     <display>2 Bells</display>
+     <default-bgcolor>#CC6600</default-bgcolor>
+   </period-type>
+   <period-type ref="PDC.Overtime">
+     <name>PDC Overtime</name>
+     <display>***OVERTIME***</display>
+     <default-bgcolor>#CC2200</default-bgcolor>
+   </period-type>
+  </period-types>
+  <prep-time length="60:00"/>
+  <speech-types>
+    <speech-type ref="speech" length="9:00" first-period="normal">
+      <bell time="6:00" number="1" next-period="PDC.1bell"/>
+      <bell time="8:00" number="2" next-period="PDC.2bell"/>
+      <bell time="finish" number="60" next-period="PDC.Overtime"/>
+    </speech-type>
+  </speech-types>
+  <speeches>
+    <speech type="speech">
+      <name>1st Affirmative</name>
+    </speech>
+    <speech type="speech">
+      <name>1st Negative</name>
+    </speech>
+    <speech type="speech">
+      <name>2nd Affirmative</name>
+    </speech>
+    <speech type="speech">
+      <name>2nd Negative</name>
+    </speech>
+    <speech type="speech">
+      <name>3rd Affirmative</name>
+    </speech>
+    <speech type="speech">
+      <name>3rd Negative</name>
+    </speech>
+  </speeches>
+</debate-format>
