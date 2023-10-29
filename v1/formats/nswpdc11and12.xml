@@ -31,7 +31,7 @@
     <speech-type ref="speech" length="9:00" first-period="normal">
       <bell time="6:00" number="1" next-period="pdc.1bell"/>
       <bell time="8:00" number="2" next-period="pdc.2bell"/>
-      <bell time="finish" number="60" next-period="pdc.Overtime"/>
+      <bell time="finish" number="60" next-period="pdc.overtime"/>
     </speech-type>
   </speech-types>
   <speeches>
