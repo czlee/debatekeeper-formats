@@ -10,17 +10,17 @@
     <description>3 speakers + 4th vs 3 speakers + 4th, 8 minute speeches</description>
   </info>
   <period-types>
-   <period-type ref="PDC.1bell">
+   <period-type ref="pdc.1bell">
      <name>PDC 1 Bell</name>
      <display>1 Bell</display>
      <default-bgcolor>#CCAA00</default-bgcolor>
    </period-type>
-   <period-type ref="PDC.2bell">
+   <period-type ref="pdc.2bell">
      <name>PDC 2 Bells</name>
      <display>2 Bells</display>
      <default-bgcolor>#CC6600</default-bgcolor>
    </period-type>
-   <period-type ref="PDC.Overtime">
+   <period-type ref="pdc.overtime">
      <name>PDC Overtime</name>
      <display>***OVERTIME***</display>
      <default-bgcolor>#CC2200</default-bgcolor>
@@ -29,9 +29,9 @@
   <prep-time length="60:00"/>
   <speech-types>
     <speech-type ref="speech" length="9:00" first-period="normal">
-      <bell time="6:00" number="1" next-period="PDC.1bell"/>
-      <bell time="8:00" number="2" next-period="PDC.2bell"/>
-      <bell time="finish" number="60" next-period="PDC.Overtime"/>
+      <bell time="6:00" number="1" next-period="pdc.1bell"/>
+      <bell time="8:00" number="2" next-period="pdc.2bell"/>
+      <bell time="finish" number="60" next-period="pdc.Overtime"/>
     </speech-type>
   </speech-types>
   <speeches>
