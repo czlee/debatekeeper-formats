@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
   <name>NSW Premier's Debating Challenge (5 and 6)</name>
-  <short-name>NSWPDC5and6</short-name>
+  <short-name>NSW PDC Y5–6</short-name>
   <version>1</version>
   <info>
     <region>NSW, Australia</region>
     <level>Primary School</level>
     <used-at>NSW Premier's Debating Challenge (for Years 5 and 6)</used-at>
-    <description>3 speakers + 4th vs 3 speakers + 4th, 4 minute speeches</description>
+    <description>3 vs 3, 6-minute speeches, no replies, no POIs</description>
   </info>
   <period-types>
    <period-type ref="pdc.1bell">
