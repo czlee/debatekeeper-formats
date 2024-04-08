@@ -70,6 +70,42 @@
         }
       }
     },
+
+    {
+  "filename": "BDIV.xml",
+  "url": "https://formats.debatekeeper.czlee.nz/v1/formats/BDIV.xml",
+  "version": 1.00,
+  "info": {
+    "es": {
+      "name": "Bangaladeshi Inter Versity",
+      "regions": [
+        "Bangladesh",
+        
+      ],
+      "levels": [
+        "Schools/Universities"
+      ],
+      "used-ats": [
+        "Inter Versity nationals"
+      ],
+      "description": "3 vs 3, 5-minute speeches, 3-minute replies, POIS,POO,POP allowed"
+    },
+    "en": {
+      "name": "Bangladesh Inter Versity Debate",
+      "regions": [
+        "Bangladesh",
+        "Asia"
+      ],
+      "levels": [
+        "High school/University"
+      ],
+      "used-ats": [
+        "Inter Versity nationals"
+      ],
+      "description": "3 vs 3, 5-minute speeches, 3-minute replies, POIS,POO,POP allowed"
+    }
+  }
+},
     {
       "filename": "apda.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/apda.xml",
