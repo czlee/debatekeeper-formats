@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
   <name>Bangladeshi Asian Parlimentary</name>
-  <version>1.00</version>
+  <version>1</version>
   <info>
     <region>Bangladesh</region>
     <level>University</level>
