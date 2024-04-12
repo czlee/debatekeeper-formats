@@ -5,14 +5,13 @@
   <info>
     <region>Bangladesh</region>
     <level>University</level>
-    <used-at>Bangladesh National Intervarsity</used-at>
+    <used-at>National Inter-Versity</used-at>
     <description>3 vs 3, 5-minute speeches, 3-minute replies, POIS,POO,POP allowed</description>
   </info>
   <prep-time length="15:00"/>
   <speech-types>
     <speech-type ref="substantive" length="5:00" first-period="normal">
-	<bell time="1:00" number="1" next-period="pois-allowed"/>
-	
+      <bell time="1:00" number="1" next-period="pois-allowed"/>
       <bell time="4:00" number="2" next-period="warning"/>
       <bell time="finish" number="3" next-period="overtime"/>
     </speech-type>
