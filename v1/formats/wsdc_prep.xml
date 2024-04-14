@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
-  <name>WSDC with Prep Times</name>
+  <name>World Schools with Prep Times</name>
+  <short-name>WSDC with Prep</short-name>
   <version>1</version>
   <info>
     <region>Estonia</region>
