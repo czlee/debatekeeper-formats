@@ -755,6 +755,26 @@
           "description": "3 vs 3, 4-minute speeches, 2-minute replies, POIs allowed"
         }
       }
+    },
+    {
+      "filename": "wsdc-prep.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/wsdc-prep.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "World Schools with Prep Times",
+          "regions": [
+            "Estonia"
+          ],
+          "levels": [
+            "High School"
+          ],
+          "used-ats": [
+            "Estonian High School Debate Championships"
+          ],
+          "description": "3 vs 3, 6-minute speeches, 3-minute replies, 1-minute preps, POIs allowed"
+        }
+      }
     }
   ]
 }
