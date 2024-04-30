@@ -11,7 +11,6 @@
   <prep-time length="60:00"/>
   <speech-types>
     <speech-type ref="substantive" length="6:00" first-period="normal">
-      <bell time="1:00" number="1" next-period="normal"/>
       <bell time="5:00" number="1" next-period="warning"/>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
