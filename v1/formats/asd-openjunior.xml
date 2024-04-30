@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<debate-format schema-version="2.2">
+  <name>ASD Junior Open</name>
+  <version>1</version>
+  <info>
+    <region>New Zealand</region>
+    <level>School</level>
+    <used-at>Auckland Schools Debating Junior Open Competitions</used-at>
+    <description>3 vs 3, 5-minute speeches, 2.5-minute replies, no POIs</description>
+  </info>
+  <speech-types>
+    <speech-type ref="substantive" length="5:00" first-period="normal">
+      <bell time="4:00" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+    <speech-type ref="reply" length="2:30" first-period="normal">
+      <bell time="1:30" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+  </speech-types>
+  <speeches>
+    <speech type="substantive">
+      <name>1st Affirmative</name>
+    </speech>
+    <speech type="substantive">
+      <name>1st Negative</name>
+    </speech>
+    <speech type="substantive">
+      <name>2nd Affirmative</name>
+    </speech>
+    <speech type="substantive">
+      <name>2nd Negative</name>
+    </speech>
+    <speech type="substantive">
+      <name>3rd Affirmative</name>
+    </speech>
+    <speech type="substantive">
+      <name>3rd Negative</name>
+    </speech>
+    <speech type="reply">
+      <name>Negative Reply</name>
+    </speech>
+    <speech type="reply">
+      <name>Affirmative Reply</name>
+    </speech>
+  </speeches>
+</debate-format>
