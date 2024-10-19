@@ -111,6 +111,26 @@
       }
     },
     {
+      "filename": "asd-openadvanced.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-openadvanced.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Auckland Schools Advanced Open",
+          "regions": [
+            "Auckland"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Auckland Schools Debating Advanced Open Competitions"
+          ],
+          "description": "3 vs 3, 6-minute speeches, 3-minute replies, POIs allowed"
+        }
+      }
+    },
+    {
       "filename": "asd-impromptu.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-impromptu.xml",
       "version": 2,
@@ -131,26 +151,6 @@
       }
     },
     {
-      "filename": "asd-juniors.xml",
-      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-juniors.xml",
-      "version": 2,
-      "info": {
-        "": {
-          "name": "Auckland Schools Junior Championships",
-          "regions": [
-            "Auckland"
-          ],
-          "levels": [
-            "School"
-          ],
-          "used-ats": [
-            "Auckland Schools Debating Junior Championships"
-          ],
-          "description": "3 vs 3, 5-minute speeches, 2.5-minute replies, no POIs"
-        }
-      }
-    },
-    {
       "filename": "asd-openjunior.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-openjunior.xml",
       "version": 1,
@@ -167,6 +167,26 @@
             "Auckland Schools Debating Junior Open Competitions"
           ],
           "description": "3 vs 3, 5-minute speeches, 2\u00bd-minute replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "asd-premadvanced.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-premadvanced.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Auckland Schools Premier Advanced",
+          "regions": [
+            "Auckland"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Auckland Schools Debating Premier Advanced Competitions"
+          ],
+          "description": "3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed"
         }
       }
     },
