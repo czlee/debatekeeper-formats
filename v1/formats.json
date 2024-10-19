@@ -151,6 +151,66 @@
       }
     },
     {
+      "filename": "asd-openjunior.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-openjunior.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Auckland Schools Junior Open",
+          "regions": [
+            "Auckland"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Auckland Schools Debating Junior Open Competitions"
+          ],
+          "description": "3 vs 3, 5-minute speeches, 2\u00bd-minute replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "asd-premjunior.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-premjunior.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Auckland Schools Premier Junior",
+          "regions": [
+            "Auckland"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Auckland Schools Debating Premier Junior Competitions"
+          ],
+          "description": "3 vs 3, 6-minute speeches, 3-minute replies, POIs allowed"
+        }
+      }
+    },
+    {
+      "filename": "asd-opensenior.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/asd-opensenior.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Auckland Schools Senior Open",
+          "regions": [
+            "Auckland"
+          ],
+          "levels": [
+            "School"
+          ],
+          "used-ats": [
+            "Auckland Schools Debating Senior Open Competitions"
+          ],
+          "description": "3 vs 3, 6-minute speeches, 3-minute replies, no POIs"
+        }
+      }
+    },
+    {
       "filename": "aueasters.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/aueasters.xml",
       "version": 1,
