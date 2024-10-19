@@ -1,22 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
-  <name>Auckland Schools Junior Championships</name>
-  <short-name>ASD Juniors</short-name>
-  <version>2</version>
+  <name>Auckland Schools Premier Advanced</name>
+  <short-name>ASD Premier Advanced</short-name>
+  <version>1</version>
   <info>
     <region>Auckland</region>
     <level>School</level>
-    <used-at>Auckland Schools Debating Junior Championships</used-at>
-    <description>3 vs 3, 5-minute speeches, 2.5-minute replies, no POIs</description>
+    <used-at>Auckland Schools Debating Premier Advanced Competitions</used-at>
+    <description>3 vs 3, 8-minute speeches, 4-minute replies, POIs allowed</description>
   </info>
   <prep-time length="60:00"/>
   <speech-types>
-    <speech-type ref="substantive" length="5:00" first-period="normal">
-      <bell time="4:00" number="1" next-period="warning"/>
+    <speech-type ref="substantive" length="8:00" first-period="normal">
+      <bell time="1:00" number="1" next-period="pois-allowed"/>
+      <bell time="7:00" number="1" next-period="warning"/>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
-    <speech-type ref="reply" length="2:30" first-period="normal">
-      <bell time="1:30" number="1" next-period="warning"/>
+    <speech-type ref="reply" length="4:00" first-period="normal">
+      <bell time="3:00" number="1" next-period="warning"/>
       <bell time="finish" number="2" next-period="overtime"/>
     </speech-type>
   </speech-types>
