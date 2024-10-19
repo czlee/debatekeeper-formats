@@ -1,12 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
-  <name>ASD Junior Open</name>
+  <name>Auckland Schools Junior Open</name>
+  <short-name>ASD Junior Open</short-name>
   <version>1</version>
   <info>
     <region>New Zealand</region>
     <level>School</level>
     <used-at>Auckland Schools Debating Junior Open Competitions</used-at>
-    <description>3 vs 3, 5-minute speeches, 2.5-minute replies, no POIs</description>
+    <description>3 vs 3, 5-minute speeches, 2½-minute replies, no POIs</description>
   </info>
   <speech-types>
     <speech-type ref="substantive" length="5:00" first-period="normal">

@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <debate-format schema-version="2.2">
-  <name>ASD Premier Junior</name>
+  <name>Auckland Schools Premier Junior</name>
+  <short-name>ASD Premier Junior</short-name>
   <version>1</version>
   <info>
     <region>New Zealand</region>
