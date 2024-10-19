@@ -4,11 +4,12 @@
   <short-name>ASD Junior Open</short-name>
   <version>1</version>
   <info>
-    <region>New Zealand</region>
+    <region>Auckland</region>
     <level>School</level>
     <used-at>Auckland Schools Debating Junior Open Competitions</used-at>
     <description>3 vs 3, 5-minute speeches, 2½-minute replies, no POIs</description>
   </info>
+  <prep-time length="60:00"/>
   <speech-types>
     <speech-type ref="substantive" length="5:00" first-period="normal">
       <bell time="4:00" number="1" next-period="warning"/>
