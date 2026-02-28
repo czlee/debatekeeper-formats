@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<debate-format schema-version="2.2">
+  <name>Friday Evening Debating (NSW) for Y8</name>
+  <short-name>FED Y8</short-name>
+  <version>1</version>
+  <info>
+    <region>NSW, Australia</region>
+    <level>Year 8</level>
+    <used-at>Friday Evening Debating (in NSW Schools)</used-at>
+    <description>3 vs 3, 5-minute speeches, no replies, no POIs</description>
+  </info>
+  <period-types>
+    <period-type ref="fed.1bell">
+      <name>FED 1 Bell</name>
+      <default-bgcolor>#CCAA00</default-bgcolor>
+    </period-type>
+  </period-types>
+  <prep-time length="45:00"/>
+  <speech-types>
+    <speech-type ref="speech" length="5:30" first-period="normal">
+      <bell time="4:00" number="1" next-period="fed.1bell"/>
+      <bell time="5:00" number="2" next-period="warning"/>
+      <bell time="finish" number="30" next-period="overtime"/>
+    </speech-type>
+  </speech-types>
+  <speeches>
+    <speech type="speech">
+      <name>1st Affirmative</name>
+    </speech>
+    <speech type="speech">
+      <name>1st Negative</name>
+    </speech>
+    <speech type="speech">
+      <name>2nd Affirmative</name>
+    </speech>
+    <speech type="speech">
+      <name>2nd Negative</name>
+    </speech>
+    <speech type="speech">
+      <name>3rd Affirmative</name>
+    </speech>
+    <speech type="speech">
+      <name>3rd Negative</name>
+    </speech>
+  </speeches>
+</debate-format>
