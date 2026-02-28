@@ -64,7 +64,7 @@ def check_version_number_increment(path: Path, base_ref: str) -> int:
         return 1
 
     if new_version <= original_version:
-        print(f"❌ {filename} ERROR: File has changed so expected at least {original_version+1}, found "
+        print(f"❌ {filename} ERROR: File has changed so expected at least {original_version + 1}, found "
               f"{new_version}")
         return 1
     else:
