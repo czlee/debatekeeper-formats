@@ -18,7 +18,7 @@
   <prep-time length="45:00"/>
   <speech-types>
     <speech-type ref="speech" length="6:30" first-period="normal">
-      <bell time="4:00" number="1" next-period="pdc.1bell"/>
+      <bell time="4:00" number="1" next-period="archdale.1bell"/>
       <bell time="6:00" number="2" next-period="warning"/>
       <bell time="finish" number="30" next-period="overtime"/>
     </speech-type>
@@ -44,3 +44,4 @@
     </speech>
   </speeches>
 </debate-format>
+
