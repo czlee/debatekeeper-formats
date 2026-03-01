@@ -1,0 +1,77 @@
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review, reopened]
+    paths:
+        - "v1/formats/*"
+
+jobs:
+  claude-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Code Review
+        id: claude-review
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ github.event.pull_request.number }}
+
+            If this PR contains changes to the v1/formats directory, review
+            those changes for the following:
+
+            1. Consistency with the contributor guidelines in .github/CONTRIBUTING.md
+               in this repository
+
+            2. Consistency with the specification on this page:
+               https://github.com/czlee/debatekeeper/wiki/Writing-your-own-custom-debate-format-file
+
+            3. Potential inconsistencies or errors, for example:
+               - Descriptions that don't match names or values
+               - Inconsistent formatting
+               - Typos
+               - Potentially missing elements
+
+            You can inspect existing files in v1/formats to get an idea of
+            what to expect. Known good examples: apda.xml, australs.xml,
+            bp.xml, worldschools.xml. (You can inspect other examples too, as
+            they may be analogous.)
+
+            Do not review any files outside the v1/formats directory.
+
+            Post a comment with your findings, adhering to the following
+            guidelines:
+
+            1. Your comment should start with a note to the author thanking
+               them for their contribution, and explaining that this repository
+               is configured to have Claude Code automatically review pull
+               requests, and saying that if they have any questions they should
+               feel free to ask in another comment and a maintainer of this
+               repository will answer.
+
+            2. There is no need to comment on items that look good. If everything
+               looks good, simply say so. Otherwise, comment with just the
+               potential issues you have noticed.
+
+            3. When you write your comment, remember that the contributor may not
+               be a software developer. Many contributors are debaters who are
+               submitting their formats from their regions to add to this
+               library. Most will not be regular contributors, and some may be
+               first-time contributors. Some may not have read the guidelines in
+               detail. Please be kind and helpful in your comment.
+
+          claude_args: |
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),WebFetch(domain:github.com)"
