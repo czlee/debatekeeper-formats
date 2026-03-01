@@ -2,7 +2,7 @@
 <debate-format schema-version="2.2">
   <name>NSW Premier's Debating Challenge (Y9–12)</name>
   <short-name>NSW PDC Y9–12</short-name>
-  <version>1</version>
+  <version>2</version>
   <info>
     <region>NSW, Australia</region>
     <level>Years 9 to 12</level>
@@ -10,15 +10,15 @@
     <description>3 vs 3, 8-minute speeches, no replies, no POIs</description>
   </info>
   <period-types>
-    <period-type ref="pdc.1bell">
-      <name>PDC 1 Bell</name>
+    <period-type ref="nsw.1bell">
+      <name>NSW 1 Bell</name>
       <default-bgcolor>#CCAA00</default-bgcolor>
     </period-type>
   </period-types>
   <prep-time length="60:00"/>
   <speech-types>
     <speech-type ref="speech" length="9:00" first-period="normal">
-      <bell time="6:00" number="1" next-period="pdc.1bell"/>
+      <bell time="6:00" number="1" next-period="nsw.1bell"/>
       <bell time="8:00" number="2" next-period="warning"/>
       <bell time="finish" number="60" next-period="overtime"/>
     </speech-type>
