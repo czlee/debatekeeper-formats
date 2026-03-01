@@ -456,6 +456,86 @@
       }
     },
     {
+      "filename": "nswfed-10-and-opens.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nswfed-10-and-opens.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Friday Evening Debating (NSW) for Y10 and Opens (Seniors)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 10 and Seniors"
+          ],
+          "used-ats": [
+            "Friday Evening Debating (in NSW Schools)"
+          ],
+          "description": "3 vs 3, 8-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "nswfed-7.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nswfed-7.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Friday Evening Debating (NSW) for Y7",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 7"
+          ],
+          "used-ats": [
+            "Friday Evening Debating (in NSW Schools)"
+          ],
+          "description": "3 vs 3, 5-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "nswfed-8.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nswfed-8.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Friday Evening Debating (NSW) for Y8",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 8"
+          ],
+          "used-ats": [
+            "Friday Evening Debating (in NSW Schools)"
+          ],
+          "description": "3 vs 3, 5-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "nswfed-9.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nswfed-9.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Friday Evening Debating (NSW) for Y9",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 9"
+          ],
+          "used-ats": [
+            "Friday Evening Debating (in NSW Schools)"
+          ],
+          "description": "3 vs 3, 6-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
       "filename": "greek.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/greek.xml",
       "version": 1,
@@ -473,6 +553,226 @@
             "Greek Public Schools Debating Championship"
           ],
           "description": "3 vs 3, 6-minute substantive speeches, 4-minute replies, no POIs allowed on replies"
+        }
+      }
+    },
+    {
+      "filename": "archdale-juniors.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/archdale-juniors.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "IGSA Archdale Debating Competition ('Juniors')",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Years 7-9"
+          ],
+          "used-ats": [
+            "IGSA Archdale Debating Competition"
+          ],
+          "description": "3 vs 3, 7-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "archdale-seniors.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/archdale-seniors.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "IGSA Archdale Debating Competition ('Seniors')",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Years 7-12"
+          ],
+          "used-ats": [
+            "IGSA Archdale Debating Competition"
+          ],
+          "description": "3 vs 3, 8-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "archdale-y10.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/archdale-y10.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "IGSA Archdale Debating Competition (Y10)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 10"
+          ],
+          "used-ats": [
+            "IGSA Archdale Debating Competition"
+          ],
+          "description": "3 vs 3, 8-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "archdale-y7.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/archdale-y7.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "IGSA Archdale Debating Competition (Y7A and Y7B)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 7"
+          ],
+          "used-ats": [
+            "IGSA Archdale Debating Competition"
+          ],
+          "description": "3 vs 3, 4-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "archdale-y8.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/archdale-y8.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "IGSA Archdale Debating Competition (Y8A and Y8B)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 8"
+          ],
+          "used-ats": [
+            "IGSA Archdale Debating Competition"
+          ],
+          "description": "3 vs 3, 6-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "archdale-y9.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/archdale-y9.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "IGSA Archdale Debating Competition (Y9)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 9"
+          ],
+          "used-ats": [
+            "IGSA Archdale Debating Competition"
+          ],
+          "description": "3 vs 3, 7-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "isda-primary.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/isda-primary.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Independent Schools Debating Association (Primary A and B)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Years 5-6"
+          ],
+          "used-ats": [
+            "Independent Schools Debating Association, NSW, Australia"
+          ],
+          "description": "3 vs 3, 4-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "isda-seniors.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/isda-seniors.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Independent Schools Debating Association (Seniors A and B)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 11 and 12"
+          ],
+          "used-ats": [
+            "Independent Schools Debating Association, NSW, Australia"
+          ],
+          "description": "3 vs 3, 7-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "isda-y10.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/isda-y10.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Independent Schools Debating Association (Year 10)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 10"
+          ],
+          "used-ats": [
+            "Independent Schools Debating Association, NSW, Australia"
+          ],
+          "description": "3 vs 3, 6-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "isda-y9.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/isda-y9.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Independent Schools Debating Association (Year 9)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Year 9"
+          ],
+          "used-ats": [
+            "Independent Schools Debating Association, NSW, Australia"
+          ],
+          "description": "3 vs 3, 6-minute speeches, no replies, no POIs"
+        }
+      }
+    },
+    {
+      "filename": "isda-y7y8.xml",
+      "url": "https://formats.debatekeeper.czlee.nz/v1/formats/isda-y7y8.xml",
+      "version": 1,
+      "info": {
+        "": {
+          "name": "Independent Schools Debating Association (Years 7 and 8)",
+          "regions": [
+            "NSW, Australia"
+          ],
+          "levels": [
+            "Years 7-8"
+          ],
+          "used-ats": [
+            "Independent Schools Debating Association, NSW, Australia"
+          ],
+          "description": "3 vs 3, 5-minute speeches, no replies, no POIs"
         }
       }
     },
@@ -585,7 +885,7 @@
     {
       "filename": "nswpdc5and6.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nswpdc5and6.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "NSW Premier's Debating Challenge (Y5\u20136)",
@@ -605,7 +905,7 @@
     {
       "filename": "nswpdc7and8.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nswpdc7and8.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "NSW Premier's Debating Challenge (Y7\u20138)",
@@ -625,7 +925,7 @@
     {
       "filename": "nswpdc9to12.xml",
       "url": "https://formats.debatekeeper.czlee.nz/v1/formats/nswpdc9to12.xml",
-      "version": 1,
+      "version": 2,
       "info": {
         "": {
           "name": "NSW Premier's Debating Challenge (Y9\u201312)",
