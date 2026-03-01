@@ -10,15 +10,15 @@
     <description>3 vs 3, 6-minute speeches, no replies, no POIs</description>
   </info>
   <period-types>
-    <period-type ref="fed.1bell">
-      <name>FED 1 Bell</name>
+    <period-type ref="nsw.1bell">
+      <name>NSW 1 Bell</name>
       <default-bgcolor>#CCAA00</default-bgcolor>
     </period-type>
   </period-types>
   <prep-time length="45:00"/>
   <speech-types>
     <speech-type ref="speech" length="6:30" first-period="normal">
-      <bell time="5:00" number="1" next-period="fed.1bell"/>
+      <bell time="5:00" number="1" next-period="nsw.1bell"/>
       <bell time="6:00" number="2" next-period="warning"/>
       <bell time="finish" number="30" next-period="overtime"/>
     </speech-type>
