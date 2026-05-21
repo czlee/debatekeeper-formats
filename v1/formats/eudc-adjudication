@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<debate-format schema-version="2.2">
+  <name xml:lang="en">EUDC Adjudication</name>
+  <short-name>EUDC Adjudication</short-name>
+  <version>2</version>
+  <languages>
+    <language>en</language>
+  </languages>
+  <info xml:lang="en">
+    <region>Europe</region>
+    <level>University</level>
+    <used-at>European Universities Debating Championship</used-at>
+    <description>Rules of EUDC (British Parliament) 2023: Four teams of two, 7-minute speeches, POIs allowed, Deliberation (20min), Oral Adjudication(15min)</description>
+  </info>
+  <prep-time length="15:00"/>
+  <period-types>
+    <period-type ref="normaladj" pois-allowed="false">
+      <name>normaladj</name>
+      <default-bgcolor>#171d30</default-bgcolor>
+    </period-type>
+    <period-type ref="significantadjovertime" pois-allowed="false">
+      <name>significantadjovertime</name>
+      <display>Significant Overtime</display>
+      <default-bgcolor>#f74c31</default-bgcolor>
+    </period-type>
+    <period-type ref="adjovertime" pois-allowed="false">
+      <name>adjovertime</name>
+      <display>Overtime</display>
+      <default-bgcolor>#e66327</default-bgcolor>
+    </period-type>
+  </period-types>
+  <speech-types>
+    <speech-type ref="all" length="7:00" first-period="normal">
+      <name xml:lang="en">all</name>
+      <bell time="1:00" number="1" next-period="pois-allowed"/>
+      <bell time="6:00" number="1" next-period="warning"/>
+      <bell time="finish" number="2" next-period="overtime"/>
+    </speech-type>
+    <speech-type ref="deliberation" length="30:00" first-period="normaladj">
+      <name xml:lang="en">Deliberation (20min)</name>
+      <bell time="1:30" number="1" next-period="normaladj"/>
+      <bell time="15:00" number="1" next-period="normaladj"/>
+      <bell time="17:00" number="1" next-period="normaladj"/>
+      <bell time="20:00" number="2" next-period="adjovertime"/>
+      <bell time="25:00" number="3" next-period="significantadjovertime"/>
+      <bell time="finish" number="4" next-period="warning"/>
+    </speech-type>
+    <speech-type ref="OralAdjudication" length="25:00" first-period="normaladj">
+      <name xml:lang="en">Oral Adjudication (15min)</name>
+      <bell time="15:00" number="1" next-period="adjovertime"/>
+      <bell time="18:00" number="1" next-period="adjovertime"/>
+      <bell time="20:00" number="2" next-period="significantadjovertime"/>
+      <bell time="25:00" number="5" next-period="warning"/>
+    </speech-type>
+  </speech-types>
+  <speeches>
+    <speech type="all">
+      <name xml:lang="en">Prime Minister</name>
+    </speech>
+    <speech type="all">
+      <name xml:lang="en">Leader of the Opposition</name>
+    </speech>
+    <speech type="all">
+      <name xml:lang="en">Deputy Prime Minister</name>
+    </speech>
+    <speech type="all">
+      <name xml:lang="en">Deputy Leader of the Opposition</name>
+    </speech>
+    <speech type="all">
+      <name xml:lang="en">Member for the Government</name>
+    </speech>
+    <speech type="all">
+      <name xml:lang="en">Member for the Opposition</name>
+    </speech>
+    <speech type="all">
+      <name xml:lang="en">Government Whip</name>
+    </speech>
+    <speech type="all">
+      <name xml:lang="en">Opposition Whip</name>
+    </speech>
+    <speech type="deliberation">
+      <name xml:lang="en">Deliberation (20min)</name>
+    </speech>
+    <speech type="OralAdjudication">
+      <name xml:lang="en">Oral Adjudication (15min)</name>
+    </speech>
+  </speeches>
+</debate-format>
